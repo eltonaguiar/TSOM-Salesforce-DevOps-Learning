@@ -1,0 +1,268 @@
+{
+ "sources": {
+  "A": "live webpages",
+  "B": "repo bundles"
+ },
+ "counts": {
+  "A": 48,
+  "B": 49,
+  "both": 48,
+  "only_A": 0,
+  "only_B": 1,
+  "neither": 0,
+  "total": 49
+ },
+ "both": [
+  "apex",
+  "branching",
+  "bulkification",
+  "change_control",
+  "change_sets",
+  "ci_cd",
+  "code_coverage",
+  "cpu_time",
+  "data_import",
+  "data_model_relationships",
+  "debug_logs",
+  "deploy_conflicts",
+  "design_patterns",
+  "devops_tools",
+  "dml_limit",
+  "duplicate_management",
+  "field_level_security",
+  "flow_automation",
+  "git_source_control",
+  "governor_limits",
+  "heap_size",
+  "integrations",
+  "licenses",
+  "lwc",
+  "managed_packages",
+  "metadata_api",
+  "named_credentials",
+  "navigation_setup_paths",
+  "objects_records_fields",
+  "permission_sets",
+  "process_builder_workflow",
+  "quick_deploy",
+  "record_types",
+  "rest_api",
+  "rollback",
+  "sandbox_masking",
+  "sandbox_types",
+  "scratch_orgs",
+  "security_model",
+  "soap_api",
+  "soql",
+  "soql_limit_100",
+  "test_classes",
+  "triggers",
+  "unlocked_packages",
+  "users_profiles_roles",
+  "validation_rules",
+  "visualforce"
+ ],
+ "only_A": [],
+ "only_B": [
+  "payload_limits"
+ ],
+ "neither": [],
+ "detail": {
+  "apex": {
+   "A": true,
+   "B": true
+  },
+  "branching": {
+   "A": true,
+   "B": true
+  },
+  "bulkification": {
+   "A": true,
+   "B": true
+  },
+  "change_control": {
+   "A": true,
+   "B": true
+  },
+  "change_sets": {
+   "A": true,
+   "B": true
+  },
+  "ci_cd": {
+   "A": true,
+   "B": true
+  },
+  "code_coverage": {
+   "A": true,
+   "B": true
+  },
+  "cpu_time": {
+   "A": true,
+   "B": true
+  },
+  "data_import": {
+   "A": true,
+   "B": true
+  },
+  "data_model_relationships": {
+   "A": true,
+   "B": true
+  },
+  "debug_logs": {
+   "A": true,
+   "B": true
+  },
+  "deploy_conflicts": {
+   "A": true,
+   "B": true
+  },
+  "design_patterns": {
+   "A": true,
+   "B": true
+  },
+  "devops_tools": {
+   "A": true,
+   "B": true
+  },
+  "dml_limit": {
+   "A": true,
+   "B": true
+  },
+  "duplicate_management": {
+   "A": true,
+   "B": true
+  },
+  "field_level_security": {
+   "A": true,
+   "B": true
+  },
+  "flow_automation": {
+   "A": true,
+   "B": true
+  },
+  "git_source_control": {
+   "A": true,
+   "B": true
+  },
+  "governor_limits": {
+   "A": true,
+   "B": true
+  },
+  "heap_size": {
+   "A": true,
+   "B": true
+  },
+  "integrations": {
+   "A": true,
+   "B": true
+  },
+  "licenses": {
+   "A": true,
+   "B": true
+  },
+  "lwc": {
+   "A": true,
+   "B": true
+  },
+  "managed_packages": {
+   "A": true,
+   "B": true
+  },
+  "metadata_api": {
+   "A": true,
+   "B": true
+  },
+  "named_credentials": {
+   "A": true,
+   "B": true
+  },
+  "navigation_setup_paths": {
+   "A": true,
+   "B": true
+  },
+  "objects_records_fields": {
+   "A": true,
+   "B": true
+  },
+  "payload_limits": {
+   "A": false,
+   "B": true
+  },
+  "permission_sets": {
+   "A": true,
+   "B": true
+  },
+  "process_builder_workflow": {
+   "A": true,
+   "B": true
+  },
+  "quick_deploy": {
+   "A": true,
+   "B": true
+  },
+  "record_types": {
+   "A": true,
+   "B": true
+  },
+  "rest_api": {
+   "A": true,
+   "B": true
+  },
+  "rollback": {
+   "A": true,
+   "B": true
+  },
+  "sandbox_masking": {
+   "A": true,
+   "B": true
+  },
+  "sandbox_types": {
+   "A": true,
+   "B": true
+  },
+  "scratch_orgs": {
+   "A": true,
+   "B": true
+  },
+  "security_model": {
+   "A": true,
+   "B": true
+  },
+  "soap_api": {
+   "A": true,
+   "B": true
+  },
+  "soql": {
+   "A": true,
+   "B": true
+  },
+  "soql_limit_100": {
+   "A": true,
+   "B": true
+  },
+  "test_classes": {
+   "A": true,
+   "B": true
+  },
+  "triggers": {
+   "A": true,
+   "B": true
+  },
+  "unlocked_packages": {
+   "A": true,
+   "B": true
+  },
+  "users_profiles_roles": {
+   "A": true,
+   "B": true
+  },
+  "validation_rules": {
+   "A": true,
+   "B": true
+  },
+  "visualforce": {
+   "A": true,
+   "B": true
+  }
+ }
+}
