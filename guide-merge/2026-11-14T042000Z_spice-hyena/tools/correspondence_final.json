@@ -1,0 +1,796 @@
+{
+ "guide": [
+  {
+   "file": "docs/salesforce/crash-course.md",
+   "page": "/docs/salesforce/crash-course/",
+   "kind": "declared"
+  },
+  {
+   "file": "docs/salesforce/devops-engineer.md",
+   "page": "/docs/salesforce/devops-engineer/",
+   "kind": "declared"
+  },
+  {
+   "file": "docs/salesforce/labs-design.md",
+   "page": "/docs/salesforce/labs-design/",
+   "kind": "declared"
+  },
+  {
+   "file": "docs/salesforce/navigation-breadcrumbs.md",
+   "page": "/docs/salesforce/navigation-breadcrumbs/",
+   "kind": "declared"
+  },
+  {
+   "file": "docs/salesforce/user-management-data.md",
+   "page": "/docs/salesforce/user-management-data/",
+   "kind": "declared"
+  }
+ ],
+ "bundles": [
+  {
+   "file": "2026-11-14T021036_salesforceyetagain-v3.md",
+   "page": "devops-engineer",
+   "score": 0.1658,
+   "runner_up": 0.1243,
+   "margin": 0.0415,
+   "chars": 1233,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T0210Z-salesforceyetagain-v2-00_planning-salesforce-principles.md",
+   "page": "devops-engineer",
+   "score": 0.5988,
+   "runner_up": 0.2339,
+   "margin": 0.3649,
+   "chars": 4554,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T0210Z-salesforceyetagain-v2-01_certifications-curriculum.md",
+   "page": "devops-engineer",
+   "score": 0.2625,
+   "runner_up": 0.1907,
+   "margin": 0.0718,
+   "chars": 6135,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T0210Z-salesforceyetagain-v2-02_crash-course.md",
+   "page": "devops-engineer",
+   "score": 0.7806,
+   "runner_up": 0.5379,
+   "margin": 0.2427,
+   "chars": 44933,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T0210Z-salesforceyetagain-v2-README.md",
+   "page": "devops-engineer",
+   "score": 0.1337,
+   "runner_up": 0.0735,
+   "margin": 0.0602,
+   "chars": 1320,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T0210Z-salesforceyetagain-v2/00_planning-salesforce-principles.md",
+   "page": "devops-engineer",
+   "score": 0.5988,
+   "runner_up": 0.2339,
+   "margin": 0.3649,
+   "chars": 4556,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T0210Z-salesforceyetagain-v2/01_certifications-curriculum.md",
+   "page": "devops-engineer",
+   "score": 0.2625,
+   "runner_up": 0.1907,
+   "margin": 0.0718,
+   "chars": 6135,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T0210Z-salesforceyetagain-v2/02_crash-course.md",
+   "page": "devops-engineer",
+   "score": 0.7806,
+   "runner_up": 0.5379,
+   "margin": 0.2427,
+   "chars": 44933,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T0210Z-salesforceyetagain-v2/README.md",
+   "page": "devops-engineer",
+   "score": 0.1337,
+   "runner_up": 0.0735,
+   "margin": 0.0602,
+   "chars": 1320,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023241_salesforceagain-v2.md",
+   "page": "devops-engineer",
+   "score": 0.4793,
+   "runner_up": 0.2661,
+   "margin": 0.2132,
+   "chars": 174510,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023312_salesforcemore-v3/01-jd-crossref-and-gaps.md",
+   "page": "devops-engineer",
+   "score": 0.4486,
+   "runner_up": 0.1668,
+   "margin": 0.2819,
+   "chars": 3258,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023312_salesforcemore-v3/02-devops-tools-walkthroughs.md",
+   "page": "devops-engineer",
+   "score": 0.3936,
+   "runner_up": 0.1948,
+   "margin": 0.1987,
+   "chars": 8204,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023312_salesforcemore-v3/03-github-cicd-salesforce.md",
+   "page": "devops-engineer",
+   "score": 0.553,
+   "runner_up": 0.1499,
+   "margin": 0.4031,
+   "chars": 8127,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023312_salesforcemore-v3/04-limits-dependencies-constraints.md",
+   "page": "devops-engineer",
+   "score": 0.6158,
+   "runner_up": 0.3128,
+   "margin": 0.303,
+   "chars": 10714,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023312_salesforcemore-v3/05-jd-term-deep-dives.md",
+   "page": "devops-engineer",
+   "score": 0.4253,
+   "runner_up": 0.1837,
+   "margin": 0.2417,
+   "chars": 7247,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023312_salesforcemore-v3/06-certifications-curriculum.md",
+   "page": "devops-engineer",
+   "score": 0.2455,
+   "runner_up": 0.137,
+   "margin": 0.1085,
+   "chars": 2447,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023312_salesforcemore-v3/README.md",
+   "page": "devops-engineer",
+   "score": 0.2543,
+   "runner_up": 0.1031,
+   "margin": 0.1512,
+   "chars": 3077,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023312_salesforcemore-v3/sources.md",
+   "page": "devops-engineer",
+   "score": 0.1792,
+   "runner_up": 0.1093,
+   "margin": 0.0699,
+   "chars": 2186,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2.md",
+   "page": "devops-engineer",
+   "score": 0.6787,
+   "runner_up": 0.308,
+   "margin": 0.3708,
+   "chars": 199663,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/00-source-log/SOURCES.md",
+   "page": "devops-engineer",
+   "score": 0.3024,
+   "runner_up": 0.1724,
+   "margin": 0.13,
+   "chars": 7096,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/00-source-log/job-description.md",
+   "page": "devops-engineer",
+   "score": 0.17,
+   "runner_up": 0.0901,
+   "margin": 0.0798,
+   "chars": 5734,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/01-salesforce-key-principles/principles.md",
+   "page": "devops-engineer",
+   "score": 0.4683,
+   "runner_up": 0.1451,
+   "margin": 0.3231,
+   "chars": 7354,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/01-salesforce-key-principles/release-model.md",
+   "page": "devops-engineer",
+   "score": 0.6734,
+   "runner_up": 0.1436,
+   "margin": 0.5298,
+   "chars": 6227,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/02-limits-constraints/dependencies-and-constraints.md",
+   "page": "devops-engineer",
+   "score": 0.6296,
+   "runner_up": 0.2851,
+   "margin": 0.3444,
+   "chars": 11871,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/02-limits-constraints/governor-limits.md",
+   "page": "crash-course",
+   "score": 0.4624,
+   "runner_up": 0.2701,
+   "margin": 0.1924,
+   "chars": 9983,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/02-limits-constraints/inspection-and-drills.md",
+   "page": "devops-engineer",
+   "score": 0.4276,
+   "runner_up": 0.2724,
+   "margin": 0.1553,
+   "chars": 4971,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/02-limits-constraints/other-limits-and-system-settings.md",
+   "page": "devops-engineer",
+   "score": 0.4573,
+   "runner_up": 0.3075,
+   "margin": 0.1498,
+   "chars": 9690,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/03-devops-tools/copado-autorabit-devopscenter.md",
+   "page": "devops-engineer",
+   "score": 0.4919,
+   "runner_up": 0.1846,
+   "margin": 0.3073,
+   "chars": 8851,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/03-devops-tools/gearset-click-paths.md",
+   "page": "devops-engineer",
+   "score": 0.4269,
+   "runner_up": 0.1548,
+   "margin": 0.2721,
+   "chars": 11960,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/03-devops-tools/tool-landscape.md",
+   "page": "devops-engineer",
+   "score": 0.3455,
+   "runner_up": 0.1383,
+   "margin": 0.2073,
+   "chars": 4239,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/04-cicd/auth-secrets-environments.md",
+   "page": "devops-engineer",
+   "score": 0.2907,
+   "runner_up": 0.1207,
+   "margin": 0.17,
+   "chars": 6076,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/04-cicd/github-actions-salesforce.md",
+   "page": "devops-engineer",
+   "score": 0.4708,
+   "runner_up": 0.1324,
+   "margin": 0.3385,
+   "chars": 10617,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/04-cicd/other-ci-platforms.md",
+   "page": "devops-engineer",
+   "score": 0.3049,
+   "runner_up": 0.0991,
+   "margin": 0.2057,
+   "chars": 5372,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/05-certifications/certification-landscape.md",
+   "page": "devops-engineer",
+   "score": 0.181,
+   "runner_up": 0.1178,
+   "margin": 0.0632,
+   "chars": 4777,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/05-certifications/salesforce-credentials.md",
+   "page": "devops-engineer",
+   "score": 0.2622,
+   "runner_up": 0.2207,
+   "margin": 0.0415,
+   "chars": 8528,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/05-certifications/vendor-and-study-plan.md",
+   "page": "devops-engineer",
+   "score": 0.2913,
+   "runner_up": 0.1681,
+   "margin": 0.1231,
+   "chars": 5270,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/06-term-deep-dives/term-entries.md",
+   "page": "devops-engineer",
+   "score": 0.5198,
+   "runner_up": 0.1954,
+   "margin": 0.3244,
+   "chars": 21619,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/06-term-deep-dives/term-index.md",
+   "page": "devops-engineer",
+   "score": 0.2237,
+   "runner_up": 0.1127,
+   "margin": 0.111,
+   "chars": 4434,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/07-merge/content-gaps.md",
+   "page": "devops-engineer",
+   "score": 0.27,
+   "runner_up": 0.1349,
+   "margin": 0.135,
+   "chars": 6997,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/07-merge/merge-map.md",
+   "page": "devops-engineer",
+   "score": 0.2495,
+   "runner_up": 0.1565,
+   "margin": 0.0929,
+   "chars": 9115,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/08-cross-bundle-notes.md",
+   "page": "devops-engineer",
+   "score": 0.2771,
+   "runner_up": 0.1398,
+   "margin": 0.1372,
+   "chars": 7315,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/PLAN.md",
+   "page": "devops-engineer",
+   "score": 0.3296,
+   "runner_up": 0.1482,
+   "margin": 0.1813,
+   "chars": 9545,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14T023507_salesforcemore-v2/README.md",
+   "page": "devops-engineer",
+   "score": 0.2196,
+   "runner_up": 0.1,
+   "margin": 0.1197,
+   "chars": 5596,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14_salesforceagain-v3_devops-gearset-ui-deep-dive.md",
+   "page": "devops-engineer",
+   "score": 0.3893,
+   "runner_up": 0.2698,
+   "margin": 0.1194,
+   "chars": 18277,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14_salesforceagain-v3_devops-github-cicd-pipeline.md",
+   "page": "devops-engineer",
+   "score": 0.4596,
+   "runner_up": 0.2198,
+   "margin": 0.2399,
+   "chars": 15691,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14_salesforceagain-v3_devops-governor-limits-deep-dive.md",
+   "page": "crash-course",
+   "score": 0.5157,
+   "runner_up": 0.34,
+   "margin": 0.1756,
+   "chars": 20697,
+   "kind": "inferred"
+  },
+  {
+   "file": "2026-11-14_salesforceagain-v3_devops-metadata-dependencies-deep-dive.md",
+   "page": "devops-engineer",
+   "score": 0.3806,
+   "runner_up": 0.2239,
+   "margin": 0.1567,
+   "chars": 18619,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020300-salesforceagain-kilo/00-consolidated-review-copy.md",
+   "page": "devops-engineer",
+   "score": 0.7308,
+   "runner_up": 0.3334,
+   "margin": 0.3974,
+   "chars": 261164,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020300-salesforceagain-kilo/00-plan.md",
+   "page": "devops-engineer",
+   "score": 0.3749,
+   "runner_up": 0.1914,
+   "margin": 0.1835,
+   "chars": 8863,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020300-salesforceagain-kilo/00-research-bundle-convention.md",
+   "page": "devops-engineer",
+   "score": 0.131,
+   "runner_up": 0.0576,
+   "margin": 0.0734,
+   "chars": 2785,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020300-salesforceagain-kilo/01-jd-crossreference.md",
+   "page": "devops-engineer",
+   "score": 0.5344,
+   "runner_up": 0.2251,
+   "margin": 0.3093,
+   "chars": 16601,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020300-salesforceagain-kilo/02-limits-and-constraints.md",
+   "page": "devops-engineer",
+   "score": 0.5383,
+   "runner_up": 0.3736,
+   "margin": 0.1646,
+   "chars": 26666,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020300-salesforceagain-kilo/03-devops-tools-ui.md",
+   "page": "devops-engineer",
+   "score": 0.4617,
+   "runner_up": 0.244,
+   "margin": 0.2178,
+   "chars": 38507,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020300-salesforceagain-kilo/04-github-actions-salesforce-cicd.md",
+   "page": "devops-engineer",
+   "score": 0.5464,
+   "runner_up": 0.191,
+   "margin": 0.3554,
+   "chars": 34675,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020300-salesforceagain-kilo/05-jd-term-deep-dive.md",
+   "page": "devops-engineer",
+   "score": 0.804,
+   "runner_up": 0.2447,
+   "margin": 0.5592,
+   "chars": 43352,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020300-salesforceagain-kilo/06-certifications-curriculum.md",
+   "page": "devops-engineer",
+   "score": 0.2865,
+   "runner_up": 0.1947,
+   "margin": 0.0918,
+   "chars": 15162,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020300-salesforceagain-kilo/07-system-properties-setup-paths.md",
+   "page": "devops-engineer",
+   "score": 0.5409,
+   "runner_up": 0.3391,
+   "margin": 0.2019,
+   "chars": 19561,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020300-salesforceagain-kilo/08-cross-bundle-delta.md",
+   "page": "devops-engineer",
+   "score": 0.3305,
+   "runner_up": 0.1627,
+   "margin": 0.1678,
+   "chars": 13329,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020300-salesforceagain-kilo/README.md",
+   "page": "devops-engineer",
+   "score": 0.3402,
+   "runner_up": 0.1935,
+   "margin": 0.1467,
+   "chars": 8967,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020300-salesforceagain-kilo/sources.md",
+   "page": "devops-engineer",
+   "score": 0.237,
+   "runner_up": 0.1301,
+   "margin": 0.1069,
+   "chars": 27159,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020852-salesforcemore/PLAN.md",
+   "page": "devops-engineer",
+   "score": 0.3373,
+   "runner_up": 0.1488,
+   "margin": 0.1885,
+   "chars": 4609,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020852-salesforcemore/SALESFORCE_DEVOPS_DEEP_DIVE.md",
+   "page": "devops-engineer",
+   "score": 0.7577,
+   "runner_up": 0.2361,
+   "margin": 0.5216,
+   "chars": 35138,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020852-salesforcemore/SALESFORCE_LIMITS_DEEP_DIVE.md",
+   "page": "devops-engineer",
+   "score": 0.5571,
+   "runner_up": 0.4194,
+   "margin": 0.1377,
+   "chars": 18039,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020852-salesforcemore/certification-research/CERTIFICATION_RESEARCH.md",
+   "page": "devops-engineer",
+   "score": 0.1505,
+   "runner_up": 0.1178,
+   "margin": 0.0327,
+   "chars": 6020,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020852-salesforcemore/merge-against-pages/MAPPING_MATRIX.md",
+   "page": "devops-engineer",
+   "score": 0.2044,
+   "runner_up": 0.1599,
+   "margin": 0.0445,
+   "chars": 6573,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020852-salesforcemore/salesforce-principles/KEY_PRINCIPLES.md",
+   "page": "devops-engineer",
+   "score": 0.5543,
+   "runner_up": 0.3329,
+   "margin": 0.2214,
+   "chars": 11743,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020852-salesforcemore/source-capture/README.md",
+   "page": "devops-engineer",
+   "score": 0.096,
+   "runner_up": 0.0586,
+   "margin": 0.0374,
+   "chars": 1633,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020852-salesforcemore/source-capture/crash-course.md",
+   "page": "crash-course",
+   "score": 0.8613,
+   "runner_up": 0.4864,
+   "margin": 0.3749,
+   "chars": 15672,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020852-salesforcemore/source-capture/github-repo-readme.md",
+   "page": "devops-engineer",
+   "score": 0.114,
+   "runner_up": 0.0552,
+   "margin": 0.0587,
+   "chars": 935,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020852-salesforcemore/source-capture/labs-design.md",
+   "page": "labs-design",
+   "score": 0.8993,
+   "runner_up": 0.4385,
+   "margin": 0.4608,
+   "chars": 10847,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020852-salesforcemore/source-capture/navigation-breadcrumbs.md",
+   "page": "navigation-breadcrumbs",
+   "score": 0.9546,
+   "runner_up": 0.4052,
+   "margin": 0.5494,
+   "chars": 7737,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-020852-salesforcemore/source-capture/user-management-data.md",
+   "page": "user-management-data",
+   "score": 0.9955,
+   "runner_up": 0.3182,
+   "margin": 0.6773,
+   "chars": 12458,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-023241-salesforceagain-v2/01-limits-governors-and-system-properties.md",
+   "page": "crash-course",
+   "score": 0.3473,
+   "runner_up": 0.3285,
+   "margin": 0.0188,
+   "chars": 32627,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-023241-salesforceagain-v2/02-metadata-dependencies-and-deployment-constraints.md",
+   "page": "devops-engineer",
+   "score": 0.3999,
+   "runner_up": 0.2417,
+   "margin": 0.1582,
+   "chars": 22469,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-023241-salesforceagain-v2/03-devops-tools-ui-walkthroughs.md",
+   "page": "devops-engineer",
+   "score": 0.3623,
+   "runner_up": 0.1731,
+   "margin": 0.1892,
+   "chars": 22106,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-023241-salesforceagain-v2/04-cicd-github-salesforce.md",
+   "page": "devops-engineer",
+   "score": 0.4945,
+   "runner_up": 0.148,
+   "margin": 0.3465,
+   "chars": 23851,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-023241-salesforceagain-v2/05-jd-term-by-term.md",
+   "page": "devops-engineer",
+   "score": 0.3952,
+   "runner_up": 0.1821,
+   "margin": 0.2132,
+   "chars": 31452,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-023241-salesforceagain-v2/06-certifications-and-curriculum.md",
+   "page": "devops-engineer",
+   "score": 0.2138,
+   "runner_up": 0.1967,
+   "margin": 0.0171,
+   "chars": 16644,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-023241-salesforceagain-v2/INDEX.md",
+   "page": "devops-engineer",
+   "score": 0.293,
+   "runner_up": 0.1352,
+   "margin": 0.1579,
+   "chars": 2558,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-023241-salesforceagain-v2/PLAN.md",
+   "page": "devops-engineer",
+   "score": 0.3893,
+   "runner_up": 0.208,
+   "margin": 0.1813,
+   "chars": 8608,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-023241-salesforceagain-v2/README.md",
+   "page": "devops-engineer",
+   "score": 0.2881,
+   "runner_up": 0.1583,
+   "margin": 0.1299,
+   "chars": 4647,
+   "kind": "inferred"
+  },
+  {
+   "file": "20261114-023241-salesforceagain-v2/sources.md",
+   "page": "devops-engineer",
+   "score": 0.3284,
+   "runner_up": 0.1962,
+   "margin": 0.1322,
+   "chars": 9559,
+   "kind": "inferred"
+  },
+  {
+   "file": "salesforceagain-v4-2026-11-14-0230/README.md",
+   "page": "devops-engineer",
+   "score": 0.143,
+   "runner_up": 0.0776,
+   "margin": 0.0655,
+   "chars": 913,
+   "kind": "inferred"
+  },
+  {
+   "file": "salesforceagain-v4-2026-11-14-0230/comprehensive-devops-research.md",
+   "page": "devops-engineer",
+   "score": 0.7171,
+   "runner_up": 0.3166,
+   "margin": 0.4005,
+   "chars": 28212,
+   "kind": "inferred"
+  },
+  {
+   "file": "salesforceagain-v4-2026-11-14-0230/research-plan.md",
+   "page": "labs-design",
+   "score": 0.0814,
+   "runner_up": 0.0758,
+   "margin": 0.0056,
+   "chars": 1780,
+   "kind": "inferred"
+  }
+ ]
+}
