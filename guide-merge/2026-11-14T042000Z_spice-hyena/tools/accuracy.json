@@ -1,0 +1,47 @@
+{
+ "live site": {
+  "denies": 2,
+  "asserts": 4,
+  "silent": 2,
+  "detail": {
+   "heap_is_6_12": "ASSERTS",
+   "one_pct_rule": "NOT_ADDRESSED",
+   "payload_400mb": "NOT_ADDRESSED",
+   "no_test_run_prod": "DENIES",
+   "deactivated_cannot_reactivate": "ASSERTS",
+   "system_properties_exist": "ASSERTS",
+   "apex_jobs_setup_path": "ASSERTS",
+   "devops_cert_none": "DENIES"
+  }
+ },
+ "merged pages": {
+  "denies": 5,
+  "asserts": 0,
+  "silent": 3,
+  "detail": {
+   "heap_is_6_12": "DENIES",
+   "one_pct_rule": "DENIES",
+   "payload_400mb": "DENIES",
+   "no_test_run_prod": "NOT_ADDRESSED",
+   "deactivated_cannot_reactivate": "NOT_ADDRESSED",
+   "system_properties_exist": "DENIES",
+   "apex_jobs_setup_path": "DENIES",
+   "devops_cert_none": "NOT_ADDRESSED"
+  }
+ },
+ "repo bundles": {
+  "denies": 0,
+  "asserts": 3,
+  "silent": 5,
+  "detail": {
+   "heap_is_6_12": "ASSERTS",
+   "one_pct_rule": "ASSERTS",
+   "payload_400mb": "NOT_ADDRESSED",
+   "no_test_run_prod": "NOT_ADDRESSED",
+   "deactivated_cannot_reactivate": "NOT_ADDRESSED",
+   "system_properties_exist": "NOT_ADDRESSED",
+   "apex_jobs_setup_path": "ASSERTS",
+   "devops_cert_none": "NOT_ADDRESSED"
+  }
+ }
+}

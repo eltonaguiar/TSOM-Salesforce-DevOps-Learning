@@ -1,0 +1,34 @@
+{
+ "heap_is_6_12": [
+  "FALSE",
+  "heap is 10 MB/25 MB; 6/12 is callout request size"
+ ],
+ "one_pct_rule": [
+  "FALSE",
+  "no per-class/per-trigger 1% floor; 75% org-wide, or per-item 75% under RunSpecifiedTests"
+ ],
+ "payload_400mb": [
+  "FALSE",
+  "~39 MB compressed / ~600 MB uncompressed"
+ ],
+ "no_test_run_prod": [
+  "FALSE",
+  "NoTestRun is development-only; prod with Apex requires a test run"
+ ],
+ "deactivated_cannot_reactivate": [
+  "FALSE",
+  "deactivated users can be reactivated"
+ ],
+ "system_properties_exist": [
+  "FALSE",
+  "no general-purpose property store; named settings, not property keys"
+ ],
+ "apex_jobs_setup_path": [
+  "FALSE",
+  "consolidated into Setup > Background Jobs"
+ ],
+ "devops_cert_none": [
+  "FALSE",
+  "no official 'Salesforce DevOps Engineer' certification"
+ ]
+}
