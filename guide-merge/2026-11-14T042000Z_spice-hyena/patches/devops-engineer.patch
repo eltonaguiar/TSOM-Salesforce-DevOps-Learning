@@ -1,5 +1,5 @@
 --- originals/devops-engineer.md	2026-11-14 04:21:34.636909672 +0000
-+++ merged/devops-engineer.md	2026-11-14 04:22:46.684036174 +0000
++++ merged/devops-engineer.md	2026-11-14 04:30:42.508610099 +0000
 @@ -17,6 +17,7 @@
  - [Training items](#training-items)
  - [1. Source of truth](#1-source-of-truth)
@@ -8,17 +8,18 @@
  - [3. Environments and sandboxes](#3-environments-and-sandboxes)
  - [4. Branching](#4-branching)
  - [5. CI/CD](#5-cicd)
-@@ -24,6 +25,9 @@
+@@ -24,6 +25,10 @@
  - [7. Conflict clinic](#7-conflict-clinic)
  - [8. Packages](#8-packages)
  - [9. Tests and validation](#9-tests-and-validation)
 +  - [The five test levels](#the-five-test-levels)
 +  - [Coverage is three different rules](#coverage-is-three-different-rules-not-one)
 +  - [`validate`, the 10-day window, and the sandbox trap](#validate-the-10-day-window-and-the-sandbox-trap)
++  - [Which payloads force a test run](#which-payloads-force-a-test-run--and-the-version-trap)
  - [10. Releases, hotfixes, rollback](#10-releases-hotfixes-rollback)
  - [11. Banking change control](#11-banking-change-control)
  - [12. Design patterns you have to coach](#12-design-patterns-you-have-to-coach)
-@@ -140,6 +144,67 @@
+@@ -140,6 +145,101 @@
  
  Governor limits still matter to you even if you are not writing the trigger. A deploy can succeed and the feature can still fall over in prod because the code is not bulkified. Read the [governor-limits section of the crash course](./crash-course.md) before you sign off on an Apex story. Your question in review: "what happens when this runs on 200 records?"
  
@@ -74,6 +75,40 @@
 +This is why the release calendar exists, and why "I'll just deploy my fix quickly" is a release-control
 +problem even when the fix is one field.
 +
++### Which payloads force a test run — and the version trap
++
++This is the question that decides how long a validation takes, and it has a **version-dependent** answer that
++a lot of training material gets wrong.
++
++| Metadata API version | What triggers a test run |
++|---|---|
++| **33.0 and earlier** | A long list of types: `ApexClass`, `ApexComponent`, `ApexPage`, `ApexTrigger`, `ArticleType`, `BaseSharingRule`, `CriteriaBasedSharingRule`, `CustomField`, `CustomObject`, `DataCategoryGroup`, `Flow`, `InstalledPackage`, `NamedFilter`, `OwnerSharingRule`, `PermissionSet`, `Profile`, `Queue`, `RecordType`, `RemoteSiteSetting`, `Role`, `SharingReason`, `Territory`, `ValidationRule`, `Workflow` |
++| **34.0 and later (current)** | **Only Apex classes and Apex triggers.** If the payload has no Apex component, **no tests run by default** |
++
++The official page states it with an example:
++
++> "if your package contains a custom object, all tests are run in API version 33.0 and earlier. In contrast,
++> **starting with API version 34.0, no tests are run for this package.**"
++
++**Why this matters, and why the 24-type list still circulates.** Salesforce's "Running Tests in a Deployment"
++page lists the 24 types as triggering a test run, which is correct **for API 33.0 and earlier**. That list has
++been copied forward for a decade, and several current training documents present it as the modern rule. It is
++not. On any supported API version, a payload of `CustomField`, `Profile`, `Flow` or `ValidationRule` alone runs
++**zero tests**.
++
++The practical consequence: a deploy that looks like it should have been slow and safe is neither. It is slow
++because of compile time and it is *not* validated, because nothing ran. If you want a config-only deploy to be
++validated, you must **set the test level explicitly** — the default will not do it.
++
++Two related traps from the same page:
++
++- `NoTestRun` is only valid for **development environments** (sandbox, Developer Edition, trial). It is the
++  default there, and it is rejected in production when the payload contains Apex.
++- `RunLocalTests` is the **default for production deployments that contain Apex** — and it is enforced
++  regardless of payload contents. If you set it on a config-only deploy, you get the full run anyway.
++
++Source: [Running Tests in a Deployment](https://developer.salesforce.com/docs/platform/api-metadata/guide/meta-deploy-running-tests.html).
++
 +### Intra-payload references resolve; ordering is not the mechanism
 +
 +The Metadata API resolves references **within** a payload. If class A uses class B and both are in the same
@@ -86,7 +121,7 @@
  ---
  
  ## 3. Environments and sandboxes
-@@ -357,12 +422,63 @@
+@@ -357,12 +457,63 @@
  Production rules you can say without notes:
  
  - A payload with Apex must run tests

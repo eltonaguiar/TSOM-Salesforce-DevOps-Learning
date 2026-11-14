@@ -28,6 +28,7 @@
   - [The five test levels](#the-five-test-levels)
   - [Coverage is three different rules](#coverage-is-three-different-rules-not-one)
   - [`validate`, the 10-day window, and the sandbox trap](#validate-the-10-day-window-and-the-sandbox-trap)
+  - [Which payloads force a test run](#which-payloads-force-a-test-run--and-the-version-trap)
 - [10. Releases, hotfixes, rollback](#10-releases-hotfixes-rollback)
 - [11. Banking change control](#11-banking-change-control)
 - [12. Design patterns you have to coach](#12-design-patterns-you-have-to-coach)
@@ -195,6 +196,40 @@ engineering:
 
 This is why the release calendar exists, and why "I'll just deploy my fix quickly" is a release-control
 problem even when the fix is one field.
+
+### Which payloads force a test run — and the version trap
+
+This is the question that decides how long a validation takes, and it has a **version-dependent** answer that
+a lot of training material gets wrong.
+
+| Metadata API version | What triggers a test run |
+|---|---|
+| **33.0 and earlier** | A long list of types: `ApexClass`, `ApexComponent`, `ApexPage`, `ApexTrigger`, `ArticleType`, `BaseSharingRule`, `CriteriaBasedSharingRule`, `CustomField`, `CustomObject`, `DataCategoryGroup`, `Flow`, `InstalledPackage`, `NamedFilter`, `OwnerSharingRule`, `PermissionSet`, `Profile`, `Queue`, `RecordType`, `RemoteSiteSetting`, `Role`, `SharingReason`, `Territory`, `ValidationRule`, `Workflow` |
+| **34.0 and later (current)** | **Only Apex classes and Apex triggers.** If the payload has no Apex component, **no tests run by default** |
+
+The official page states it with an example:
+
+> "if your package contains a custom object, all tests are run in API version 33.0 and earlier. In contrast,
+> **starting with API version 34.0, no tests are run for this package.**"
+
+**Why this matters, and why the 24-type list still circulates.** Salesforce's "Running Tests in a Deployment"
+page lists the 24 types as triggering a test run, which is correct **for API 33.0 and earlier**. That list has
+been copied forward for a decade, and several current training documents present it as the modern rule. It is
+not. On any supported API version, a payload of `CustomField`, `Profile`, `Flow` or `ValidationRule` alone runs
+**zero tests**.
+
+The practical consequence: a deploy that looks like it should have been slow and safe is neither. It is slow
+because of compile time and it is *not* validated, because nothing ran. If you want a config-only deploy to be
+validated, you must **set the test level explicitly** — the default will not do it.
+
+Two related traps from the same page:
+
+- `NoTestRun` is only valid for **development environments** (sandbox, Developer Edition, trial). It is the
+  default there, and it is rejected in production when the payload contains Apex.
+- `RunLocalTests` is the **default for production deployments that contain Apex** — and it is enforced
+  regardless of payload contents. If you set it on a config-only deploy, you get the full run anyway.
+
+Source: [Running Tests in a Deployment](https://developer.salesforce.com/docs/platform/api-metadata/guide/meta-deploy-running-tests.html).
 
 ### Intra-payload references resolve; ordering is not the mechanism
 

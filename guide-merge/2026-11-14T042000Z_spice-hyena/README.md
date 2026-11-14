@@ -18,6 +18,32 @@ All agents' work from `forreviews/`, deduplicated and merged into the five publi
 | `merged/` | The five merged pages — drop-in replacements |
 | `patches/` | Unified diffs, `originals/` → `merged/`, for line-level review |
 | `sources/` | All 85 `forreviews/` files, preserved verbatim so the merge is auditable |
+| `SUBQ_DECISION_TRAIL.md` | Five SubQ decision calls used to prioritise what to add, and what verification changed |
+
+---
+
+## How the gaps were prioritised
+
+I did not guess which section needed the most work. I measured coverage of 43 release-engineering topics
+across the five pages, then put the ranking to **SubQ** — a decision model — and narrowed it with follow-up
+questions.
+
+| Question | Answer | Confidence |
+|---|---|---|
+| Which page has the most genuinely missing content | `devops-engineer` | 0.887 |
+| Which section is most incomplete | §2 vs §9 — split | 0.370 |
+| Head-to-head §2 vs §9 | **§2 Metadata that breaks releases** | 0.782 |
+| What content is most needed | C vs A — split | 0.268 |
+| Head-to-head A vs C | **metadata types / what forces a test run** | 0.706 |
+
+Full reasoning and probability tables in `SUBQ_DECISION_TRAIL.md`.
+
+**Verification overrode the model.** SubQ selected the "24 metadata types that force a full local test run".
+That list is correct only for **Metadata API 33.0 and earlier**. Since 34.0, only Apex classes and triggers
+force a test run — a `CustomField`/`Profile`/`Flow`/`ValidationRule` payload alone runs **zero tests**. The
+list had been copied forward for a decade, including into the research bundles. It is now on the page with the
+version distinction, the official example, and why it matters: a config-only deploy that looks validated is
+not, because nothing ran.
 
 ---
 
