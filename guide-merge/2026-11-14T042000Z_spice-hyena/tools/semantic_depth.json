@@ -1,0 +1,82 @@
+[
+ {
+  "concept": "heap",
+  "site_top5": 0.354,
+  "repo_top5": 0.659,
+  "site_frac": 0.0333,
+  "repo_frac": 0.0178,
+  "winner": "repo"
+ },
+ {
+  "concept": "coverage",
+  "site_top5": 0.389,
+  "repo_top5": 0.635,
+  "site_frac": 0.0333,
+  "repo_frac": 0.0298,
+  "winner": "repo"
+ },
+ {
+  "concept": "payload",
+  "site_top5": 0.294,
+  "repo_top5": 0.694,
+  "site_frac": 0.0,
+  "repo_frac": 0.0567,
+  "winner": "repo"
+ },
+ {
+  "concept": "test_trigger",
+  "site_top5": 0.418,
+  "repo_top5": 0.65,
+  "site_frac": 0.1667,
+  "repo_frac": 0.1084,
+  "winner": "repo"
+ },
+ {
+  "concept": "quick_deploy",
+  "site_top5": 0.47,
+  "repo_top5": 0.764,
+  "site_frac": 0.15,
+  "repo_frac": 0.1088,
+  "winner": "repo"
+ },
+ {
+  "concept": "destructive",
+  "site_top5": 0.438,
+  "repo_top5": 0.602,
+  "site_frac": 0.0667,
+  "repo_frac": 0.0966,
+  "winner": "repo"
+ },
+ {
+  "concept": "sandbox",
+  "site_top5": 0.397,
+  "repo_top5": 0.682,
+  "site_frac": 0.0333,
+  "repo_frac": 0.0223,
+  "winner": "repo"
+ },
+ {
+  "concept": "branching",
+  "site_top5": 0.422,
+  "repo_top5": 0.683,
+  "site_frac": 0.1,
+  "repo_frac": 0.0729,
+  "winner": "repo"
+ },
+ {
+  "concept": "audit",
+  "site_top5": 0.393,
+  "repo_top5": 0.594,
+  "site_frac": 0.15,
+  "repo_frac": 0.0811,
+  "winner": "repo"
+ },
+ {
+  "concept": "conflict",
+  "site_top5": 0.467,
+  "repo_top5": 0.684,
+  "site_frac": 0.1833,
+  "repo_frac": 0.0638,
+  "winner": "repo"
+ }
+]
