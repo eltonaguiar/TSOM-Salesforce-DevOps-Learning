@@ -1,0 +1,183 @@
+{
+ "decisions": {
+  "port_merge": {
+   "question": "Should the merged pages replace the live Salesforce pages?",
+   "options": [
+    "port the merge",
+    "leave the live pages as they are"
+   ],
+   "evidence": {
+    "live_false_assertions": 4,
+    "merged_false_assertions": 0,
+    "live_missing_39MB": true,
+    "merged_adds_lines": 151,
+    "live_stale_setup_path": "Setup > Apex Jobs"
+   }
+  },
+  "canonical_devops_bundle": {
+   "question": "Which single bundle should be canonical for the devops-engineer page?",
+   "options": [
+    "20261114-020300-salesforceagain-kilo",
+    "2026-11-14T023507_salesforcemore-v2",
+    "the rest"
+   ],
+   "evidence": {
+    "kilo_false_assertions": 0,
+    "salesforcemore_false_assertions": 0,
+    "kilo_has_self_delta": true,
+    "salesforcemore_documents_own_corrections": true,
+    "others_false_assertions": 3,
+    "kilo_files": 13,
+    "salesforcemore_files": 24
+   }
+  },
+  "add_payload_ceilings": {
+   "question": "Should the site gain the Metadata API payload ceilings?",
+   "options": [
+    "add them",
+    "leave them out"
+   ],
+   "evidence": {
+    "site_occurrences_39MB": 0,
+    "site_occurrences_600MB": 0,
+    "site_payload_mentions": 13,
+    "repo_depth": 0.694,
+    "site_depth": 0.294,
+    "verified_against": "meta-deploy.html"
+   }
+  },
+  "add_missing_concepts": {
+   "question": "Should the five concepts absent from the site be added?",
+   "options": [
+    "add mfa, source_tracking, big_objects, mulesoft, einstein",
+    "leave them out"
+   ],
+   "evidence": {
+    "absent_from_site": 5,
+    "absent_from_repo": 0,
+    "missing_from_both": [
+     "heroku",
+     "tableau_crm"
+    ],
+    "role": "commercial-banking release engineering"
+   }
+  },
+  "delete_flat_twins": {
+   "question": "Delete the four flat duplicates of the salesforceyetagain-v2 folder?",
+   "options": [
+    "delete them",
+    "keep them"
+   ],
+   "evidence": {
+    "exact_duplicate_groups": 3,
+    "near_duplicate_pairs": 4,
+    "semantic_pairs_ge_060": 1,
+    "all_four_are": "salesforceyetagain-v2 folder vs flat twin"
+   }
+  },
+  "delete_redundant_branches": {
+   "question": "Delete the four research branches that are already on main?",
+   "options": [
+    "delete them",
+    "keep them"
+   ],
+   "evidence": {
+    "branches_ahead": 4,
+    "unique_content_on_branches": 0,
+    "verified_by": "git diff --stat origin/main origin/<branch>"
+   }
+  }
+ },
+ "answers": {
+  "port_merge": {
+   "type": "choice",
+   "choice": "option_0",
+   "probabilities": {
+    "options": 0.035023126751184464,
+    "option_0": 0.9554895758628845,
+    "option_1": 0.0009553860872983932,
+    "live_false_assertions": 0.0018928637728095055,
+    "merged_false_assertions": 0.0038049558643251657,
+    "live_missing_39MB": 0.0008453356567770243,
+    "merged_adds_lines": 0.0015040254220366478,
+    "live_stale_setup_path": 0.0004847221134696156
+   },
+   "confidence": 0.9491309438432965
+  },
+  "canonical_devops_bundle": {
+   "type": "choice",
+   "choice": "option_1",
+   "probabilities": {
+    "options": 0.08810804784297943,
+    "option_0": 0.20165018737316132,
+    "option_1": 0.560971200466156,
+    "option_2": 0.00801868736743927,
+    "kilo_false_assertions": 0.03196492791175842,
+    "salesforcemore_false_assertions": 0.05194896087050438,
+    "kilo_has_self_delta": 0.00491246348246932,
+    "salesforcemore_documents_own_corrections": 0.012629925273358822,
+    "others_false_assertions": 0.0050677224062383175,
+    "kilo_files": 0.006870999466627836,
+    "salesforcemore_files": 0.027856983244419098
+   },
+   "confidence": 0.5170683205127716
+  },
+  "add_payload_ceilings": {
+   "type": "choice",
+   "choice": "option_0",
+   "probabilities": {
+    "options": 0.015138528309762478,
+    "option_0": 0.9366022944450378,
+    "option_1": 0.014348316937685013,
+    "site_occurrences_39MB": 0.010305282659828663,
+    "site_occurrences_600MB": 0.004580322187393904,
+    "site_payload_mentions": 0.0011019922094419599,
+    "repo_depth": 0.011301064863801003,
+    "site_depth": 0.005907763727009296,
+    "verified_against": 0.0007146151619963348
+   },
+   "confidence": 0.9286775812506676
+  },
+  "add_missing_concepts": {
+   "type": "choice",
+   "choice": "option_0",
+   "probabilities": {
+    "options": 0.00767201604321599,
+    "option_0": 0.9575111865997314,
+    "option_1": 0.008778035640716553,
+    "absent_from_site": 0.003239680314436555,
+    "absent_from_repo": 0.021356824785470963,
+    "missing_from_both": 0.000663842773064971,
+    "role": 0.0007784142508171499
+   },
+   "confidence": 0.9504297176996866
+  },
+  "delete_flat_twins": {
+   "type": "choice",
+   "choice": "option_0",
+   "probabilities": {
+    "options": 0.011527868919074535,
+    "option_0": 0.9602958559989929,
+    "option_1": 0.010944684036076069,
+    "exact_duplicate_groups": 0.004641280975192785,
+    "near_duplicate_pairs": 0.006332949735224247,
+    "semantic_pairs_ge_060": 0.0011855593184009194,
+    "all_four_are": 0.005071829538792372
+   },
+   "confidence": 0.9536784986654917
+  },
+  "delete_redundant_branches": {
+   "type": "choice",
+   "choice": "option_0",
+   "probabilities": {
+    "options": 0.005121349822729826,
+    "option_0": 0.9700174331665039,
+    "option_1": 0.002648710273206234,
+    "branches_ahead": 0.0009070539963431656,
+    "unique_content_on_branches": 0.020712539553642273,
+    "verified_by": 0.0005929169710725546
+   },
+   "confidence": 0.9640209197998046
+  }
+ }
+}
