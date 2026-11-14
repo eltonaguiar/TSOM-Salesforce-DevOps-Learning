@@ -1,0 +1,44 @@
+[
+ {
+  "bundle": "2026-11-14T0210Z-salesforceyetagain-v2",
+  "depth": 0.569,
+  "files": 4,
+  "self_doc": 0,
+  "currency": 7
+ },
+ {
+  "bundle": "2026-11-14T023507_salesforcemore-v2",
+  "depth": 0.615,
+  "files": 24,
+  "self_doc": 1,
+  "currency": 23
+ },
+ {
+  "bundle": "20261114-020300-salesforceagain-kilo",
+  "depth": 0.616,
+  "files": 13,
+  "self_doc": 1,
+  "currency": 165
+ },
+ {
+  "bundle": "20261114-020852-salesforcemore",
+  "depth": 0.638,
+  "files": 12,
+  "self_doc": 1,
+  "currency": 18
+ },
+ {
+  "bundle": "20261114-023241-salesforceagain-v2",
+  "depth": 0.634,
+  "files": 10,
+  "self_doc": 1,
+  "currency": 19
+ },
+ {
+  "bundle": "salesforceagain-v4-2026-11-14-0230",
+  "depth": 0.544,
+  "files": 3,
+  "self_doc": 0,
+  "currency": 13
+ }
+]

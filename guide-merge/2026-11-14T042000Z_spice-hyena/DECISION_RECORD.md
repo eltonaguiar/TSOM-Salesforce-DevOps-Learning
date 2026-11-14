@@ -8,7 +8,7 @@ This is the output the whole comparison exists to produce. The analysis files me
 | Decision | Choice | Confidence |
 |---|---|---|
 | Port the merged pages to the live site | **port the merge** | 0.949 |
-| Canonical bundle for `devops-engineer` | *unresolved* | **0.517** |
+| Canonical bundle for `devops-engineer` | `salesforceagain-kilo` | **0.922** — see `BEST_MATCH.md` |
 | Add the Metadata API payload ceilings | **add them** | 0.929 |
 | Add the five concepts absent from the site | **add them** | 0.950 |
 | Delete the four flat duplicate files | **delete them** | 0.954 |
@@ -67,7 +67,12 @@ All four are behind `main` with no unique content.
 
 ## The one that does not resolve
 
-### Which bundle should be canonical for `devops-engineer` — **0.517**
+### Which bundle should be canonical for `devops-engineer` — RESOLVED at 0.922
+
+Originally 0.517 (open) because the evidence did not separate the candidates on accuracy alone. Resolved by
+measuring the axes that do separate them — depth and currency — and re-running as a best-match selection.
+`salesforceagain-kilo` wins on currency by 7-9x (165 current-CLI references vs 18-23) despite a 0.022 depth
+deficit. See `BEST_MATCH.md`.
 
 | Candidate | False assertions | Files | Self-documentation |
 |---|---|---|---|
