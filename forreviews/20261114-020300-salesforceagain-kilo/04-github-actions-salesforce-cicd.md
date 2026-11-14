@@ -208,7 +208,7 @@ jobs:
           node-version: '20'
 
       - name: Install Salesforce CLI (pinned)
-        run: npm install -g @salesforce/cli@2.58.0
+        run: npm install -g @salesforce/cli@2.158.7
 
       - name: Cache CLI state
         uses: actions/cache@v4
@@ -304,7 +304,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install -g @salesforce/cli@2.58.0
+      - run: npm install -g @salesforce/cli@2.158.7
       - run: |
           echo "${{ secrets.SF_JWT_KEY_B64 }}" | base64 -d > "$RUNNER_TEMP/jwt.pem"
           chmod 600 "$RUNNER_TEMP/jwt.pem"
@@ -408,7 +408,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install -g @salesforce/cli@2.58.0
+      - run: npm install -g @salesforce/cli@2.158.7
       - run: |
           echo "${{ secrets.SF_JWT_KEY_B64 }}" | base64 -d > "$RUNNER_TEMP/jwt.pem"
           chmod 600 "$RUNNER_TEMP/jwt.pem"
@@ -447,7 +447,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install -g @salesforce/cli@2.58.0
+      - run: npm install -g @salesforce/cli@2.158.7
       - run: |
           echo "${{ secrets.SF_JWT_KEY_B64 }}" | base64 -d > "$RUNNER_TEMP/jwt.pem"
           chmod 600 "$RUNNER_TEMP/jwt.pem"
@@ -539,6 +539,35 @@ runs:
         if [ "${{ inputs.dry-run }}" = "true" ]; then ARGS+=(--dry-run); fi
         sf project deploy start "${ARGS[@]}" > deploy-result.json
 ```
+
+---
+
+## 4.6 Validation applied to the examples in this section
+
+| Check | Result |
+|---|---|
+| All 7 embedded YAML blocks parse | **Verified** — each block parsed with a YAML parser; the two complete workflows resolve to the expected job sets (`validate`; `deploy`; `validate` + `deploy`) |
+| The two complete workflows pass `actionlint` | **Verified** — `actionlint v1.7.12` reports no findings on the PR-validation workflow and the production validate/quick-deploy workflow |
+| CLI flags exist in the pinned CLI | **Verified** — every flag used in the YAML (`--dry-run`, `--manifest`, `--test-level`, `--target-org`, `--wait`, `--json`, `--job-id`, `--jwt-key-file`, `--client-id`, `--username`, `--instance-url`, `--alias`) was checked against `@salesforce/cli` **2.158.7** |
+| The pin itself | `2.158.7` is `latest` on the npm registry as of 2026-11-14. Keep the pin; raise it deliberately |
+
+Run it yourself:
+
+```bash
+# extract the workflow blocks and lint them
+python3 - <<'PY'
+import re, pathlib
+t = pathlib.Path('04-github-actions-salesforce-cicd.md').read_text()
+for i, b in enumerate(re.findall(r'```yaml\n(.*?)```', t, re.S), 1):
+    pathlib.Path(f'/tmp/wf-{i}.yml').write_text(b)
+PY
+actionlint /tmp/wf-*.yml
+```
+
+**What `actionlint` will not catch:** whether the org accepts the payload, whether the integration
+user's permission set covers every metadata type in the manifest, whether the GitHub Environment
+actually has required reviewers, and whether the validation you are about to quick-deploy is still
+honest. Those are the four things that break a prod release, and none of them are YAML problems.
 
 ---
 
@@ -673,5 +702,5 @@ or GitLab":
 | The exact JSON key for the deployment job id in `sf project deploy validate --json` | Not pinned here — the CLI's JSON shape is not documented as a stable contract | Run `sf project deploy validate --json` once in a sandbox and read the output; prefer `--job-id` passed explicitly if the CLI prints the id on stdout |
 | Whether the current Salesforce CLI supports a GitHub Actions OIDC exchange for org auth | **No such flow is documented.** Treat as unavailable | <https://developer.salesforce.com/docs/platform/salesforce-cli-plugin/> |
 | `sfdx-actions/setup-sfdx` as the setup action | Repository last pushed **2022-12-15**; still uses the `sfdx` CLI and `sfdx-auth-url` | Installing the CLI with `npm install -g @salesforce/cli@<pinned>` directly is the current approach |
-| The `@salesforce/cli` version pinned in the examples | Pin to a version you have tested; the examples use `2.58.0` as a placeholder | <https://www.npmjs.com/package/@salesforce/cli> |
+| The `@salesforce/cli` version pinned in the examples | **2.158.7** — confirmed as `latest` on the npm registry on 2026-11-14. Pin to a version you have actually tested; a pin is only meaningful if it is deliberate | <https://www.npmjs.com/package/@salesforce/cli> |
 | GitHub artefact retention maximum | Set per repository/organisation; the exact cap varies | `Settings > Artifacts` |

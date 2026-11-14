@@ -2,7 +2,7 @@
 
 > **Unique file:** `forreviews/20261114-020300-salesforceagain-kilo/00-consolidated-review-copy.md`
 > **Tracking subfolder:** `forreviews/20261114-020300-salesforceagain-kilo/` (this folder — all artifacts live here)
-> **Worktree:** `salesforceagain`  ·  **Agent:** kilo  ·  **Research window:** 2026-11-14 02:03–02:33 UTC
+> **Worktree:** `salesforceagain`  ·  **Agent:** kilo  ·  **Research window:** 2026-11-14 02:03–02:40 UTC
 > **Repository:** <https://github.com/eltonaguiar/TSOM-Salesforce-DevOps-Learning> (branch `main`)
 > **Target page:** <https://eltonaguiar.github.io/ServiceNow_Learning_TSOM-_CSM_FSM_SalesCRM_HAM_ITSM/docs/salesforce/devops-engineer/>
 > **Job:** <https://jobs.scotiabank.com/job/Toronto-DevOps-Engineer%28Salesforce%29-ON-M5H-1A1/606915617/> (Req. 276046)
@@ -12,6 +12,25 @@ This is a single consolidated review copy of the research bundle in
 in the same folder. The same content is also committed on branch
 `research/salesforceagain-2026-11-14T020300Z` under
 `research/2026-11-14T020300Z-kilo-salesforceagain/`.
+
+**Other entries currently in `forreviews/`** (independent bundles from other worktrees — the merge
+round should reconcile them rather than pick one):
+
+| File | Worktree | Scope |
+|---|---|---|
+| `2026-11-14T023241_salesforceagain-v2.md` + `20261114-023241-salesforceagain-v2/` | `salesforceagain-v2` | A second independent round-1 bundle covering the same requisition |
+| `2026-11-14T023507_salesforcemore-v2.md` + `2026-11-14T023507_salesforcemore-v2/` | `salesforcemore-v2` | A third bundle, including the key-principles and merge-map artifacts |
+| `20261114-020852-salesforcemore/` | `salesforcemore` | A fourth bundle with limits and certification deep dives |
+| `2026-11-14T021036_salesforceyetagain-v3.md` and the `salesforceyetagain-v2` / `salesforceagain-v3` files | `salesforceyetagain-*`, `salesforceagain-v3` | Salesforce Crash Course research and topic deep dives |
+
+**What distinguishes this bundle:** every Salesforce CLI flag was read from the **plugin source**
+rather than the docs page (which returns 403 to automated requests), which caught two errors common
+in published runbooks — `sf org login jwt` has **no `--client-secret`** and takes
+**`--jwt-key-file`**, not `--jwt-key`; and `sf project deploy validate` **requires** Apex tests and
+is explicitly not intended for sandboxes. The two complete GitHub Actions workflows here were
+linted with `actionlint v1.7.12` (clean) and every flag was checked against `@salesforce/cli`
+**2.158.7**. It also carries the only copy of the **26 metadata types that force a full local test
+run** and a **16-item list of stale vendor labels not to repeat** (`03` §0 and §5).
 
 ---
 
@@ -30,12 +49,13 @@ in the same folder. The same content is also committed on branch
 | Part VIII | Org settings and system properties that change release behaviour | `07-system-properties-setup-paths.md` |
 | Part IX | Cross-bundle delta and reconciliation | `08-cross-bundle-delta.md` |
 | Part X | Sources — URL, access date, verification status | `sources.md` |
+| Part XI | Repository research-bundle convention and contributor rules | `00-research-bundle-convention.md` |
 
 ---
 
 ## Part 0 — Bundle manifest, method and headline findings
 
-*Source artifact: `research/2026-11-14T020300Z-kilo-salesforceagain/README.md`*
+*Source artifact: `forreviews/20261114-020300-salesforceagain-kilo/README.md`*
 
 
 | Field | Value |
@@ -43,6 +63,8 @@ in the same folder. The same content is also committed on branch
 | Bundle | `2026-11-14T020300Z-kilo-salesforceagain` |
 | Worktree | `salesforceagain` |
 | Agent | kilo |
+| Location on `main` | `forreviews/20261114-020300-salesforceagain-kilo/` (this folder) |
+| Consolidated single-file copy | `forreviews/20261114-020300-salesforceagain-kilo/00-consolidated-review-copy.md` |
 | Branch | `research/salesforceagain-2026-11-14T020300Z` (pushed to `origin`) |
 | Sibling bundle | `2026-11-14T021057Z_salesforcemore-v2` on branch `research/salesforcemore-v2-2026-11-14T021057Z` |
 | Research start | 2026-11-14T02:03:00Z |
@@ -100,6 +122,8 @@ metadata dependencies, and deployment constraints"*.
 
 | File | Contents |
 |---|---|
+| `00-consolidated-review-copy.md` | This whole bundle in one file (~36k words), for quick review. |
+| `00-research-bundle-convention.md` | The folder-naming convention and contributor rules for this repo. |
 | `00-plan.md` | Plan, JD → artifact matrix, source policy, confidence rubric. |
 | `01-jd-crossreference.md` | Every JD bullet → current page section → coverage verdict → what this bundle adds. |
 | `02-limits-and-constraints.md` | Governor limits, platform/org limits, Metadata API deploy limits, metadata dependencies, deployment constraints. |
@@ -134,7 +158,7 @@ metadata dependencies, and deployment constraints"*.
 
 ## Part I — Research plan — JD → artifact matrix, method, source policy
 
-*Source artifact: `research/2026-11-14T020300Z-kilo-salesforceagain/00-plan.md`*
+*Source artifact: `forreviews/20261114-020300-salesforceagain-kilo/00-plan.md`*
 
 
 ### 1. Objective
@@ -273,7 +297,7 @@ names the actual label instead. It never guesses.
 
 ## Part II — Job description × existing training page cross-reference
 
-*Source artifact: `research/2026-11-14T020300Z-kilo-salesforceagain/01-jd-crossreference.md`*
+*Source artifact: `forreviews/20261114-020300-salesforceagain-kilo/01-jd-crossreference.md`*
 
 
 **Job:** DevOps Engineer (Salesforce), Scotiabank, Toronto. Requisition 276046.
@@ -401,7 +425,7 @@ Each new item is a `<details>` block so the page stays scannable — the user's 
 
 ## Part III — Salesforce limits, metadata dependencies, deployment constraints
 
-*Source artifact: `research/2026-11-14T020300Z-kilo-salesforceagain/02-limits-and-constraints.md`*
+*Source artifact: `forreviews/20261114-020300-salesforceagain-kilo/02-limits-and-constraints.md`*
 
 
 > JD line covered: **"Understanding of Salesforce limits, metadata dependencies, and deployment
@@ -804,7 +828,7 @@ review cadence — not a default.
 
 ## Part IV — DevOps tools in practice — Gearset, Copado, AutoRABIT
 
-*Source artifact: `research/2026-11-14T020300Z-kilo-salesforceagain/03-devops-tools-ui.md`*
+*Source artifact: `forreviews/20261114-020300-salesforceagain-kilo/03-devops-tools-ui.md`*
 
 
 > JD line covered: **"Hands on experience with Salesforce DevOps tools such as: Gearset, Copado,
@@ -1418,7 +1442,7 @@ distinguishes a release engineer from a tool operator.
 
 ## Part V — GitHub Actions + Salesforce CI/CD
 
-*Source artifact: `research/2026-11-14T020300Z-kilo-salesforceagain/04-github-actions-salesforce-cicd.md`*
+*Source artifact: `forreviews/20261114-020300-salesforceagain-kilo/04-github-actions-salesforce-cicd.md`*
 
 
 > JD lines covered: R1 (design/implement/maintain CI/CD pipelines), R3 (scheduled/hotfix/emergency
@@ -1629,7 +1653,7 @@ jobs:
           node-version: '20'
 
       - name: Install Salesforce CLI (pinned)
-        run: npm install -g @salesforce/cli@2.58.0
+        run: npm install -g @salesforce/cli@2.158.7
 
       - name: Cache CLI state
         uses: actions/cache@v4
@@ -1725,7 +1749,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install -g @salesforce/cli@2.58.0
+      - run: npm install -g @salesforce/cli@2.158.7
       - run: |
           echo "${{ secrets.SF_JWT_KEY_B64 }}" | base64 -d > "$RUNNER_TEMP/jwt.pem"
           chmod 600 "$RUNNER_TEMP/jwt.pem"
@@ -1829,7 +1853,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install -g @salesforce/cli@2.58.0
+      - run: npm install -g @salesforce/cli@2.158.7
       - run: |
           echo "${{ secrets.SF_JWT_KEY_B64 }}" | base64 -d > "$RUNNER_TEMP/jwt.pem"
           chmod 600 "$RUNNER_TEMP/jwt.pem"
@@ -1868,7 +1892,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install -g @salesforce/cli@2.58.0
+      - run: npm install -g @salesforce/cli@2.158.7
       - run: |
           echo "${{ secrets.SF_JWT_KEY_B64 }}" | base64 -d > "$RUNNER_TEMP/jwt.pem"
           chmod 600 "$RUNNER_TEMP/jwt.pem"
@@ -1960,6 +1984,35 @@ runs:
         if [ "${{ inputs.dry-run }}" = "true" ]; then ARGS+=(--dry-run); fi
         sf project deploy start "${ARGS[@]}" > deploy-result.json
 ```
+
+---
+
+### 4.6 Validation applied to the examples in this section
+
+| Check | Result |
+|---|---|
+| All 7 embedded YAML blocks parse | **Verified** — each block parsed with a YAML parser; the two complete workflows resolve to the expected job sets (`validate`; `deploy`; `validate` + `deploy`) |
+| The two complete workflows pass `actionlint` | **Verified** — `actionlint v1.7.12` reports no findings on the PR-validation workflow and the production validate/quick-deploy workflow |
+| CLI flags exist in the pinned CLI | **Verified** — every flag used in the YAML (`--dry-run`, `--manifest`, `--test-level`, `--target-org`, `--wait`, `--json`, `--job-id`, `--jwt-key-file`, `--client-id`, `--username`, `--instance-url`, `--alias`) was checked against `@salesforce/cli` **2.158.7** |
+| The pin itself | `2.158.7` is `latest` on the npm registry as of 2026-11-14. Keep the pin; raise it deliberately |
+
+Run it yourself:
+
+```bash
+# extract the workflow blocks and lint them
+python3 - <<'PY'
+import re, pathlib
+t = pathlib.Path('04-github-actions-salesforce-cicd.md').read_text()
+for i, b in enumerate(re.findall(r'```yaml\n(.*?)```', t, re.S), 1):
+    pathlib.Path(f'/tmp/wf-{i}.yml').write_text(b)
+PY
+actionlint /tmp/wf-*.yml
+```
+
+**What `actionlint` will not catch:** whether the org accepts the payload, whether the integration
+user's permission set covers every metadata type in the manifest, whether the GitHub Environment
+actually has required reviewers, and whether the validation you are about to quick-deploy is still
+honest. Those are the four things that break a prod release, and none of them are YAML problems.
 
 ---
 
@@ -2094,13 +2147,13 @@ or GitLab":
 | The exact JSON key for the deployment job id in `sf project deploy validate --json` | Not pinned here — the CLI's JSON shape is not documented as a stable contract | Run `sf project deploy validate --json` once in a sandbox and read the output; prefer `--job-id` passed explicitly if the CLI prints the id on stdout |
 | Whether the current Salesforce CLI supports a GitHub Actions OIDC exchange for org auth | **No such flow is documented.** Treat as unavailable | <https://developer.salesforce.com/docs/platform/salesforce-cli-plugin/> |
 | `sfdx-actions/setup-sfdx` as the setup action | Repository last pushed **2022-12-15**; still uses the `sfdx` CLI and `sfdx-auth-url` | Installing the CLI with `npm install -g @salesforce/cli@<pinned>` directly is the current approach |
-| The `@salesforce/cli` version pinned in the examples | Pin to a version you have tested; the examples use `2.58.0` as a placeholder | <https://www.npmjs.com/package/@salesforce/cli> |
+| The `@salesforce/cli` version pinned in the examples | **2.158.7** — confirmed as `latest` on the npm registry on 2026-11-14. Pin to a version you have actually tested; a pin is only meaningful if it is deliberate | <https://www.npmjs.com/package/@salesforce/cli> |
 | GitHub artefact retention maximum | Set per repository/organisation; the exact cap varies | `Settings > Artifacts` |
 
 
 ## Part VI — Term-by-term deep dive of every JD phrase
 
-*Source artifact: `research/2026-11-14T020300Z-kilo-salesforceagain/05-jd-term-deep-dive.md`*
+*Source artifact: `forreviews/20261114-020300-salesforceagain-kilo/05-jd-term-deep-dive.md`*
 
 
 > Every JD phrase, with the **settings**, **variations**, **failure modes** and a one-line
@@ -2831,7 +2884,7 @@ What the release engineer needs from Apex, even if they do not write it:
 
 ## Part VII — Certifications named in the posting and their curricula
 
-*Source artifact: `research/2026-11-14T020300Z-kilo-salesforceagain/06-certifications-curriculum.md`*
+*Source artifact: `forreviews/20261114-020300-salesforceagain-kilo/06-certifications-curriculum.md`*
 
 
 > JD line covered: **"Salesforce certifications (PD1, Advanced Admin, DevOps related certs)"** (Q17).
@@ -3045,7 +3098,7 @@ Trailhead units. Two practical consequences:
 
 ## Part VIII — Org settings and system properties that change release behaviour
 
-*Source artifact: `research/2026-11-14T020300Z-kilo-salesforceagain/07-system-properties-setup-paths.md`*
+*Source artifact: `forreviews/20261114-020300-salesforceagain-kilo/07-system-properties-setup-paths.md`*
 
 
 > JD lines covered: R4 (audit/security/compliance), R6 (sandbox strategy), Q3 (limits and
@@ -3285,7 +3338,7 @@ production URL in Git.
 
 ## Part IX — Cross-bundle delta and reconciliation
 
-*Source artifact: `research/2026-11-14T020300Z-kilo-salesforceagain/08-cross-bundle-delta.md`*
+*Source artifact: `forreviews/20261114-020300-salesforceagain-kilo/08-cross-bundle-delta.md`*
 
 
 **For the merge round.** This bundle is one of two independent research drops for Scotiabank
@@ -3389,7 +3442,7 @@ tier. A task-to-screen table is stable; a screenshot of a sidebar is not.
 
 ## Part X — Sources — URL, access date, verification status
 
-*Source artifact: `research/2026-11-14T020300Z-kilo-salesforceagain/sources.md`*
+*Source artifact: `forreviews/20261114-020300-salesforceagain-kilo/sources.md`*
 
 
 All URLs accessed **2026-11-14 (UTC)** unless stated. Confidence tags follow `00-plan.md` §6.
@@ -3580,3 +3633,67 @@ is the literal string the CLI uses.
 | **Negative results** | Where a UI label could not be found, the artifact says so. This is deliberate: "not a current documented label" is a finding, silence would be a gap. The main negative results are listed in `03 §5`. |
 | **Vendor pricing** | Copado Essentials prices were read from copado.com on 2026-11-14 and are subject to change. Re-verify before quoting. |
 | **Not consulted** | Any local Salesforce org, any live vendor tenant, and any internal Scotiabank material. Every statement about what a bank "typically" does is framed as such. |
+
+
+## Part XI — Repository research-bundle convention and contributor rules
+
+*Source artifact: `forreviews/20261114-020300-salesforceagain-kilo/00-research-bundle-convention.md`*
+
+
+Each research bundle is a self-contained, timestamped research drop produced by one agent (or one
+agent worktree) against a single objective. Bundles are **inputs to a later merge round**, not
+published curriculum.
+
+
+### Folder naming
+
+```
+research/<UTC-timestamp>-<worktree-name>/
+```
+
+- `<UTC-timestamp>` — `YYYY-MM-DDTHHMMSSZ`, the moment the research started (not the commit time).
+- `<worktree-name>` — the agent worktree / session name. This is the uniqueness key. Two agents
+  working the same repo at the same minute must not collide, so the worktree name is mandatory.
+
+Examples:
+
+| Folder | Agent / worktree | Started (UTC) |
+|---|---|---|
+| `2026-11-14T020300Z-kilo-salesforceagain` | kilo / `salesforceagain` | 2026-11-14 02:03 |
+| `2026-11-14T021057Z_salesforcemore-v2` | kilo / `salesforcemore-v2` | 2026-11-14 02:10 |
+
+### Standard bundle layout
+
+| File / directory | Purpose |
+|---|---|
+| `README.md` | Bundle manifest: objective, scope, method, headline findings, known gaps. |
+| `00-plan.md` | The plan the work was executed against: JD → research-item matrix, method, source policy. |
+| `01-*.md` … `07-*.md` | Numbered research artifacts. The number is the canonical cross-bundle sort key. |
+| `sources.md` | Every URL used, with access date and a verification status (`verified` / `vendor-claim` / `unverified`). |
+
+### Rules for contributors
+
+1. **Do not edit another bundle.** Bundles are append-only per agent. The merge round owns consolidation.
+2. **Every factual claim carries a source.** If a UI label could not be verified, say so explicitly
+   rather than guessing — a wrong button name is worse than a gap.
+3. **Record premise corrections.** When current vendor documentation contradicts a widely repeated
+   claim (product names, tier names, button labels), the correction goes in the artifact itself
+   and in the "known corrections" table of the bundle README.
+4. **Mark confidence.** Use `verified` (primary source confirms it), `vendor-claim` (vendor states it,
+   not independently confirmed), `unverified` (could not confirm — say what would confirm it).
+5. **No secrets, no customer data.** Never paste tokens, certificates, sandbox URLs, or customer rows.
+
+### Merge round
+
+The merge agent takes the bundles and produces the publishable page(s) under
+`https://eltonaguiar.github.io/ServiceNow_Learning_TSOM-_CSM_FSM_SalesCRM_HAM_ITSM/docs/salesforce/devops-engineer/`,
+using the existing Salesforce guide pages as the surrounding structure:
+
+- Salesforce Crash Course
+- Navigation & Breadcrumbs
+- Labs & Design
+- User Management & Data
+- DevOps & Release Engineering
+
+Cross-bundle overlap is expected and fine. When two bundles disagree, prefer the one with a
+primary-source citation and record the resolution in the merge notes.
