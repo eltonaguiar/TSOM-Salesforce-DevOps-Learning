@@ -1,16 +1,17 @@
 # For review — Salesforce DevOps Engineer research bundle (Scotiabank requisition 276046)
 
-> **Unique file:** `forreviews/2026-11-14T020300_salesforceagain-kilo.md`
-> **Tracking subfolder:** `forreviews/20261114-020300-salesforceagain-kilo/` (the split, per-topic source of this file)
+> **Unique file:** `forreviews/20261114-020300-salesforceagain-kilo/00-consolidated-review-copy.md`
+> **Tracking subfolder:** `forreviews/20261114-020300-salesforceagain-kilo/` (this folder — all artifacts live here)
 > **Worktree:** `salesforceagain`  ·  **Agent:** kilo  ·  **Research window:** 2026-11-14 02:03–02:33 UTC
 > **Repository:** <https://github.com/eltonaguiar/TSOM-Salesforce-DevOps-Learning> (branch `main`)
 > **Target page:** <https://eltonaguiar.github.io/ServiceNow_Learning_TSOM-_CSM_FSM_SalesCRM_HAM_ITSM/docs/salesforce/devops-engineer/>
 > **Job:** <https://jobs.scotiabank.com/job/Toronto-DevOps-Engineer%28Salesforce%29-ON-M5H-1A1/606915617/> (Req. 276046)
 
 This is a single consolidated review copy of the research bundle in
-`forreviews/20261114-020300-salesforceagain-kilo/`. The same content is also committed as a
-multi-file bundle on branch `research/salesforceagain-2026-11-14T020300Z` under
-`research/2026-11-14T020300Z-kilo-salesforceagain/`, for readers who prefer one file per topic.
+`forreviews/20261114-020300-salesforceagain-kilo/`. The split, per-topic source files sit beside it
+in the same folder. The same content is also committed on branch
+`research/salesforceagain-2026-11-14T020300Z` under
+`research/2026-11-14T020300Z-kilo-salesforceagain/`.
 
 ---
 

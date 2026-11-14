@@ -6,7 +6,7 @@
 | Worktree | `salesforceagain` |
 | Agent | kilo |
 | Location on `main` | `forreviews/20261114-020300-salesforceagain-kilo/` (this folder) |
-| Consolidated single-file copy | `forreviews/2026-11-14T020300_salesforceagain-kilo.md` |
+| Consolidated single-file copy | `forreviews/20261114-020300-salesforceagain-kilo/00-consolidated-review-copy.md` |
 | Branch | `research/salesforceagain-2026-11-14T020300Z` (pushed to `origin`) |
 | Sibling bundle | `2026-11-14T021057Z_salesforcemore-v2` on branch `research/salesforcemore-v2-2026-11-14T021057Z` |
 | Research start | 2026-11-14T02:03:00Z |
@@ -63,6 +63,8 @@ metadata dependencies, and deployment constraints"*.
 
 | File | Contents |
 |---|---|
+| `00-consolidated-review-copy.md` | This whole bundle in one file (~36k words), for quick review. |
+| `00-research-bundle-convention.md` | The folder-naming convention and contributor rules for this repo. |
 | `00-plan.md` | Plan, JD → artifact matrix, source policy, confidence rubric. |
 | `01-jd-crossreference.md` | Every JD bullet → current page section → coverage verdict → what this bundle adds. |
 | `02-limits-and-constraints.md` | Governor limits, platform/org limits, Metadata API deploy limits, metadata dependencies, deployment constraints. |
