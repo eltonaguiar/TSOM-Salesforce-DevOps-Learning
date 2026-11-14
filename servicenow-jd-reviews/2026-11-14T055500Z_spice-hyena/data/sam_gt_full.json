@@ -1,0 +1,42 @@
+{
+ "end_to_end": {
+  "verdict": "PARTIAL",
+  "confidence": 0.667
+ },
+ "content_library": {
+  "verdict": "PARTIAL",
+  "confidence": 0.491
+ },
+ "entitlements_metrics": {
+  "verdict": "PARTIAL",
+  "confidence": 0.547
+ },
+ "reconciliation": {
+  "verdict": "PARTIAL",
+  "confidence": 0.558
+ },
+ "removal_reclamation": {
+  "verdict": "MISSING",
+  "confidence": 0.769
+ },
+ "saas_licence_mgmt": {
+  "verdict": "MISSING",
+  "confidence": 0.826
+ },
+ "publisher_packs": {
+  "verdict": "MISSING",
+  "confidence": 0.286
+ },
+ "cmdb_data_quality": {
+  "verdict": "PARTIAL",
+  "confidence": 0.656
+ },
+ "audit_readiness": {
+  "verdict": "PARTIAL",
+  "confidence": 0.445
+ },
+ "bank_angle": {
+  "verdict": "MISSING",
+  "confidence": 0.627
+ }
+}

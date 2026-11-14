@@ -1,0 +1,22 @@
+{
+ "ensemble": {
+  "end_to_end": "PARTIAL",
+  "content_library": "PARTIAL",
+  "entitlements_metrics": "PARTIAL",
+  "reconciliation": "MISSING",
+  "removal_reclamation": "MISSING",
+  "saas_licence_mgmt": "PARTIAL",
+  "publisher_packs": "MISSING",
+  "cmdb_data_quality": "PARTIAL",
+  "audit_readiness": "MISSING",
+  "bank_angle": "MISSING"
+ },
+ "usable_models": [
+  "gemma3:12b",
+  "qwen2.5:14b",
+  "qwen2.5-coder:14b",
+  "Qwen/Qwen2.5-14B-Instruct",
+  "qwen2.5:32b",
+  "llama3.1:8b"
+ ]
+}

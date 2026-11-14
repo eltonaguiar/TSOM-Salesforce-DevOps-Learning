@@ -1,0 +1,418 @@
+[
+ {
+  "page": "docs/cross-cutting.md",
+  "chars": 24704,
+  "hits": {
+   "server_scripting": 25,
+   "client_scripting": 28,
+   "gliderecord": 2,
+   "flow_designer": 29,
+   "integrations": 65,
+   "service_catalog": 0,
+   "itsm_process": 34,
+   "security_acl": 10,
+   "delivery": 49,
+   "retail_selfservice": 4
+  }
+ },
+ {
+  "page": "docs/interviews/code-deployment.md",
+  "chars": 16279,
+  "hits": {
+   "server_scripting": 10,
+   "client_scripting": 1,
+   "gliderecord": 0,
+   "flow_designer": 2,
+   "integrations": 9,
+   "service_catalog": 0,
+   "itsm_process": 12,
+   "security_acl": 0,
+   "delivery": 92,
+   "retail_selfservice": 4
+  }
+ },
+ {
+  "page": "docs/interviews/custom-application-development.md",
+  "chars": 19013,
+  "hits": {
+   "server_scripting": 25,
+   "client_scripting": 67,
+   "gliderecord": 14,
+   "flow_designer": 16,
+   "integrations": 4,
+   "service_catalog": 0,
+   "itsm_process": 6,
+   "security_acl": 16,
+   "delivery": 17,
+   "retail_selfservice": 4
+  }
+ },
+ {
+  "page": "docs/interviews/data-management-migration.md",
+  "chars": 15611,
+  "hits": {
+   "server_scripting": 0,
+   "client_scripting": 0,
+   "gliderecord": 0,
+   "flow_designer": 1,
+   "integrations": 74,
+   "service_catalog": 0,
+   "itsm_process": 10,
+   "security_acl": 0,
+   "delivery": 0,
+   "retail_selfservice": 4
+  }
+ },
+ {
+  "page": "docs/interviews/integrations.md",
+  "chars": 18510,
+  "hits": {
+   "server_scripting": 4,
+   "client_scripting": 2,
+   "gliderecord": 1,
+   "flow_designer": 71,
+   "integrations": 104,
+   "service_catalog": 0,
+   "itsm_process": 37,
+   "security_acl": 0,
+   "delivery": 5,
+   "retail_selfservice": 7
+  }
+ },
+ {
+  "page": "docs/interviews/prioritized-prep-list.md",
+  "chars": 16982,
+  "hits": {
+   "server_scripting": 10,
+   "client_scripting": 16,
+   "gliderecord": 4,
+   "flow_designer": 22,
+   "integrations": 37,
+   "service_catalog": 0,
+   "itsm_process": 30,
+   "security_acl": 8,
+   "delivery": 45,
+   "retail_selfservice": 16
+  }
+ },
+ {
+  "page": "docs/learning.md",
+  "chars": 1546,
+  "hits": {
+   "server_scripting": 0,
+   "client_scripting": 0,
+   "gliderecord": 0,
+   "flow_designer": 0,
+   "integrations": 0,
+   "service_catalog": 0,
+   "itsm_process": 0,
+   "security_acl": 0,
+   "delivery": 0,
+   "retail_selfservice": 5
+  }
+ },
+ {
+  "page": "docs/modules/ai/ai-guide.md",
+  "chars": 80188,
+  "hits": {
+   "server_scripting": 10,
+   "client_scripting": 17,
+   "gliderecord": 1,
+   "flow_designer": 69,
+   "integrations": 12,
+   "service_catalog": 7,
+   "itsm_process": 126,
+   "security_acl": 39,
+   "delivery": 26,
+   "retail_selfservice": 19
+  }
+ },
+ {
+  "page": "docs/modules/ai/javascript-reference.md",
+  "chars": 19822,
+  "hits": {
+   "server_scripting": 25,
+   "client_scripting": 54,
+   "gliderecord": 24,
+   "flow_designer": 9,
+   "integrations": 3,
+   "service_catalog": 0,
+   "itsm_process": 39,
+   "security_acl": 2,
+   "delivery": 7,
+   "retail_selfservice": 1
+  }
+ },
+ {
+  "page": "docs/modules/app-engine/app-engine-guide.md",
+  "chars": 23849,
+  "hits": {
+   "server_scripting": 9,
+   "client_scripting": 14,
+   "gliderecord": 0,
+   "flow_designer": 47,
+   "integrations": 10,
+   "service_catalog": 1,
+   "itsm_process": 22,
+   "security_acl": 11,
+   "delivery": 26,
+   "retail_selfservice": 10
+  }
+ },
+ {
+  "page": "docs/modules/cmdb/cmdb-guide.md",
+  "chars": 177990,
+  "hits": {
+   "server_scripting": 98,
+   "client_scripting": 78,
+   "gliderecord": 12,
+   "flow_designer": 118,
+   "integrations": 169,
+   "service_catalog": 4,
+   "itsm_process": 94,
+   "security_acl": 44,
+   "delivery": 58,
+   "retail_selfservice": 44
+  }
+ },
+ {
+  "page": "docs/modules/csm/csm-guide.md",
+  "chars": 34001,
+  "hits": {
+   "server_scripting": 11,
+   "client_scripting": 24,
+   "gliderecord": 3,
+   "flow_designer": 9,
+   "integrations": 12,
+   "service_catalog": 4,
+   "itsm_process": 52,
+   "security_acl": 2,
+   "delivery": 11,
+   "retail_selfservice": 45
+  }
+ },
+ {
+  "page": "docs/modules/discovery/discovery-guide.md",
+  "chars": 79519,
+  "hits": {
+   "server_scripting": 7,
+   "client_scripting": 14,
+   "gliderecord": 1,
+   "flow_designer": 30,
+   "integrations": 63,
+   "service_catalog": 0,
+   "itsm_process": 46,
+   "security_acl": 8,
+   "delivery": 11,
+   "retail_selfservice": 15
+  }
+ },
+ {
+  "page": "docs/modules/fsm/fsm-guide.md",
+  "chars": 29046,
+  "hits": {
+   "server_scripting": 11,
+   "client_scripting": 21,
+   "gliderecord": 3,
+   "flow_designer": 1,
+   "integrations": 10,
+   "service_catalog": 3,
+   "itsm_process": 19,
+   "security_acl": 3,
+   "delivery": 10,
+   "retail_selfservice": 2
+  }
+ },
+ {
+  "page": "docs/modules/ham/ham-guide.md",
+  "chars": 49129,
+  "hits": {
+   "server_scripting": 11,
+   "client_scripting": 18,
+   "gliderecord": 5,
+   "flow_designer": 2,
+   "integrations": 17,
+   "service_catalog": 3,
+   "itsm_process": 20,
+   "security_acl": 5,
+   "delivery": 7,
+   "retail_selfservice": 4
+  }
+ },
+ {
+  "page": "docs/modules/hrsd/hrsd-guide.md",
+  "chars": 29936,
+  "hits": {
+   "server_scripting": 12,
+   "client_scripting": 14,
+   "gliderecord": 0,
+   "flow_designer": 3,
+   "integrations": 14,
+   "service_catalog": 8,
+   "itsm_process": 46,
+   "security_acl": 50,
+   "delivery": 13,
+   "retail_selfservice": 26
+  }
+ },
+ {
+  "page": "docs/modules/itom/itom-guide.md",
+  "chars": 28563,
+  "hits": {
+   "server_scripting": 13,
+   "client_scripting": 14,
+   "gliderecord": 1,
+   "flow_designer": 2,
+   "integrations": 40,
+   "service_catalog": 0,
+   "itsm_process": 57,
+   "security_acl": 1,
+   "delivery": 8,
+   "retail_selfservice": 6
+  }
+ },
+ {
+  "page": "docs/modules/itsm/itsm-guide.md",
+  "chars": 74535,
+  "hits": {
+   "server_scripting": 13,
+   "client_scripting": 17,
+   "gliderecord": 9,
+   "flow_designer": 18,
+   "integrations": 52,
+   "service_catalog": 26,
+   "itsm_process": 582,
+   "security_acl": 4,
+   "delivery": 15,
+   "retail_selfservice": 46
+  }
+ },
+ {
+  "page": "docs/modules/other/other-guide.md",
+  "chars": 100866,
+  "hits": {
+   "server_scripting": 30,
+   "client_scripting": 26,
+   "gliderecord": 6,
+   "flow_designer": 102,
+   "integrations": 211,
+   "service_catalog": 1,
+   "itsm_process": 152,
+   "security_acl": 10,
+   "delivery": 119,
+   "retail_selfservice": 36
+  }
+ },
+ {
+  "page": "docs/modules/sales-crm/sales-crm-guide.md",
+  "chars": 46236,
+  "hits": {
+   "server_scripting": 18,
+   "client_scripting": 20,
+   "gliderecord": 3,
+   "flow_designer": 23,
+   "integrations": 28,
+   "service_catalog": 16,
+   "itsm_process": 36,
+   "security_acl": 7,
+   "delivery": 15,
+   "retail_selfservice": 4
+  }
+ },
+ {
+  "page": "docs/modules/sam/sam-guide.md",
+  "chars": 61142,
+  "hits": {
+   "server_scripting": 17,
+   "client_scripting": 21,
+   "gliderecord": 5,
+   "flow_designer": 7,
+   "integrations": 19,
+   "service_catalog": 1,
+   "itsm_process": 23,
+   "security_acl": 4,
+   "delivery": 11,
+   "retail_selfservice": 4
+  }
+ },
+ {
+  "page": "docs/modules/servicemapping/servicemapping-guide.md",
+  "chars": 71467,
+  "hits": {
+   "server_scripting": 9,
+   "client_scripting": 14,
+   "gliderecord": 1,
+   "flow_designer": 4,
+   "integrations": 49,
+   "service_catalog": 0,
+   "itsm_process": 31,
+   "security_acl": 7,
+   "delivery": 13,
+   "retail_selfservice": 31
+  }
+ },
+ {
+  "page": "docs/modules/tsom/tsom-assurance.md",
+  "chars": 25739,
+  "hits": {
+   "server_scripting": 5,
+   "client_scripting": 0,
+   "gliderecord": 0,
+   "flow_designer": 9,
+   "integrations": 7,
+   "service_catalog": 0,
+   "itsm_process": 20,
+   "security_acl": 2,
+   "delivery": 1,
+   "retail_selfservice": 6
+  }
+ },
+ {
+  "page": "docs/modules/tsom/tsom-capabilities.md",
+  "chars": 20554,
+  "hits": {
+   "server_scripting": 5,
+   "client_scripting": 0,
+   "gliderecord": 0,
+   "flow_designer": 7,
+   "integrations": 9,
+   "service_catalog": 0,
+   "itsm_process": 20,
+   "security_acl": 0,
+   "delivery": 3,
+   "retail_selfservice": 1
+  }
+ },
+ {
+  "page": "docs/modules/tsom/tsom-guide.md",
+  "chars": 87076,
+  "hits": {
+   "server_scripting": 9,
+   "client_scripting": 24,
+   "gliderecord": 2,
+   "flow_designer": 35,
+   "integrations": 39,
+   "service_catalog": 2,
+   "itsm_process": 96,
+   "security_acl": 9,
+   "delivery": 21,
+   "retail_selfservice": 37
+  }
+ },
+ {
+  "page": "docs/youtube.md",
+  "chars": 1638,
+  "hits": {
+   "server_scripting": 1,
+   "client_scripting": 0,
+   "gliderecord": 0,
+   "flow_designer": 1,
+   "integrations": 0,
+   "service_catalog": 0,
+   "itsm_process": 0,
+   "security_acl": 0,
+   "delivery": 1,
+   "retail_selfservice": 0
+  }
+ }
+]
