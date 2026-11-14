@@ -1,0 +1,42 @@
+{
+ "live_has_false_assertions": {
+  "question": "the live site asserts heap 6/12 MB, deactivated users cannot be reactivated, named system properties exist, and Apex Jobs as a separate Setup page",
+  "answer": "Yes",
+  "confidence": 0.6139283180236816
+ },
+ "merged_has_false_assertions": {
+  "question": "the merged pages assert none of the eight tested false claims",
+  "answer": "No",
+  "confidence": 0.7814799944559733
+ },
+ "repo_broader_than_site": {
+  "question": "repo wins 10/10 on mean-top-5 semantic depth, 0.594-0.764 vs 0.294-0.470",
+  "answer": "Yes",
+  "confidence": 0.40758681297302246
+ },
+ "repo_is_accurate": {
+  "question": "the repo falsely asserts 5 of 8 known-false claims",
+  "answer": "No",
+  "confidence": 0.8366632461547852
+ },
+ "site_lacks_payload_limits": {
+  "question": "zero occurrences of 39 MB or 600 MB on the site, which mentions deploy payloads 13 times",
+  "answer": "Yes",
+  "confidence": 0.7456799348195394
+ },
+ "duplicates_exist": {
+  "question": "3 exact duplicate groups and 4 near-duplicate pairs, all the salesforceyetagain-v2 folder vs flat twin pattern",
+  "answer": "Yes",
+  "confidence": 0.8961357275644938
+ },
+ "redundant_branches_exist": {
+  "question": "4 research branches are behind main with no unique content",
+  "answer": "Yes",
+  "confidence": 0.9690894285837809
+ },
+ "merge_improves_accuracy": {
+  "question": "merged pages read 8/8 correct denials at 0.866-0.961 confidence",
+  "answer": "Yes",
+  "confidence": 0.8316055138905843
+ }
+}
