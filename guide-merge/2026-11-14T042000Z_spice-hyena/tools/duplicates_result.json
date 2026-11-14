@@ -1,0 +1,91 @@
+{
+ "exact": {
+  "e313a409f3d72a876912178bea6f053a": [
+   "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2-01_certifications-curriculum.md",
+   "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2/01_certifications-curriculum.md"
+  ],
+  "654cc741cd218a9fdea1348dcb875287": [
+   "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2-02_crash-course.md",
+   "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2/02_crash-course.md"
+  ],
+  "e520cc88941f652105075c2a271964e1": [
+   "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2-README.md",
+   "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2/README.md"
+  ]
+ },
+ "pairs": [
+  {
+   "a": "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2-01_certifications-curriculum.md",
+   "b": "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2/01_certifications-curriculum.md",
+   "jaccard": 1.0,
+   "a_chars": 6135,
+   "b_chars": 6135,
+   "tier": "NEAR"
+  },
+  {
+   "a": "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2-02_crash-course.md",
+   "b": "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2/02_crash-course.md",
+   "jaccard": 1.0,
+   "a_chars": 44933,
+   "b_chars": 44933,
+   "tier": "NEAR"
+  },
+  {
+   "a": "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2-README.md",
+   "b": "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2/README.md",
+   "jaccard": 1.0,
+   "a_chars": 1320,
+   "b_chars": 1320,
+   "tier": "NEAR"
+  },
+  {
+   "a": "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2-00_planning-salesforce-principles.md",
+   "b": "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2/00_planning-salesforce-principles.md",
+   "jaccard": 0.98,
+   "a_chars": 4554,
+   "b_chars": 4556,
+   "tier": "NEAR"
+  }
+ ],
+ "near_clusters": [
+  {
+   "representative": "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2/00_planning-salesforce-principles.md",
+   "members": [
+    "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2/00_planning-salesforce-principles.md",
+    "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2-00_planning-salesforce-principles.md"
+   ],
+   "chars": 4556
+  },
+  {
+   "representative": "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2-01_certifications-curriculum.md",
+   "members": [
+    "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2-01_certifications-curriculum.md",
+    "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2/01_certifications-curriculum.md"
+   ],
+   "chars": 6135
+  },
+  {
+   "representative": "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2-02_crash-course.md",
+   "members": [
+    "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2-02_crash-course.md",
+    "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2/02_crash-course.md"
+   ],
+   "chars": 44933
+  },
+  {
+   "representative": "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2-README.md",
+   "members": [
+    "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2-README.md",
+    "/tmp/tsom/forreviews/2026-11-14T0210Z-salesforceyetagain-v2/README.md"
+   ],
+   "chars": 1320
+  }
+ ],
+ "counts": {
+  "docs": 85,
+  "exact_groups": 3,
+  "near_pairs": 4,
+  "overlap_pairs": 0,
+  "near_clusters": 4
+ }
+}
