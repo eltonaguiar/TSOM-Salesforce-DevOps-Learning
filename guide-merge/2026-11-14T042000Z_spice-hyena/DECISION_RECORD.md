@@ -25,6 +25,9 @@ Mean confidence **0.877**.
 Evidence supplied: `live_false_assertions: 4`, `merged_false_assertions: 0`, `live_missing_39MB: true`,
 `merged_adds_lines: 151`, `live_stale_setup_path: "Setup > Apex Jobs"`.
 
+Re-verified at the full context budget: the merged pages now read **8/8 correct denials, 0 false assertions**
+(confidence 0.866–0.961), against 4 false assertions for the live site and 5 for the repo.
+
 The live pages carry four false assertions the merged pages do not, and lack a concept they add. This is the
 one decision with unambiguous support.
 
@@ -87,6 +90,9 @@ measure on a different axis rather than let the model guess.
 
 Those are three cheap measurements. Until they are taken, the honest state of this decision is *open*, and the
 right move is to merge from both rather than crown one.
+
+**Note:** this decision is the one most likely to move once re-run at the full context budget. The two
+candidates were separated on a 1.1K-char excerpt; the budget fix already changed two other results materially.
 
 ---
 

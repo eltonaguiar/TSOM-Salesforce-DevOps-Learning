@@ -31,11 +31,33 @@ All eight claims are **FALSE**. A source that DENIES them is correct; one that A
 
 ## Results
 
+### Corrected after the context-budget fix
+
+The first run used ~1.1K-character excerpts (see `SUBQ_CONTEXT_BUDGET.md`). Re-run at the measured ~34K budget,
+which revealed errors the fragments had hidden:
+
 | Source | Correctly denies | **Falsely asserts** | Silent |
 |---|---|---|---|
 | **live webpages** | 2 / 8 | **4 / 8** | 2 |
-| **merged pages** | 5 / 8 | **0 / 8** | 3 |
-| **repo bundles** | 0 / 8 | **3 / 8** | 5 |
+| **merged pages** | **8 / 8** | **0 / 8** | 0 |
+| **repo bundles** | 3 / 8 | **5 / 8** | 0 |
+
+Merged pages moved from 5/8 with 3 silent to **8/8 with zero silent**, at confidence 0.866–0.961.
+The repo moved from 3 false assertions to **5** — the extra context surfaced two more.
+
+**Spot-check that validated the change.** The repo now scores a false assertion on
+`deactivated_cannot_reactivate`, which the small-context run had marked "not addressed". Direct inspection of
+the retrieved bundle text confirms it is real:
+
+```
+| Deactivated | Cannot log in; license freed up (cannot be reactivated) |
+```
+
+That is the original page's defect, copied into a bundle. The page was later fixed by the merge; the bundle
+still carries it. The full-budget run was right and the excerpt run was blind.
+
+**This is the practical case for measuring the context limit:** the small excerpt did not merely lower
+confidence, it *hid two errors*. A starved context is not a weaker instrument — it is a wrong one.
 
 ### Live webpages
 
