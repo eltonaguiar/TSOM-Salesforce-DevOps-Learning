@@ -1,0 +1,318 @@
+{
+ "live": {
+  "crash-course": {
+   "heap_limits": [
+    "Yes",
+    0.96
+   ],
+   "payload_ceilings": [
+    "No",
+    0.88
+   ],
+   "coverage_rules": [
+    "No",
+    0.37
+   ],
+   "validate_window": [
+    "No",
+    0.99
+   ],
+   "test_levels": [
+    "No",
+    0.92
+   ],
+   "destructive_changes": [
+    "No",
+    0.96
+   ],
+   "deploy_queue": [
+    "No",
+    0.98
+   ],
+   "sandbox_masking": [
+    "No",
+    0.95
+   ],
+   "branch_model": [
+    "No",
+    1.0
+   ],
+   "audit_pack": [
+    "No",
+    0.92
+   ],
+   "conflict_clinic": [
+    "No",
+    0.99
+   ],
+   "source_tracking": [
+    "No",
+    0.42
+   ]
+  },
+  "devops-engineer": {
+   "heap_limits": [
+    "No",
+    0.92
+   ],
+   "payload_ceilings": [
+    "No",
+    0.93
+   ],
+   "coverage_rules": [
+    "No",
+    0.11
+   ],
+   "validate_window": [
+    "No",
+    0.37
+   ],
+   "test_levels": [
+    "Yes",
+    0.71
+   ],
+   "destructive_changes": [
+    "Yes",
+    0.68
+   ],
+   "deploy_queue": [
+    "No",
+    0.97
+   ],
+   "sandbox_masking": [
+    "Yes",
+    0.92
+   ],
+   "branch_model": [
+    "Yes",
+    0.88
+   ],
+   "audit_pack": [
+    "Yes",
+    1.0
+   ],
+   "conflict_clinic": [
+    "Yes",
+    0.99
+   ],
+   "source_tracking": [
+    "No",
+    0.89
+   ]
+  },
+  "labs-design": {
+   "heap_limits": [
+    "No",
+    0.2
+   ],
+   "payload_ceilings": [
+    "No",
+    0.89
+   ],
+   "coverage_rules": [
+    "No",
+    0.14
+   ],
+   "validate_window": [
+    "No",
+    0.98
+   ],
+   "test_levels": [
+    "No",
+    0.93
+   ],
+   "destructive_changes": [
+    "No",
+    0.91
+   ],
+   "deploy_queue": [
+    "No",
+    0.96
+   ],
+   "sandbox_masking": [
+    "No",
+    0.86
+   ],
+   "branch_model": [
+    "No",
+    1.0
+   ],
+   "audit_pack": [
+    "No",
+    0.99
+   ],
+   "conflict_clinic": [
+    "No",
+    0.64
+   ],
+   "source_tracking": [
+    "No",
+    0.84
+   ]
+  },
+  "navigation-breadcrumbs": {
+   "heap_limits": [
+    "No",
+    0.98
+   ],
+   "payload_ceilings": [
+    "No",
+    0.98
+   ],
+   "coverage_rules": [
+    "No",
+    0.99
+   ],
+   "validate_window": [
+    "No",
+    1.0
+   ],
+   "test_levels": [
+    "No",
+    0.99
+   ],
+   "destructive_changes": [
+    "No",
+    0.99
+   ],
+   "deploy_queue": [
+    "No",
+    1.0
+   ],
+   "sandbox_masking": [
+    "No",
+    0.99
+   ],
+   "branch_model": [
+    "No",
+    1.0
+   ],
+   "audit_pack": [
+    "No",
+    1.0
+   ],
+   "conflict_clinic": [
+    "No",
+    1.0
+   ],
+   "source_tracking": [
+    "No",
+    0.99
+   ]
+  },
+  "user-management-data": {
+   "heap_limits": [
+    "No",
+    0.97
+   ],
+   "payload_ceilings": [
+    "No",
+    0.97
+   ],
+   "coverage_rules": [
+    "No",
+    0.99
+   ],
+   "validate_window": [
+    "No",
+    1.0
+   ],
+   "test_levels": [
+    "No",
+    0.99
+   ],
+   "destructive_changes": [
+    "No",
+    0.96
+   ],
+   "deploy_queue": [
+    "No",
+    1.0
+   ],
+   "sandbox_masking": [
+    "No",
+    1.0
+   ],
+   "branch_model": [
+    "No",
+    1.0
+   ],
+   "audit_pack": [
+    "No",
+    1.0
+   ],
+   "conflict_clinic": [
+    "No",
+    0.99
+   ],
+   "source_tracking": [
+    "No",
+    0.97
+   ]
+  }
+ },
+ "live_union": {
+  "heap_limits": [
+   "Yes",
+   0
+  ],
+  "payload_ceilings": [
+   "No",
+   0
+  ],
+  "coverage_rules": [
+   "No",
+   0
+  ],
+  "validate_window": [
+   "No",
+   0
+  ],
+  "test_levels": [
+   "Yes",
+   0
+  ],
+  "destructive_changes": [
+   "Yes",
+   0
+  ],
+  "deploy_queue": [
+   "No",
+   0
+  ],
+  "sandbox_masking": [
+   "Yes",
+   0
+  ],
+  "branch_model": [
+   "Yes",
+   0
+  ],
+  "audit_pack": [
+   "Yes",
+   0
+  ],
+  "conflict_clinic": [
+   "Yes",
+   0
+  ],
+  "source_tracking": [
+   "No",
+   0
+  ]
+ },
+ "concepts": {
+  "heap_limits": "the numeric heap size limits for synchronous and asynchronous Apex",
+  "payload_ceilings": "the maximum Metadata API deployment payload size",
+  "coverage_rules": "the code coverage percentage required to deploy Apex, and how it varies by test level",
+  "validate_window": "the quick-deploy validation window and how long it stays valid",
+  "test_levels": "the available Apex test levels",
+  "destructive_changes": "how to delete metadata components during a deployment",
+  "deploy_queue": "whether deployments are queued and whether the queue is FIFO",
+  "sandbox_masking": "sandbox types and the masking gate before a refreshed sandbox is used",
+  "branch_model": "a prescribed branching model including where a hotfix is cut from",
+  "audit_pack": "the artifacts an auditor requires after a production deploy",
+  "conflict_clinic": "profile and permission-set deployment conflicts",
+  "source_tracking": "what source tracking is and when it applies"
+ }
+}

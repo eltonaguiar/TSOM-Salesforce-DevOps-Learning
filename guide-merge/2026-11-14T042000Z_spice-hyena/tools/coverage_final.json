@@ -1,0 +1,354 @@
+{
+ "per_page": {
+  "crash-course": {
+   "heap_limits": [
+    "Yes",
+    0.96
+   ],
+   "payload_ceilings": [
+    "No",
+    0.77
+   ],
+   "coverage_rules": [
+    "Yes",
+    0.32
+   ],
+   "validate_window": [
+    "No",
+    0.99
+   ],
+   "test_levels": [
+    "No",
+    0.79
+   ],
+   "destructive_changes": [
+    "No",
+    0.97
+   ],
+   "deploy_queue": [
+    "No",
+    0.97
+   ],
+   "sandbox_masking": [
+    "No",
+    0.99
+   ],
+   "branch_model": [
+    "No",
+    1.0
+   ],
+   "audit_pack": [
+    "No",
+    0.99
+   ],
+   "conflict_clinic": [
+    "No",
+    0.99
+   ],
+   "source_tracking": [
+    "No",
+    0.47
+   ]
+  },
+  "devops-engineer": {
+   "heap_limits": [
+    "No",
+    0.91
+   ],
+   "payload_ceilings": [
+    "Yes",
+    0.53
+   ],
+   "coverage_rules": [
+    "Yes",
+    0.83
+   ],
+   "validate_window": [
+    "Yes",
+    0.87
+   ],
+   "test_levels": [
+    "Yes",
+    0.91
+   ],
+   "destructive_changes": [
+    "Yes",
+    0.9
+   ],
+   "deploy_queue": [
+    "Yes",
+    0.95
+   ],
+   "sandbox_masking": [
+    "Yes",
+    0.97
+   ],
+   "branch_model": [
+    "Yes",
+    0.97
+   ],
+   "audit_pack": [
+    "No",
+    0.62
+   ],
+   "conflict_clinic": [
+    "Yes",
+    0.98
+   ],
+   "source_tracking": [
+    "No",
+    0.9
+   ]
+  },
+  "labs-design": {
+   "heap_limits": [
+    "No",
+    0.48
+   ],
+   "payload_ceilings": [
+    "No",
+    0.92
+   ],
+   "coverage_rules": [
+    "No",
+    0.28
+   ],
+   "validate_window": [
+    "No",
+    0.99
+   ],
+   "test_levels": [
+    "No",
+    0.91
+   ],
+   "destructive_changes": [
+    "No",
+    0.95
+   ],
+   "deploy_queue": [
+    "No",
+    0.98
+   ],
+   "sandbox_masking": [
+    "No",
+    0.92
+   ],
+   "branch_model": [
+    "No",
+    0.99
+   ],
+   "audit_pack": [
+    "No",
+    0.99
+   ],
+   "conflict_clinic": [
+    "No",
+    0.8
+   ],
+   "source_tracking": [
+    "No",
+    0.84
+   ]
+  },
+  "navigation-breadcrumbs": {
+   "heap_limits": [
+    "No",
+    0.97
+   ],
+   "payload_ceilings": [
+    "No",
+    0.98
+   ],
+   "coverage_rules": [
+    "No",
+    0.99
+   ],
+   "validate_window": [
+    "No",
+    1.0
+   ],
+   "test_levels": [
+    "No",
+    0.99
+   ],
+   "destructive_changes": [
+    "No",
+    0.99
+   ],
+   "deploy_queue": [
+    "No",
+    1.0
+   ],
+   "sandbox_masking": [
+    "No",
+    0.98
+   ],
+   "branch_model": [
+    "No",
+    1.0
+   ],
+   "audit_pack": [
+    "No",
+    1.0
+   ],
+   "conflict_clinic": [
+    "No",
+    0.99
+   ],
+   "source_tracking": [
+    "No",
+    0.98
+   ]
+  },
+  "user-management-data": {
+   "heap_limits": [
+    "No",
+    0.98
+   ],
+   "payload_ceilings": [
+    "No",
+    0.98
+   ],
+   "coverage_rules": [
+    "No",
+    0.99
+   ],
+   "validate_window": [
+    "No",
+    1.0
+   ],
+   "test_levels": [
+    "No",
+    0.99
+   ],
+   "destructive_changes": [
+    "No",
+    0.99
+   ],
+   "deploy_queue": [
+    "No",
+    1.0
+   ],
+   "sandbox_masking": [
+    "No",
+    1.0
+   ],
+   "branch_model": [
+    "No",
+    1.0
+   ],
+   "audit_pack": [
+    "No",
+    1.0
+   ],
+   "conflict_clinic": [
+    "No",
+    1.0
+   ],
+   "source_tracking": [
+    "No",
+    0.98
+   ]
+  }
+ },
+ "union": {
+  "heap_limits": [
+   "Yes",
+   0
+  ],
+  "payload_ceilings": [
+   "Yes",
+   0
+  ],
+  "coverage_rules": [
+   "Yes",
+   0
+  ],
+  "validate_window": [
+   "Yes",
+   0
+  ],
+  "test_levels": [
+   "Yes",
+   0
+  ],
+  "destructive_changes": [
+   "Yes",
+   0
+  ],
+  "deploy_queue": [
+   "Yes",
+   0
+  ],
+  "sandbox_masking": [
+   "Yes",
+   0
+  ],
+  "branch_model": [
+   "Yes",
+   0
+  ],
+  "audit_pack": [
+   "No",
+   0
+  ],
+  "conflict_clinic": [
+   "Yes",
+   0
+  ],
+  "source_tracking": [
+   "No",
+   0
+  ]
+ },
+ "live_union": {
+  "heap_limits": [
+   "Yes",
+   0
+  ],
+  "payload_ceilings": [
+   "No",
+   0
+  ],
+  "coverage_rules": [
+   "No",
+   0
+  ],
+  "validate_window": [
+   "No",
+   0
+  ],
+  "test_levels": [
+   "Yes",
+   0
+  ],
+  "destructive_changes": [
+   "Yes",
+   0
+  ],
+  "deploy_queue": [
+   "No",
+   0
+  ],
+  "sandbox_masking": [
+   "Yes",
+   0
+  ],
+  "branch_model": [
+   "Yes",
+   0
+  ],
+  "audit_pack": [
+   "Yes",
+   0
+  ],
+  "conflict_clinic": [
+   "Yes",
+   0
+  ],
+  "source_tracking": [
+   "No",
+   0
+  ]
+ }
+}
