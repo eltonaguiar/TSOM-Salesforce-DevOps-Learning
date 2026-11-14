@@ -1,0 +1,11 @@
+--- originals/user-management-data.md	2026-11-14 04:21:34.636968200 +0000
++++ merged/user-management-data.md	2026-11-14 04:21:39.580301780 +0000
+@@ -48,7 +48,7 @@
+ |-------|-------------|
+ | **Active** | Can log in and use Salesforce |
+ | **Inactive (Frozen)** | Cannot log in; keeps history and records |
+-| **Deactivated** | Cannot log in; license freed up (can't be reactivated, must recreate) |
++| **Deactivated** | Cannot log in; license freed up. **Can be reactivated** — edit the user and re-check **Active** |
+ 
+ **Best practice:** Freeze users instead of deactivating when they leave temporarily. Deactivate only when you need the license back and won't need the user again.
+ 
