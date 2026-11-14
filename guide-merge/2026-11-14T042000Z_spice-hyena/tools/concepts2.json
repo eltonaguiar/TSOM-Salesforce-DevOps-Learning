@@ -1,0 +1,12 @@
+{
+ "governor_limit_numbers": {"terms":["heap","CPU time","SOQL","10,000","governor"],"need":"actual quotable numbers (heap MB, CPU ms, SOQL/DML counts), not a link"},
+ "test_execution_trigger": {"terms":["NoTestRun","test level","Apex classes or triggers","test run","34.0"],"need":"which payloads cause tests to run, incl. the API-version rule"},
+ "coverage_rules": {"terms":["75%","code coverage","RunSpecifiedTests","per class"],"need":"the distinct coverage requirement per test level"},
+ "payload_ceilings": {"terms":["39 MB","600 MB","10,000","zip","compressed"],"need":"Metadata API deploy size limits"},
+ "quick_deploy_window": {"terms":["quick deploy","10 days","valid","validation"],"need":"how long a validation stays valid"},
+ "destructive_changes": {"terms":["destructiveChanges","delete","revert","manifest"],"need":"how to delete metadata safely, and that git revert does not undo it"},
+ "sandbox_masking": {"terms":["mask","Partial Copy","Full sandbox","refresh"],"need":"sandbox types and the masking gate before login"},
+ "release_branching": {"terms":["hotfix","release branch","main","feature branch"],"need":"branch model incl. hotfix origin and merge-back"},
+ "audit_pack": {"terms":["audit","approver","ticket","deploy id","coverage number"],"need":"the artifacts an auditor requires after a prod deploy"},
+ "conflict_resolution": {"terms":["conflict","profile","permission set","merge"],"need":"profile/permission-set conflict handling"}
+}

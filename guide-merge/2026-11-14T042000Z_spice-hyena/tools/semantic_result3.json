@@ -1,0 +1,72 @@
+[
+ {
+  "concept": "governor_limit_numbers",
+  "winner": "B",
+  "prob": 0.858,
+  "a_excerpt_chars": 1495,
+  "b_excerpt_chars": 1690
+ },
+ {
+  "concept": "test_execution_trigger",
+  "winner": "B",
+  "prob": 0.906,
+  "a_excerpt_chars": 1281,
+  "b_excerpt_chars": 2131
+ },
+ {
+  "concept": "coverage_rules",
+  "winner": "B",
+  "prob": 0.823,
+  "a_excerpt_chars": 1170,
+  "b_excerpt_chars": 1292
+ },
+ {
+  "concept": "payload_ceilings",
+  "winner": "B",
+  "prob": 0.849,
+  "a_excerpt_chars": 903,
+  "b_excerpt_chars": 1065
+ },
+ {
+  "concept": "quick_deploy_window",
+  "winner": "B",
+  "prob": 0.427,
+  "a_excerpt_chars": 1181,
+  "b_excerpt_chars": 2075
+ },
+ {
+  "concept": "destructive_changes",
+  "winner": "B",
+  "prob": 0.934,
+  "a_excerpt_chars": 773,
+  "b_excerpt_chars": 1697
+ },
+ {
+  "concept": "sandbox_masking",
+  "winner": "B",
+  "prob": 0.653,
+  "a_excerpt_chars": 281,
+  "b_excerpt_chars": 2200
+ },
+ {
+  "concept": "release_branching",
+  "winner": "B",
+  "prob": 0.651,
+  "a_excerpt_chars": 1116,
+  "b_excerpt_chars": 1113
+ },
+ {
+  "concept": "audit_pack",
+  "winner": "B",
+  "prob": 0.371,
+  "a_excerpt_chars": 1330,
+  "b_excerpt_chars": 1567
+ },
+ {
+  "concept": "conflict_resolution",
+  "winner": "B",
+  "prob": 0.846,
+  "a_excerpt_chars": 1465,
+  "b_excerpt_chars": 876
+ }
+]
