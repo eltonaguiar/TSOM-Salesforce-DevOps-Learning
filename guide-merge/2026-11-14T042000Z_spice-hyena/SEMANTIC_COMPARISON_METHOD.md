@@ -132,3 +132,72 @@ python3 repo_compare.py --a "pages:/path/to/pages" --b "corpus:/path/to/bundles"
 | `semantic.py` | one decision call: state + options → choice + probabilities |
 | `retrieval_judge.py` | flatten-aware passage split, junk filter, density retrieval, forced-binary compare |
 | `repo_compare.py` | repo flattening (md/html/xml/json/code), shrink to budget, aggregate wins |
+---
+
+# Addendum — webpage source, and the precision number
+
+## Extending to webpages
+
+A webpage source is not a directory of files. Added `web_source.py`: fetch each URL, keep only
+`<main>`/`<article>` when present, strip `nav/header/footer/aside/script/style`, flatten to the same text
+shape the repo adapter produces. All five Salesforce pages fetched cleanly (84,078 chars).
+
+**The live site is stale relative to the merged pages** — verified, not assumed:
+
+| Marker | Live site | Merged pages |
+|---|---|---|
+| Heap `6 MB / 12 MB` (wrong) | present | absent |
+| Heap `10 MB / 25 MB` (correct) | absent | present |
+| `39 MB` payload ceiling | absent | present |
+| `RunRelevantTests` | absent | present |
+| `Setup > Apex Jobs` (stale path) | present | absent |
+| `Setup > Background Jobs` | absent | present |
+
+So the merge has not been ported. Every comparison against the live site is a comparison against the
+pre-merge pages.
+
+## Run: live webpages vs repo bundles
+
+All ten concepts went to the repo, most at high confidence:
+
+| Concept | Repo wins | Prob |
+|---|---|---|
+| payload_ceilings | B | 0.928 |
+| destructive_changes | B | 0.926 |
+| governor_limit_numbers | B | 0.913 |
+| release_branching | B | 0.909 |
+| coverage_rules | B | 0.904 |
+| quick_deploy_window | B | 0.889 |
+| conflict_resolution | B | 0.874 |
+| test_execution_trigger | B | 0.846 |
+| sandbox_masking | B | 0.833 |
+| audit_pack | B | 0.752 |
+
+## Then I checked whether the repo's extra coverage was *correct*
+
+This is the step that turns a ranking into something usable. I inspected the retrieved repo excerpt for the
+four highest-ranked concepts and checked for known-bad values:
+
+| Concept | Repo excerpt contained | Verdict |
+|---|---|---|
+| `payload_ceilings` (0.928) | **39 MB**, with the base64/50 MB/22% explanation | **Genuine gap — correct content** |
+| `destructive_changes` (0.926) | `destructiveChanges.xml`, `--pre-` / `--post-` distinction | **Genuine gap — correct content** |
+| `governor_limit_numbers` (0.913) | **No numbers at all** — error symptoms ("Too many SOQL queries: 101") | **False positive.** Broader in symptoms, thinner in quotable limits |
+| `coverage_rules` (0.904) | **"1% minimum per trigger"** — the documented falsehood | **False positive.** The repo is wrong |
+
+**Measured precision at the top of the ranking: 2 of 4 (50%).**
+
+Both genuine gaps (`payload_ceilings`, `destructive_changes`) are already closed in the merged pages — they
+are gaps against the *live site*, not against the merge. So the actionable output of this run is: **port the
+merge**, which was already known.
+
+## What this means for using the tool
+
+- The ranking is a **candidate generator**, not a verdict. Half the top-ranked items did not survive a
+  correctness check.
+- **High confidence is not evidence of correctness.** `coverage_rules` scored 0.904 and the repo's content was
+  wrong. Confidence measures how decisively the model preferred one excerpt, not whether either is true.
+- The verification step is cheap: grep the retrieved excerpt for the specific value you expect. It took one
+  command to reject two of four.
+- **Always name the source precisely.** "Repo vs webpages" is only meaningful once you say which revision of
+  each. Here the webpages were pre-merge, which is why the repo won everything.
