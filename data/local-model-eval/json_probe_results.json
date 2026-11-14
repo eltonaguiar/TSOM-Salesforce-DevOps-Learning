@@ -1,0 +1,1546 @@
+[
+  {
+    "model": "qwen2.5:14b",
+    "test": "T1",
+    "run": 1,
+    "max_tokens": 500,
+    "raw": "{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"latest\",\n  \"license\": \"subscription\"\n}",
+    "raw_120": "{\\n  \"name\": \"ServiceNow SAM Pro\",\\n  \"version\": \"latest\",\\n  \"license\": \"subscription\"\\n}",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 5.39,
+    "usage": {
+      "prompt_tokens": 51,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens": 27,
+      "total_tokens": 78
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": false,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "keys": [
+        "license",
+        "name",
+        "version"
+      ]
+    }
+  },
+  {
+    "model": "qwen2.5:14b",
+    "test": "T1",
+    "run": 2,
+    "max_tokens": 500,
+    "raw": "{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"latest\",\n  \"licence\": \"subscription\"\n}",
+    "raw_120": "{\\n  \"name\": \"ServiceNow SAM Pro\",\\n  \"version\": \"latest\",\\n  \"licence\": \"subscription\"\\n}",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 1.24,
+    "usage": {
+      "prompt_tokens": 56,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 27,
+      "total_tokens": 83
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "keys": [
+        "licence",
+        "name",
+        "version"
+      ]
+    }
+  },
+  {
+    "model": "qwen2.5:14b",
+    "test": "T1",
+    "run": 3,
+    "max_tokens": 500,
+    "raw": "{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"1.0\",\n  \"licence\": \"proprietary\"\n}",
+    "raw_120": "{\\n  \"name\": \"ServiceNow SAM Pro\",\\n  \"version\": \"1.0\",\\n  \"licence\": \"proprietary\"\\n}",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 1.35,
+    "usage": {
+      "prompt_tokens": 52,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 30,
+      "total_tokens": 82
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "keys": [
+        "licence",
+        "name",
+        "version"
+      ]
+    }
+  },
+  {
+    "model": "qwen2.5:14b",
+    "test": "T2",
+    "run": 1,
+    "max_tokens": 500,
+    "raw": "{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}",
+    "raw_120": "{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 0.9,
+    "usage": {
+      "prompt_tokens": 93,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 20,
+      "total_tokens": 113
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "metric": "core",
+      "quantity": 48,
+      "quantity_pytype": "int",
+      "publisher_pytype": "str"
+    }
+  },
+  {
+    "model": "qwen2.5:14b",
+    "test": "T2",
+    "run": 2,
+    "max_tokens": 500,
+    "raw": "{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}",
+    "raw_120": "{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 0.9,
+    "usage": {
+      "prompt_tokens": 99,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 20,
+      "total_tokens": 119
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "metric": "core",
+      "quantity": 48,
+      "quantity_pytype": "int",
+      "publisher_pytype": "str"
+    }
+  },
+  {
+    "model": "qwen2.5:14b",
+    "test": "T2",
+    "run": 3,
+    "max_tokens": 500,
+    "raw": "{\n   \"publisher\": \"Microsoft\",\n   \"metric\": \"core\",\n   \"quantity\": 48\n}",
+    "raw_120": "{\\n   \"publisher\": \"Microsoft\",\\n   \"metric\": \"core\",\\n   \"quantity\": 48\\n}",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 1.15,
+    "usage": {
+      "prompt_tokens": 88,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 25,
+      "total_tokens": 113
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "metric": "core",
+      "quantity": 48,
+      "quantity_pytype": "int",
+      "publisher_pytype": "str"
+    }
+  },
+  {
+    "model": "qwen2.5:14b",
+    "test": "T3",
+    "run": 1,
+    "max_tokens": 500,
+    "raw": "OK",
+    "raw_120": "OK",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 0.13,
+    "usage": {
+      "prompt_tokens": 45,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 2,
+      "total_tokens": 47
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "exact": true
+    }
+  },
+  {
+    "model": "qwen2.5:14b",
+    "test": "T3",
+    "run": 2,
+    "max_tokens": 500,
+    "raw": "OK",
+    "raw_120": "OK",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 0.13,
+    "usage": {
+      "prompt_tokens": 47,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 2,
+      "total_tokens": 49
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "exact": true
+    }
+  },
+  {
+    "model": "qwen2.5:14b",
+    "test": "T3",
+    "run": 3,
+    "max_tokens": 500,
+    "raw": "OK",
+    "raw_120": "OK",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 0.12,
+    "usage": {
+      "prompt_tokens": 46,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 2,
+      "total_tokens": 48
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "exact": true
+    }
+  },
+  {
+    "model": "qwen2.5:32b",
+    "test": "T1",
+    "run": 1,
+    "max_tokens": 500,
+    "raw": "{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"Latest\",\n  \"licence\": \"Commercial\"\n}",
+    "raw_120": "{\\n  \"name\": \"ServiceNow SAM Pro\",\\n  \"version\": \"Latest\",\\n  \"licence\": \"Commercial\"\\n}",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 8.46,
+    "usage": {
+      "prompt_tokens": 51,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens": 27,
+      "total_tokens": 78
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "keys": [
+        "licence",
+        "name",
+        "version"
+      ]
+    }
+  },
+  {
+    "model": "qwen2.5:32b",
+    "test": "T1",
+    "run": 2,
+    "max_tokens": 500,
+    "raw": "{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"latest\",\n  \"licence\": \"Commercial\"\n}",
+    "raw_120": "{\\n  \"name\": \"ServiceNow SAM Pro\",\\n  \"version\": \"latest\",\\n  \"licence\": \"Commercial\"\\n}",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 2.59,
+    "usage": {
+      "prompt_tokens": 56,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 27,
+      "total_tokens": 83
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "keys": [
+        "licence",
+        "name",
+        "version"
+      ]
+    }
+  },
+  {
+    "model": "qwen2.5:32b",
+    "test": "T1",
+    "run": 3,
+    "max_tokens": 500,
+    "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"latest\",\n  \"licence\": \"Enterprise Licence\"\n}\n```",
+    "raw_120": "```json\\n{\\n  \"name\": \"ServiceNow SAM Pro\",\\n  \"version\": \"latest\",\\n  \"licence\": \"Enterprise Licence\"\\n}\\n```",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 3.23,
+    "usage": {
+      "prompt_tokens": 52,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 32,
+      "total_tokens": 84
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": false,
+    "fenced": true,
+    "extra_prose": true,
+    "detail": {
+      "keys": null
+    }
+  },
+  {
+    "model": "qwen2.5:32b",
+    "test": "T2",
+    "run": 1,
+    "max_tokens": 500,
+    "raw": "{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}",
+    "raw_120": "{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 2.09,
+    "usage": {
+      "prompt_tokens": 93,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 20,
+      "total_tokens": 113
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "metric": "core",
+      "quantity": 48,
+      "quantity_pytype": "int",
+      "publisher_pytype": "str"
+    }
+  },
+  {
+    "model": "qwen2.5:32b",
+    "test": "T2",
+    "run": 2,
+    "max_tokens": 500,
+    "raw": "{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}",
+    "raw_120": "{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 2.05,
+    "usage": {
+      "prompt_tokens": 99,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 20,
+      "total_tokens": 119
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "metric": "core",
+      "quantity": 48,
+      "quantity_pytype": "int",
+      "publisher_pytype": "str"
+    }
+  },
+  {
+    "model": "qwen2.5:32b",
+    "test": "T2",
+    "run": 3,
+    "max_tokens": 500,
+    "raw": "{\"publisher\": \"Microsoft SQL Server\", \"metric\": \"core\", \"quantity\": 48}",
+    "raw_120": "{\"publisher\": \"Microsoft SQL Server\", \"metric\": \"core\", \"quantity\": 48}",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 2.2,
+    "usage": {
+      "prompt_tokens": 88,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 22,
+      "total_tokens": 110
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "metric": "core",
+      "quantity": 48,
+      "quantity_pytype": "int",
+      "publisher_pytype": "str"
+    }
+  },
+  {
+    "model": "qwen2.5:32b",
+    "test": "T3",
+    "run": 1,
+    "max_tokens": 500,
+    "raw": "OK",
+    "raw_120": "OK",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 0.24,
+    "usage": {
+      "prompt_tokens": 45,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 2,
+      "total_tokens": 47
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "exact": true
+    }
+  },
+  {
+    "model": "qwen2.5:32b",
+    "test": "T3",
+    "run": 2,
+    "max_tokens": 500,
+    "raw": "OK",
+    "raw_120": "OK",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 0.24,
+    "usage": {
+      "prompt_tokens": 47,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 2,
+      "total_tokens": 49
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "exact": true
+    }
+  },
+  {
+    "model": "qwen2.5:32b",
+    "test": "T3",
+    "run": 3,
+    "max_tokens": 500,
+    "raw": "OK",
+    "raw_120": "OK",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 0.24,
+    "usage": {
+      "prompt_tokens": 46,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 2,
+      "total_tokens": 48
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "exact": true
+    }
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "test": "T1",
+    "run": 1,
+    "max_tokens": 500,
+    "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"2023.1\",\n  \"licence\": \"ServiceNow Subscription Agreement\"\n}\n```",
+    "raw_120": "```json\\n{\\n  \"name\": \"ServiceNow SAM Pro\",\\n  \"version\": \"2023.1\",\\n  \"licence\": \"ServiceNow Subscription Agreement\"\\n}\\n```",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 5.93,
+    "usage": {
+      "prompt_tokens": 51,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens": 39,
+      "total_tokens": 90
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": false,
+    "fenced": true,
+    "extra_prose": true,
+    "detail": {
+      "keys": null
+    }
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "test": "T1",
+    "run": 2,
+    "max_tokens": 500,
+    "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"2023.1\",\n  \"licence\": \"Subscription\"\n}\n```",
+    "raw_120": "```json\\n{\\n  \"name\": \"ServiceNow SAM Pro\",\\n  \"version\": \"2023.1\",\\n  \"licence\": \"Subscription\"\\n}\\n```",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 1.66,
+    "usage": {
+      "prompt_tokens": 56,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 36,
+      "total_tokens": 92
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": false,
+    "fenced": true,
+    "extra_prose": true,
+    "detail": {
+      "keys": null
+    }
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "test": "T1",
+    "run": 3,
+    "max_tokens": 500,
+    "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"2023.1\",\n  \"licence\": \"Enterprise\"\n}\n```",
+    "raw_120": "```json\\n{\\n  \"name\": \"ServiceNow SAM Pro\",\\n  \"version\": \"2023.1\",\\n  \"licence\": \"Enterprise\"\\n}\\n```",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 1.65,
+    "usage": {
+      "prompt_tokens": 52,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 36,
+      "total_tokens": 88
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": false,
+    "fenced": true,
+    "extra_prose": true,
+    "detail": {
+      "keys": null
+    }
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "test": "T2",
+    "run": 1,
+    "max_tokens": 500,
+    "raw": "{\n  \"publisher\": \"Microsoft\",\n  \"metric\": \"core\",\n  \"quantity\": 48\n}",
+    "raw_120": "{\\n  \"publisher\": \"Microsoft\",\\n  \"metric\": \"core\",\\n  \"quantity\": 48\\n}",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 1.17,
+    "usage": {
+      "prompt_tokens": 93,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 25,
+      "total_tokens": 118
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "metric": "core",
+      "quantity": 48,
+      "quantity_pytype": "int",
+      "publisher_pytype": "str"
+    }
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "test": "T2",
+    "run": 2,
+    "max_tokens": 500,
+    "raw": "{\n  \"publisher\": \"Microsoft\",\n  \"metric\": \"core\",\n  \"quantity\": 48\n}",
+    "raw_120": "{\\n  \"publisher\": \"Microsoft\",\\n  \"metric\": \"core\",\\n  \"quantity\": 48\\n}",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 1.25,
+    "usage": {
+      "prompt_tokens": 99,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 25,
+      "total_tokens": 124
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "metric": "core",
+      "quantity": 48,
+      "quantity_pytype": "int",
+      "publisher_pytype": "str"
+    }
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "test": "T2",
+    "run": 3,
+    "max_tokens": 500,
+    "raw": "```json\n{\n  \"publisher\": \"Microsoft\",\n  \"metric\": \"core\",\n  \"quantity\": 48\n}\n```",
+    "raw_120": "```json\\n{\\n  \"publisher\": \"Microsoft\",\\n  \"metric\": \"core\",\\n  \"quantity\": 48\\n}\\n```",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 1.34,
+    "usage": {
+      "prompt_tokens": 88,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 29,
+      "total_tokens": 117
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": false,
+    "fenced": true,
+    "extra_prose": true,
+    "detail": {
+      "metric": null,
+      "quantity": null
+    }
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "test": "T3",
+    "run": 1,
+    "max_tokens": 500,
+    "raw": "OK",
+    "raw_120": "OK",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 0.11,
+    "usage": {
+      "prompt_tokens": 45,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 2,
+      "total_tokens": 47
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "exact": true
+    }
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "test": "T3",
+    "run": 2,
+    "max_tokens": 500,
+    "raw": "OK",
+    "raw_120": "OK",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 0.11,
+    "usage": {
+      "prompt_tokens": 47,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 2,
+      "total_tokens": 49
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "exact": true
+    }
+  },
+  {
+    "model": "qwen2.5-coder:14b",
+    "test": "T3",
+    "run": 3,
+    "max_tokens": 500,
+    "raw": "OK",
+    "raw_120": "OK",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 0.11,
+    "usage": {
+      "prompt_tokens": 46,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 2,
+      "total_tokens": 48
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "exact": true
+    }
+  },
+  {
+    "model": "deepseek-r1:32b",
+    "test": "T1",
+    "run": 1,
+    "max_tokens": 1500,
+    "raw": "\n\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"22.2\",\n  \"licence\": \"Subscription\"\n}",
+    "raw_120": "\\n\\n{\\n  \"name\": \"ServiceNow SAM Pro\",\\n  \"version\": \"22.2\",\\n  \"licence\": \"Subscription\"\\n}",
+    "reasoning_len": 1183,
+    "finish": "stop",
+    "secs": 31.11,
+    "usage": {
+      "prompt_tokens": 25,
+      "prompt_tokens_details": {
+        "cached_tokens": 2
+      },
+      "completion_tokens": 312,
+      "total_tokens": 337
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "keys": [
+        "licence",
+        "name",
+        "version"
+      ]
+    }
+  },
+  {
+    "model": "deepseek-r1:32b",
+    "test": "T1",
+    "run": 2,
+    "max_tokens": 1500,
+    "raw": "\n\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"2023.7\",\n  \"licence\": \"Per User\"\n}",
+    "raw_120": "\\n\\n{\\n  \"name\": \"ServiceNow SAM Pro\",\\n  \"version\": \"2023.7\",\\n  \"licence\": \"Per User\"\\n}",
+    "reasoning_len": 1703,
+    "finish": "stop",
+    "secs": 56.55,
+    "usage": {
+      "prompt_tokens": 30,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens": 420,
+      "total_tokens": 450
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "keys": [
+        "licence",
+        "name",
+        "version"
+      ]
+    }
+  },
+  {
+    "model": "deepseek-r1:32b",
+    "test": "T1",
+    "run": 3,
+    "max_tokens": 1500,
+    "raw": "\n\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"2023.2\",\n  \"licence\": \"enterprise\"\n}",
+    "raw_120": "\\n\\n{\\n  \"name\": \"ServiceNow SAM Pro\",\\n  \"version\": \"2023.2\",\\n  \"licence\": \"enterprise\"\\n}",
+    "reasoning_len": 1935,
+    "finish": "stop",
+    "secs": 52.02,
+    "usage": {
+      "prompt_tokens": 26,
+      "prompt_tokens_details": {
+        "cached_tokens": 2
+      },
+      "completion_tokens": 491,
+      "total_tokens": 517
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "keys": [
+        "licence",
+        "name",
+        "version"
+      ]
+    }
+  },
+  {
+    "model": "deepseek-r1:32b",
+    "test": "T2",
+    "run": 1,
+    "max_tokens": 1500,
+    "raw": "\n\n{\"publisher\": \"Microsoft SQL Server\", \"metric\": \"core\", \"quantity\": 48}",
+    "raw_120": "\\n\\n{\"publisher\": \"Microsoft SQL Server\", \"metric\": \"core\", \"quantity\": 48}",
+    "reasoning_len": 802,
+    "finish": "stop",
+    "secs": 31.0,
+    "usage": {
+      "prompt_tokens": 67,
+      "prompt_tokens_details": {
+        "cached_tokens": 2
+      },
+      "completion_tokens": 220,
+      "total_tokens": 287
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "metric": "core",
+      "quantity": 48,
+      "quantity_pytype": "int",
+      "publisher_pytype": "str"
+    }
+  },
+  {
+    "model": "deepseek-r1:32b",
+    "test": "T2",
+    "run": 2,
+    "max_tokens": 1500,
+    "raw": "\n\n{\"publisher\": \"Microsoft SQL Server\", \"metric\": \"core\", \"quantity\": 48}",
+    "raw_120": "\\n\\n{\"publisher\": \"Microsoft SQL Server\", \"metric\": \"core\", \"quantity\": 48}",
+    "reasoning_len": 821,
+    "finish": "stop",
+    "secs": 28.29,
+    "usage": {
+      "prompt_tokens": 73,
+      "prompt_tokens_details": {
+        "cached_tokens": 2
+      },
+      "completion_tokens": 208,
+      "total_tokens": 281
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "metric": "core",
+      "quantity": 48,
+      "quantity_pytype": "int",
+      "publisher_pytype": "str"
+    }
+  },
+  {
+    "model": "deepseek-r1:32b",
+    "test": "T2",
+    "run": 3,
+    "max_tokens": 1500,
+    "raw": "\n\n{\"publisher\": \"Microsoft SQL Server\", \"metric\": \"core\", \"quantity\": 48}",
+    "raw_120": "\\n\\n{\"publisher\": \"Microsoft SQL Server\", \"metric\": \"core\", \"quantity\": 48}",
+    "reasoning_len": 1339,
+    "finish": "stop",
+    "secs": 41.17,
+    "usage": {
+      "prompt_tokens": 62,
+      "prompt_tokens_details": {
+        "cached_tokens": 2
+      },
+      "completion_tokens": 335,
+      "total_tokens": 397
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "metric": "core",
+      "quantity": 48,
+      "quantity_pytype": "int",
+      "publisher_pytype": "str"
+    }
+  },
+  {
+    "model": "deepseek-r1:32b",
+    "test": "T3",
+    "run": 1,
+    "max_tokens": 1500,
+    "raw": "\n\nOK",
+    "raw_120": "\\n\\nOK",
+    "reasoning_len": 1841,
+    "finish": "stop",
+    "secs": 58.61,
+    "usage": {
+      "prompt_tokens": 19,
+      "prompt_tokens_details": {
+        "cached_tokens": 2
+      },
+      "completion_tokens": 409,
+      "total_tokens": 428
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "exact": true
+    }
+  },
+  {
+    "model": "deepseek-r1:32b",
+    "test": "T3",
+    "run": 2,
+    "max_tokens": 1500,
+    "raw": "\n\nOK",
+    "raw_120": "\\n\\nOK",
+    "reasoning_len": 1946,
+    "finish": "stop",
+    "secs": 62.96,
+    "usage": {
+      "prompt_tokens": 21,
+      "prompt_tokens_details": {
+        "cached_tokens": 2
+      },
+      "completion_tokens": 424,
+      "total_tokens": 445
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "exact": true
+    }
+  },
+  {
+    "model": "deepseek-r1:32b",
+    "test": "T3",
+    "run": 3,
+    "max_tokens": 1500,
+    "raw": "\n\nOK",
+    "raw_120": "\\n\\nOK",
+    "reasoning_len": 1980,
+    "finish": "stop",
+    "secs": 63.57,
+    "usage": {
+      "prompt_tokens": 20,
+      "prompt_tokens_details": {
+        "cached_tokens": 2
+      },
+      "completion_tokens": 412,
+      "total_tokens": 432
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "exact": true
+    }
+  },
+  {
+    "model": "gemma3:12b",
+    "test": "T1",
+    "run": 1,
+    "max_tokens": 500,
+    "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"N/A\",\n  \"licence\": \"ServiceNow Proprietary\"\n}\n```",
+    "raw_120": "```json\\n{\\n  \"name\": \"ServiceNow SAM Pro\",\\n  \"version\": \"N/A\",\\n  \"licence\": \"ServiceNow Proprietary\"\\n}\\n```",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 7.91,
+    "usage": {
+      "prompt_tokens": 31,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens": 42,
+      "total_tokens": 73
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": false,
+    "fenced": true,
+    "extra_prose": true,
+    "detail": {
+      "keys": null
+    }
+  },
+  {
+    "model": "gemma3:12b",
+    "test": "T1",
+    "run": 2,
+    "max_tokens": 500,
+    "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"San Jose\",\n  \"licence\": \"Subscription\"\n}\n```",
+    "raw_120": "```json\\n{\\n  \"name\": \"ServiceNow SAM Pro\",\\n  \"version\": \"San Jose\",\\n  \"licence\": \"Subscription\"\\n}\\n```",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 2.07,
+    "usage": {
+      "prompt_tokens": 36,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens": 38,
+      "total_tokens": 74
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": false,
+    "fenced": true,
+    "extra_prose": true,
+    "detail": {
+      "keys": null
+    }
+  },
+  {
+    "model": "gemma3:12b",
+    "test": "T1",
+    "run": 3,
+    "max_tokens": 500,
+    "raw": "```json\n[\n  {\n    \"name\": \"Microsoft Office\",\n    \"version\": \"2019\",\n    \"licence\": \"Retail\"\n  },\n  {\n    \"name\": \"Adobe Creative Cloud\",\n    \"version\": \"2023\",\n    \"licence\": \"Subscription\"\n  },\n  {\n    \"name\": \"VMware vSphere\",\n    \"version\": \"7.0\",\n    \"licence\": \"Per Core\"\n  },\n  {\n    \"name\": \"Autodesk AutoCAD\",\n    \"version\": \"2022\",\n    \"licence\": \"Named User\"\n  },\n  {\n    \"name\": \"Oracle Database\",\n    \"version\": \"19c\",\n    \"licence\": \"Per Processor\"\n  },\n  {\n    \"name\": \"SAP S/4HANA\",\n    \"version\": \"2022.08\",\n    \"licence\": \"Subscription\"\n  },\n  {\n    \"name\": \"Microsoft Windows Server\",\n    \"version\": \"2019\",\n    \"licence\": \"Standard\"\n  },\n  {\n    \"name\": \"Cisco IOS\",\n    \"version\": \"16.9\",\n    \"licence\": \"Per Device\"\n  },\n  {\n    \"name\": \"IBM WebSphere Application Server\",\n    \"version\": \"9.0\",\n    \"licence\": \"Per Processor\"\n  },\n  {\n    \"name\": \"Microsoft SQL Server\",\n    \"version\": \"2019\",\n    \"licence\": \"Standard\"\n  }\n]\n```",
+    "raw_120": "```json\\n[\\n  {\\n    \"name\": \"Microsoft Office\",\\n    \"version\": \"2019\",\\n    \"licence\": \"Retail\"\\n  },\\n  {\\n    \"name\": \"Adobe",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 21.75,
+    "usage": {
+      "prompt_tokens": 31,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens": 378,
+      "total_tokens": 409
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": false,
+    "fenced": true,
+    "extra_prose": true,
+    "detail": {
+      "keys": null
+    }
+  },
+  {
+    "model": "gemma3:12b",
+    "test": "T2",
+    "run": 1,
+    "max_tokens": 500,
+    "raw": "{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}",
+    "raw_120": "{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 1.7,
+    "usage": {
+      "prompt_tokens": 79,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens": 20,
+      "total_tokens": 99
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "metric": "core",
+      "quantity": 48,
+      "quantity_pytype": "int",
+      "publisher_pytype": "str"
+    }
+  },
+  {
+    "model": "gemma3:12b",
+    "test": "T2",
+    "run": 2,
+    "max_tokens": 500,
+    "raw": "{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}",
+    "raw_120": "{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 0.8,
+    "usage": {
+      "prompt_tokens": 85,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens": 20,
+      "total_tokens": 105
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "metric": "core",
+      "quantity": 48,
+      "quantity_pytype": "int",
+      "publisher_pytype": "str"
+    }
+  },
+  {
+    "model": "gemma3:12b",
+    "test": "T2",
+    "run": 3,
+    "max_tokens": 500,
+    "raw": "```json\n{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}\n```",
+    "raw_120": "```json\\n{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}\\n```",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 2.09,
+    "usage": {
+      "prompt_tokens": 74,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens": 25,
+      "total_tokens": 99
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": false,
+    "fenced": true,
+    "extra_prose": true,
+    "detail": {
+      "metric": null,
+      "quantity": null
+    }
+  },
+  {
+    "model": "gemma3:12b",
+    "test": "T3",
+    "run": 1,
+    "max_tokens": 500,
+    "raw": "OK",
+    "raw_120": "OK",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 0.14,
+    "usage": {
+      "prompt_tokens": 26,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens": 2,
+      "total_tokens": 28
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "exact": true
+    }
+  },
+  {
+    "model": "gemma3:12b",
+    "test": "T3",
+    "run": 2,
+    "max_tokens": 500,
+    "raw": "OK",
+    "raw_120": "OK",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 0.13,
+    "usage": {
+      "prompt_tokens": 28,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens": 2,
+      "total_tokens": 30
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "exact": true
+    }
+  },
+  {
+    "model": "gemma3:12b",
+    "test": "T3",
+    "run": 3,
+    "max_tokens": 500,
+    "raw": "OK.",
+    "raw_120": "OK.",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 0.17,
+    "usage": {
+      "prompt_tokens": 27,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens": 3,
+      "total_tokens": 30
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": false,
+    "fenced": false,
+    "extra_prose": true,
+    "detail": {
+      "exact": false
+    }
+  },
+  {
+    "model": "qwen2.5:7b",
+    "test": "T1",
+    "run": 1,
+    "max_tokens": 500,
+    "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"1.0.0\",\n  \"license\": \"ServiceNow Internal Use License\"\n}\n```",
+    "raw_120": "```json\\n{\\n  \"name\": \"ServiceNow SAM Pro\",\\n  \"version\": \"1.0.0\",\\n  \"license\": \"ServiceNow Internal Use License\"\\n}\\n```",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 5.13,
+    "usage": {
+      "prompt_tokens": 51,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens": 39,
+      "total_tokens": 90
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": false,
+    "fenced": true,
+    "extra_prose": true,
+    "detail": {
+      "keys": null
+    }
+  },
+  {
+    "model": "qwen2.5:7b",
+    "test": "T1",
+    "run": 2,
+    "max_tokens": 500,
+    "raw": "{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"10.20.3\",\n  \"licence\": \"Enterprise\"\n}",
+    "raw_120": "{\\n  \"name\": \"ServiceNow SAM Pro\",\\n  \"version\": \"10.20.3\",\\n  \"licence\": \"Enterprise\"\\n}",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 1.02,
+    "usage": {
+      "prompt_tokens": 56,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 33,
+      "total_tokens": 89
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "keys": [
+        "licence",
+        "name",
+        "version"
+      ]
+    }
+  },
+  {
+    "model": "qwen2.5:7b",
+    "test": "T1",
+    "run": 3,
+    "max_tokens": 500,
+    "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"1.0\",\n  \"licence\": \"Apache License 2.0\"\n}\n```",
+    "raw_120": "```json\\n{\\n  \"name\": \"ServiceNow SAM Pro\",\\n  \"version\": \"1.0\",\\n  \"licence\": \"Apache License 2.0\"\\n}\\n```",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 1.0,
+    "usage": {
+      "prompt_tokens": 52,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 38,
+      "total_tokens": 90
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": false,
+    "fenced": true,
+    "extra_prose": true,
+    "detail": {
+      "keys": null
+    }
+  },
+  {
+    "model": "qwen2.5:7b",
+    "test": "T2",
+    "run": 1,
+    "max_tokens": 500,
+    "raw": "{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}",
+    "raw_120": "{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 1.28,
+    "usage": {
+      "prompt_tokens": 93,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 20,
+      "total_tokens": 113
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "metric": "core",
+      "quantity": 48,
+      "quantity_pytype": "int",
+      "publisher_pytype": "str"
+    }
+  },
+  {
+    "model": "qwen2.5:7b",
+    "test": "T2",
+    "run": 2,
+    "max_tokens": 500,
+    "raw": "{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}",
+    "raw_120": "{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 1.01,
+    "usage": {
+      "prompt_tokens": 99,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 20,
+      "total_tokens": 119
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "metric": "core",
+      "quantity": 48,
+      "quantity_pytype": "int",
+      "publisher_pytype": "str"
+    }
+  },
+  {
+    "model": "qwen2.5:7b",
+    "test": "T2",
+    "run": 3,
+    "max_tokens": 500,
+    "raw": "{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}",
+    "raw_120": "{\"publisher\": \"Microsoft\", \"metric\": \"core\", \"quantity\": 48}",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 0.49,
+    "usage": {
+      "prompt_tokens": 88,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 20,
+      "total_tokens": 108
+    },
+    "error": null,
+    "parse_ok": true,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "metric": "core",
+      "quantity": 48,
+      "quantity_pytype": "int",
+      "publisher_pytype": "str"
+    }
+  },
+  {
+    "model": "qwen2.5:7b",
+    "test": "T3",
+    "run": 1,
+    "max_tokens": 500,
+    "raw": "OK",
+    "raw_120": "OK",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 0.07,
+    "usage": {
+      "prompt_tokens": 45,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 2,
+      "total_tokens": 47
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "exact": true
+    }
+  },
+  {
+    "model": "qwen2.5:7b",
+    "test": "T3",
+    "run": 2,
+    "max_tokens": 500,
+    "raw": "OK",
+    "raw_120": "OK",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 0.06,
+    "usage": {
+      "prompt_tokens": 47,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 2,
+      "total_tokens": 49
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "exact": true
+    }
+  },
+  {
+    "model": "qwen2.5:7b",
+    "test": "T3",
+    "run": 3,
+    "max_tokens": 500,
+    "raw": "OK",
+    "raw_120": "OK",
+    "reasoning_len": 0,
+    "finish": "stop",
+    "secs": 0.06,
+    "usage": {
+      "prompt_tokens": 46,
+      "prompt_tokens_details": {
+        "cached_tokens": 24
+      },
+      "completion_tokens": 2,
+      "total_tokens": 48
+    },
+    "error": null,
+    "parse_ok": false,
+    "schema_ok": true,
+    "fenced": false,
+    "extra_prose": false,
+    "detail": {
+      "exact": true
+    }
+  }
+]

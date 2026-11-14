@@ -1,0 +1,122 @@
+[
+ {
+  "model": "qwen2.5:14b",
+  "approx_words": 2000,
+  "needle_frac": 0.1,
+  "found": true,
+  "secs": 4.4,
+  "prompt_tok": 1458,
+  "preview": "ZXQ-KKD5",
+  "err": null
+ },
+ {
+  "model": "qwen2.5:32b",
+  "approx_words": 2000,
+  "needle_frac": 0.1,
+  "found": true,
+  "secs": 15.2,
+  "prompt_tok": 1458,
+  "preview": "ZXQ-KKD5",
+  "err": null
+ },
+ {
+  "model": "qwen2.5:14b",
+  "approx_words": 2000,
+  "needle_frac": 0.9,
+  "found": true,
+  "secs": 1.0,
+  "prompt_tok": 1458,
+  "preview": "ZXQ-LGN4",
+  "err": null
+ },
+ {
+  "model": "qwen2.5:32b",
+  "approx_words": 2000,
+  "needle_frac": 0.9,
+  "found": true,
+  "secs": 2.1,
+  "prompt_tok": 1458,
+  "preview": "ZXQ-LGN4",
+  "err": null
+ },
+ {
+  "model": "qwen2.5:14b",
+  "approx_words": 6000,
+  "needle_frac": 0.1,
+  "found": true,
+  "secs": 2.5,
+  "prompt_tok": 4178,
+  "preview": "ZXQ-OJEO",
+  "err": null
+ },
+ {
+  "model": "qwen2.5:32b",
+  "approx_words": 6000,
+  "needle_frac": 0.1,
+  "found": true,
+  "secs": 5.7,
+  "prompt_tok": 4178,
+  "preview": "ZXQ-OJEO",
+  "err": null
+ },
+ {
+  "model": "qwen2.5:14b",
+  "approx_words": 6000,
+  "needle_frac": 0.9,
+  "found": true,
+  "secs": 2.2,
+  "prompt_tok": 4179,
+  "preview": "ZXQ-LI9A",
+  "err": null
+ },
+ {
+  "model": "qwen2.5:32b",
+  "approx_words": 6000,
+  "needle_frac": 0.9,
+  "found": true,
+  "secs": 4.3,
+  "prompt_tok": 4179,
+  "preview": "ZXQ-LI9A",
+  "err": null
+ },
+ {
+  "model": "qwen2.5:14b",
+  "approx_words": 12000,
+  "needle_frac": 0.1,
+  "found": false,
+  "secs": 6.6,
+  "prompt_tok": 8258,
+  "preview": "', Z, X, Q,  , p, l, a, c, e, h, o, l, d, e, r, '",
+  "err": null
+ },
+ {
+  "model": "qwen2.5:32b",
+  "approx_words": 12000,
+  "needle_frac": 0.1,
+  "found": true,
+  "secs": 9.9,
+  "prompt_tok": 8258,
+  "preview": "ZXQ-SSEF",
+  "err": null
+ },
+ {
+  "model": "qwen2.5:14b",
+  "approx_words": 12000,
+  "needle_frac": 0.9,
+  "found": true,
+  "secs": 3.7,
+  "prompt_tok": 8259,
+  "preview": "ZXQ-VN71",
+  "err": null
+ },
+ {
+  "model": "qwen2.5:32b",
+  "approx_words": 12000,
+  "needle_frac": 0.9,
+  "found": true,
+  "secs": 7.0,
+  "prompt_tok": 8259,
+  "preview": "ZXQ-VN71",
+  "err": null
+ }
+]

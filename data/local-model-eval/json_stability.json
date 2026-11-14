@@ -1,0 +1,194 @@
+{
+  "qwen2.5:14b": [
+    {
+      "raw": "{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"latest\",\n  \"license\": \"subscription\"\n}",
+      "parse": true,
+      "schema": false,
+      "fenced": false
+    },
+    {
+      "raw": "{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"latest\",\n  \"license\": \"subscription\"\n}",
+      "parse": true,
+      "schema": false,
+      "fenced": false
+    },
+    {
+      "raw": "{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"latest\",\n  \"license\": \"subscription\"\n}",
+      "parse": true,
+      "schema": false,
+      "fenced": false
+    },
+    {
+      "raw": "{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"latest\",\n  \"license\": \"subscription\"\n}",
+      "parse": true,
+      "schema": false,
+      "fenced": false
+    },
+    {
+      "raw": "{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"latest\",\n  \"license\": \"subscription\"\n}",
+      "parse": true,
+      "schema": false,
+      "fenced": false
+    }
+  ],
+  "qwen2.5:32b": [
+    {
+      "raw": "{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"Latest\",\n  \"licence\": \"Commercial\"\n}",
+      "parse": true,
+      "schema": true,
+      "fenced": false
+    },
+    {
+      "raw": "{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"Latest\",\n  \"licence\": \"Commercial\"\n}",
+      "parse": true,
+      "schema": true,
+      "fenced": false
+    },
+    {
+      "raw": "{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"Latest\",\n  \"licence\": \"Commercial\"\n}",
+      "parse": true,
+      "schema": true,
+      "fenced": false
+    },
+    {
+      "raw": "{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"Latest\",\n  \"licence\": \"Commercial\"\n}",
+      "parse": true,
+      "schema": true,
+      "fenced": false
+    },
+    {
+      "raw": "{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"Latest\",\n  \"licence\": \"Commercial\"\n}",
+      "parse": true,
+      "schema": true,
+      "fenced": false
+    }
+  ],
+  "qwen2.5-coder:14b": [
+    {
+      "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"2023.1\",\n  \"licence\": \"ServiceNow Subscription Agreement\"\n}\n```",
+      "parse": false,
+      "schema": false,
+      "fenced": true
+    },
+    {
+      "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"2023.1\",\n  \"licence\": \"ServiceNow Subscription Agreement\"\n}\n```",
+      "parse": false,
+      "schema": false,
+      "fenced": true
+    },
+    {
+      "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"2023.1\",\n  \"licence\": \"ServiceNow Subscription Agreement\"\n}\n```",
+      "parse": false,
+      "schema": false,
+      "fenced": true
+    },
+    {
+      "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"2023.1\",\n  \"licence\": \"ServiceNow Subscription Agreement\"\n}\n```",
+      "parse": false,
+      "schema": false,
+      "fenced": true
+    },
+    {
+      "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"2023.1\",\n  \"licence\": \"ServiceNow Subscription Agreement\"\n}\n```",
+      "parse": false,
+      "schema": false,
+      "fenced": true
+    }
+  ],
+  "deepseek-r1:32b": [
+    {
+      "raw": "\n\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"22.2\",\n  \"licence\": \"Subscription\"\n}",
+      "parse": true,
+      "schema": true,
+      "fenced": false
+    },
+    {
+      "raw": "\n\n```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"22.11\",\n  \"licence\": \"Proprietary\"\n}\n```",
+      "parse": false,
+      "schema": false,
+      "fenced": true
+    },
+    {
+      "raw": "\n\n```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"22.11\",\n  \"licence\": \"Proprietary\"\n}\n```",
+      "parse": false,
+      "schema": false,
+      "fenced": true
+    },
+    {
+      "raw": "\n\n```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"22.11\",\n  \"licence\": \"Proprietary\"\n}\n```",
+      "parse": false,
+      "schema": false,
+      "fenced": true
+    },
+    {
+      "raw": "\n\n```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"22.11\",\n  \"licence\": \"Proprietary\"\n}\n```",
+      "parse": false,
+      "schema": false,
+      "fenced": true
+    }
+  ],
+  "gemma3:12b": [
+    {
+      "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"N/A\",\n  \"licence\": \"ServiceNow Proprietary\"\n}\n```",
+      "parse": false,
+      "schema": false,
+      "fenced": true
+    },
+    {
+      "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"N/A (ServiceNow release dependent)\",\n  \"licence\": \"ServiceNow Subscription\"\n}\n```",
+      "parse": false,
+      "schema": false,
+      "fenced": true
+    },
+    {
+      "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"N/A (ServiceNow release dependent)\",\n  \"licence\": \"ServiceNow Subscription\"\n}\n```",
+      "parse": false,
+      "schema": false,
+      "fenced": true
+    },
+    {
+      "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"N/A (ServiceNow release dependent)\",\n  \"licence\": \"ServiceNow Subscription\"\n}\n```",
+      "parse": false,
+      "schema": false,
+      "fenced": true
+    },
+    {
+      "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"N/A (ServiceNow release dependent)\",\n  \"licence\": \"ServiceNow Subscription\"\n}\n```",
+      "parse": false,
+      "schema": false,
+      "fenced": true
+    }
+  ],
+  "qwen2.5:7b": [
+    {
+      "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"1.0.0\",\n  \"license\": \"ServiceNow Internal Use License\"\n}\n```",
+      "parse": false,
+      "schema": false,
+      "fenced": true
+    },
+    {
+      "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"1.0.0\",\n  \"license\": \"ServiceNow Internal Use License\"\n}\n```",
+      "parse": false,
+      "schema": false,
+      "fenced": true
+    },
+    {
+      "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"1.0.0\",\n  \"license\": \"ServiceNow Internal Use License\"\n}\n```",
+      "parse": false,
+      "schema": false,
+      "fenced": true
+    },
+    {
+      "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"1.0.0\",\n  \"license\": \"ServiceNow Internal Use License\"\n}\n```",
+      "parse": false,
+      "schema": false,
+      "fenced": true
+    },
+    {
+      "raw": "```json\n{\n  \"name\": \"ServiceNow SAM Pro\",\n  \"version\": \"1.0.0\",\n  \"license\": \"ServiceNow Internal Use License\"\n}\n```",
+      "parse": false,
+      "schema": false,
+      "fenced": true
+    }
+  ]
+}

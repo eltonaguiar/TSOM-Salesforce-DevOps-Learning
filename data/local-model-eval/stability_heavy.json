@@ -1,0 +1,48 @@
+[
+ {
+  "target": "litellm:4000",
+  "single_mean": 1.3,
+  "burst_ok": 12,
+  "burst_n": 12,
+  "burst_wall": 15.6,
+  "burst_mean": 8.5,
+  "burst_max": 15.6,
+  "errors": [],
+  "survived": true
+ },
+ {
+  "target": "vllm:8000",
+  "single_mean": 12.8,
+  "burst_ok": 12,
+  "burst_n": 12,
+  "burst_wall": 15.1,
+  "burst_mean": 15.1,
+  "burst_max": 15.1,
+  "errors": [],
+  "survived": true
+ },
+ {
+  "target": "ollama:11434",
+  "single_mean": 2.6,
+  "burst_ok": 12,
+  "burst_n": 12,
+  "burst_wall": 32.9,
+  "burst_mean": 17.8,
+  "burst_max": 32.9,
+  "errors": [],
+  "survived": true
+ },
+ {
+  "target": "hermes:8642",
+  "single_mean": 18.4,
+  "burst_ok": 10,
+  "burst_n": 12,
+  "burst_wall": 117.7,
+  "burst_mean": 62.3,
+  "burst_max": 117.7,
+  "errors": [
+   "HTTP 429"
+  ],
+  "survived": true
+ }
+]

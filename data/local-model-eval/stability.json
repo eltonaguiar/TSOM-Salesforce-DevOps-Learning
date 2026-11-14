@@ -1,0 +1,131 @@
+[
+ {
+  "target": "litellm:4000",
+  "before": true,
+  "single": {
+   "label": "single x3",
+   "n": 3,
+   "ok": 3,
+   "success_pct": 100.0,
+   "mean_s": 0.96,
+   "max_s": 2.82,
+   "errors": []
+  },
+  "burst": {
+   "label": "burst x8",
+   "n": 8,
+   "ok": 8,
+   "success_pct": 100.0,
+   "mean_s": 0.11,
+   "max_s": 0.19,
+   "errors": []
+  },
+  "burst_wall_s": 0.19,
+  "after": true,
+  "survived": true
+ },
+ {
+  "target": "litellm:4000 tools",
+  "before": true,
+  "single": {
+   "label": "single x3",
+   "n": 3,
+   "ok": 2,
+   "success_pct": 66.7,
+   "mean_s": 4.37,
+   "max_s": 5.28,
+   "errors": [
+    "HTTP 404: {\"error\":{\"message\":\"litellm.NotFoundError: NotFoundError: Hosted_vllmException - {\\\"error\\\":{\\\"mess"
+   ]
+  },
+  "burst": {
+   "label": "burst x8",
+   "n": 8,
+   "ok": 7,
+   "success_pct": 87.5,
+   "mean_s": 0.47,
+   "max_s": 0.73,
+   "errors": [
+    "HTTP 404: {\"error\":{\"message\":\"litellm.NotFoundError: NotFoundError: Hosted_vllmException - {\\\"error\\\":{\\\"mess"
+   ]
+  },
+  "burst_wall_s": 0.73,
+  "after": true,
+  "survived": true
+ },
+ {
+  "target": "vllm:8000",
+  "before": true,
+  "single": {
+   "label": "single x3",
+   "n": 3,
+   "ok": 3,
+   "success_pct": 100.0,
+   "mean_s": 0.33,
+   "max_s": 0.36,
+   "errors": []
+  },
+  "burst": {
+   "label": "burst x8",
+   "n": 8,
+   "ok": 8,
+   "success_pct": 100.0,
+   "mean_s": 0.36,
+   "max_s": 0.36,
+   "errors": []
+  },
+  "burst_wall_s": 0.36,
+  "after": true,
+  "survived": true
+ },
+ {
+  "target": "ollama:11434",
+  "before": true,
+  "single": {
+   "label": "single x3",
+   "n": 3,
+   "ok": 3,
+   "success_pct": 100.0,
+   "mean_s": 0.85,
+   "max_s": 2.44,
+   "errors": []
+  },
+  "burst": {
+   "label": "burst x8",
+   "n": 8,
+   "ok": 8,
+   "success_pct": 100.0,
+   "mean_s": 0.2,
+   "max_s": 0.36,
+   "errors": []
+  },
+  "burst_wall_s": 0.36,
+  "after": true,
+  "survived": true
+ },
+ {
+  "target": "hermes:8642",
+  "before": true,
+  "single": {
+   "label": "single x3",
+   "n": 3,
+   "ok": 3,
+   "success_pct": 100.0,
+   "mean_s": 2.35,
+   "max_s": 2.96,
+   "errors": []
+  },
+  "burst": {
+   "label": "burst x8",
+   "n": 8,
+   "ok": 8,
+   "success_pct": 100.0,
+   "mean_s": 6.4,
+   "max_s": 11.23,
+   "errors": []
+  },
+  "burst_wall_s": 11.23,
+  "after": true,
+  "survived": true
+ }
+]

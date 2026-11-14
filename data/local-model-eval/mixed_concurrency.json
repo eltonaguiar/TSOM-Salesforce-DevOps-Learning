@@ -1,0 +1,76 @@
+[
+ {
+  "warm": "TOPNOTCH_LOCALONLY_GEMMA",
+  "ok": true,
+  "secs": 5.444399833679199,
+  "chars": 191
+ },
+ {
+  "warm": "TOPNOTCH_LOCALONLY_QWEN14",
+  "ok": true,
+  "secs": 4.6014649868011475,
+  "chars": 207
+ },
+ {
+  "warm": "TOPNOTCH_LOCALONLY_QWEN32",
+  "ok": true,
+  "secs": 9.862555742263794,
+  "chars": 210
+ },
+ {
+  "warm": "TOPNOTCH_LOCALONLY_CODER",
+  "ok": true,
+  "secs": 5.42771053314209,
+  "chars": 272
+ },
+ {
+  "warm": "TOPNOTCH_LOCALONLY_DEEP",
+  "ok": true,
+  "secs": 16.18477201461792,
+  "chars": 0
+ },
+ {
+  "warm": "TOPNOTCH_LOCALONLY_VLLM",
+  "ok": true,
+  "secs": 4.72193717956543,
+  "chars": 240
+ },
+ {
+  "wave": "6 distinct models x1",
+  "calls": 6,
+  "ok": 6,
+  "wall_s": 30.5,
+  "mean_s": 18.7,
+  "max_s": 30.5,
+  "errors": [],
+  "pid_before": "3518861",
+  "pid_after": "3518861",
+  "survived": true
+ },
+ {
+  "wave": "gemma x4 + qwen14 + coder",
+  "calls": 6,
+  "ok": 6,
+  "wall_s": 13.1,
+  "mean_s": 8.8,
+  "max_s": 13.1,
+  "errors": [],
+  "pid_before": "3518861",
+  "pid_after": "3518861",
+  "survived": true
+ },
+ {
+  "wave": "18 concurrent, 3x6 mixed",
+  "calls": 18,
+  "ok": 16,
+  "wall_s": 65.5,
+  "mean_s": 28.8,
+  "max_s": 65.5,
+  "errors": [
+   "HTTP 429"
+  ],
+  "pid_before": "3518861",
+  "pid_after": "3518861",
+  "survived": true
+ }
+]

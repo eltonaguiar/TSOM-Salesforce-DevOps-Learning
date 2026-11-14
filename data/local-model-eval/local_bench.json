@@ -1,0 +1,203 @@
+{
+ "wall_secs": 118.2,
+ "results": [
+  {
+   "model": "gemma3:12b",
+   "backend": "ollama",
+   "secs": 65.6,
+   "text": "```json\n{\n  \"end_to_end\": \"PARTIAL\",\n  \"content_library\": \"PARTIAL\",\n  \"entitlements_metrics\": \"MISSING\",\n  \"reconciliation\": \"MISSING\",\n  \"removal_reclamation\": \"MISSING\",\n  \"saas_licence_mgmt\": \"MISSING\",\n  \"publisher_packs\": \"MISSING\",\n  \"cmdb_data_quality\": \"PARTIAL\",\n  \"audit_readiness\": \"MISSING\",\n  \"bank_angle\": \"MISSING\"\n}\n```",
+   "prompt_tokens": 3640,
+   "completion_tokens": 131,
+   "parsed": {
+    "end_to_end": "PARTIAL",
+    "content_library": "PARTIAL",
+    "entitlements_metrics": "MISSING",
+    "reconciliation": "MISSING",
+    "removal_reclamation": "MISSING",
+    "saas_licence_mgmt": "MISSING",
+    "publisher_packs": "MISSING",
+    "cmdb_data_quality": "PARTIAL",
+    "audit_readiness": "MISSING",
+    "bank_angle": "MISSING"
+   },
+   "score": {
+    "exact": 7,
+    "adjacent": 0.85,
+    "answered": 10,
+    "of": 10
+   }
+  },
+  {
+   "model": "qwen2.5:14b",
+   "backend": "ollama",
+   "secs": 118.2,
+   "text": "{\n  \"end_to_end\": \"PARTIAL\",\n  \"content_library\": \"PARTIAL\",\n  \"entitlements_metrics\": \"PARTIAL\",\n  \"reconciliation\": \"PARTIAL\",\n  \"removal_reclamation\": \"PARTIAL\",\n  \"saas_licence_mgmt\": \"PARTIAL\",\n  \"publisher_packs\": \"PARTIAL\",\n  \"cmdb_data_quality\": \"PARTIAL\",\n  \"audit_readiness\": \"PARTIAL\",\n  \"bank_angle\": \"MISSING\"\n}",
+   "prompt_tokens": 3410,
+   "completion_tokens": 105,
+   "parsed": {
+    "end_to_end": "PARTIAL",
+    "content_library": "PARTIAL",
+    "entitlements_metrics": "PARTIAL",
+    "reconciliation": "PARTIAL",
+    "removal_reclamation": "PARTIAL",
+    "saas_licence_mgmt": "PARTIAL",
+    "publisher_packs": "PARTIAL",
+    "cmdb_data_quality": "PARTIAL",
+    "audit_readiness": "PARTIAL",
+    "bank_angle": "MISSING"
+   },
+   "score": {
+    "exact": 7,
+    "adjacent": 0.85,
+    "answered": 10,
+    "of": 10
+   }
+  },
+  {
+   "model": "qwen2.5-coder:14b",
+   "backend": "ollama",
+   "secs": 32.0,
+   "text": "```json\n{\n  \"end_to_end\": \"PARTIAL\",\n  \"content_library\": \"PARTIAL\",\n  \"entitlements_metrics\": \"PARTIAL\",\n  \"reconciliation\": \"PARTIAL\",\n  \"removal_reclamation\": \"PARTIAL\",\n  \"saas_licence_mgmt\": \"PARTIAL\",\n  \"publisher_packs\": \"PARTIAL\",\n  \"cmdb_data_quality\": \"PARTIAL\",\n  \"audit_readiness\": \"PARTIAL\",\n  \"bank_angle\": \"PARTIAL\"\n}\n```",
+   "prompt_tokens": 3410,
+   "completion_tokens": 109,
+   "parsed": {
+    "end_to_end": "PARTIAL",
+    "content_library": "PARTIAL",
+    "entitlements_metrics": "PARTIAL",
+    "reconciliation": "PARTIAL",
+    "removal_reclamation": "PARTIAL",
+    "saas_licence_mgmt": "PARTIAL",
+    "publisher_packs": "PARTIAL",
+    "cmdb_data_quality": "PARTIAL",
+    "audit_readiness": "PARTIAL",
+    "bank_angle": "PARTIAL"
+   },
+   "score": {
+    "exact": 6,
+    "adjacent": 0.8,
+    "answered": 10,
+    "of": 10
+   }
+  },
+  {
+   "model": "Qwen/Qwen2.5-14B-Instruct",
+   "backend": "vllm",
+   "secs": 34.0,
+   "text": "{\n  \"end_to_end\": \"PARTIAL\",\n  \"content_library\": \"MISSING\",\n  \"entitlements_metrics\": \"PARTIAL\",\n  \"reconciliation\": \"PARTIAL\",\n  \"removal_reclamation\": \"MISSING\",\n  \"saas_licence_mgmt\": \"PARTIAL\",\n  \"publisher_packs\": \"PARTIAL\",\n  \"cmdb_data_quality\": \"PARTIAL\",\n  \"audit_readiness\": \"MISSING\",\n  \"bank_angle\": \"MISSING\"\n}",
+   "prompt_tokens": 3410,
+   "completion_tokens": 105,
+   "parsed": {
+    "end_to_end": "PARTIAL",
+    "content_library": "MISSING",
+    "entitlements_metrics": "PARTIAL",
+    "reconciliation": "PARTIAL",
+    "removal_reclamation": "MISSING",
+    "saas_licence_mgmt": "PARTIAL",
+    "publisher_packs": "PARTIAL",
+    "cmdb_data_quality": "PARTIAL",
+    "audit_readiness": "MISSING",
+    "bank_angle": "MISSING"
+   },
+   "score": {
+    "exact": 6,
+    "adjacent": 0.8,
+    "answered": 10,
+    "of": 10
+   }
+  },
+  {
+   "model": "qwen2.5:32b",
+   "backend": "ollama",
+   "secs": 49.0,
+   "text": "{\n  \"end_to_end\": \"MISSING\",\n  \"content_library\": \"MISSING\",\n  \"entitlements_metrics\": \"PARTIAL\",\n  \"reconciliation\": \"MISSING\",\n  \"removal_reclamation\": \"MISSING\",\n  \"saas_licence_mgmt\": \"MISSING\",\n  \"publisher_packs\": \"MISSING\",\n  \"cmdb_data_quality\": \"PARTIAL\",\n  \"audit_readiness\": \"MISSING\",\n  \"bank_angle\": \"MISSING\"\n}",
+   "prompt_tokens": 3410,
+   "completion_tokens": 105,
+   "parsed": {
+    "end_to_end": "MISSING",
+    "content_library": "MISSING",
+    "entitlements_metrics": "PARTIAL",
+    "reconciliation": "MISSING",
+    "removal_reclamation": "MISSING",
+    "saas_licence_mgmt": "MISSING",
+    "publisher_packs": "MISSING",
+    "cmdb_data_quality": "PARTIAL",
+    "audit_readiness": "MISSING",
+    "bank_angle": "MISSING"
+   },
+   "score": {
+    "exact": 6,
+    "adjacent": 0.8,
+    "answered": 10,
+    "of": 10
+   }
+  },
+  {
+   "model": "llama3.1:8b",
+   "backend": "ollama",
+   "secs": 65.9,
+   "text": "{\n  \"end_to_end\": \"MISSING\",\n  \"content_library\": \"PARTIAL\",\n  \"entitlements_metrics\": \"MISSING\",\n  \"reconciliation\": \"MISSING\",\n  \"removal_reclamation\": \"MISSING\",\n  \"saas_licence_mgmt\": \"PARTIAL\",\n  \"publisher_packs\": \"MISSING\",\n  \"cmdb_data_quality\": \"PARTIAL\",\n  \"audit_readiness\": \"MISSING\",\n  \"bank_angle\": \"MISSING\"\n}",
+   "prompt_tokens": 3379,
+   "completion_tokens": 105,
+   "parsed": {
+    "end_to_end": "MISSING",
+    "content_library": "PARTIAL",
+    "entitlements_metrics": "MISSING",
+    "reconciliation": "MISSING",
+    "removal_reclamation": "MISSING",
+    "saas_licence_mgmt": "PARTIAL",
+    "publisher_packs": "MISSING",
+    "cmdb_data_quality": "PARTIAL",
+    "audit_readiness": "MISSING",
+    "bank_angle": "MISSING"
+   },
+   "score": {
+    "exact": 5,
+    "adjacent": 0.75,
+    "answered": 10,
+    "of": 10
+   }
+  },
+  {
+   "model": "qwen3.5:4b",
+   "backend": "ollama",
+   "secs": 46.0,
+   "text": "",
+   "prompt_tokens": 3577,
+   "completion_tokens": 400,
+   "parsed": {},
+   "score": {
+    "exact": 0,
+    "adjacent": 0.0,
+    "answered": 0,
+    "of": 10
+   }
+  },
+  {
+   "model": "deepseek-r1:32b",
+   "backend": "ollama",
+   "secs": 108.1,
+   "text": "",
+   "prompt_tokens": 3384,
+   "completion_tokens": 400,
+   "parsed": {},
+   "score": {
+    "exact": 0,
+    "adjacent": 0.0,
+    "answered": 0,
+    "of": 10
+   }
+  }
+ ],
+ "ground_truth": {
+  "end_to_end": "PARTIAL",
+  "content_library": "PARTIAL",
+  "entitlements_metrics": "PARTIAL",
+  "reconciliation": "PARTIAL",
+  "removal_reclamation": "MISSING",
+  "saas_licence_mgmt": "MISSING",
+  "publisher_packs": "MISSING",
+  "cmdb_data_quality": "PARTIAL",
+  "audit_readiness": "PARTIAL",
+  "bank_angle": "MISSING"
+ }
+}
