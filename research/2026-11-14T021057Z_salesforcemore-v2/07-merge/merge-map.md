@@ -127,3 +127,21 @@ Add a blank line after `<summary>` and before `</details>`.
 - [ ] All `<details>` blocks use `markdown="1"`.
 - [ ] All changeable facts carry a caveat.
 - [ ] No secrets or customer data.
+
+## 8. Sibling-page opportunities
+
+The research also feeds the other Salesforce guides in the same repo, not just the DevOps page.
+
+| Research file | Sibling page | Suggested addition |
+|---|---|---|
+| `02-limits-constraints/governor-limits.md` | Salesforce Crash Course (`docs/salesforce/crash-course.md`) | A compact governor-limits table and the 200/10,000-record review questions; link to the DevOps page for the full deep dive |
+| `02-limits-constraints/dependencies-and-constraints.md` | Crash Course; Labs & Design (`docs/salesforce/labs-design.md`) | A "missing dependency" lab and an error-to-fix table |
+| `03-devops-tools/gearset-click-paths.md` | Navigation & Breadcrumbs (`docs/salesforce/navigation-breadcrumbs.md`) | A "Deployment & DevOps" row set: Setup → Deploy → Deployment Status, Setup → Sandboxes, Setup → DevOps Center, plus vendor-tool paths |
+| `04-cicd/auth-secrets-environments.md` | Labs & Design | A lab: create a JWT auth flow, store a key in a CI secret, validate a deploy, never commit the key |
+| `05-certifications/salesforce-credentials.md` | Learning Paths page (general docs) | A study order and the current credential names (Platform Administrator II, not "Advanced Admin") |
+| `06-term-deep-dives/term-entries.md` | Crash Course; Interview Prep | Short definitions and the "interview line" for Apex, Flow, permission sets, record types, layouts, security |
+| `02-limits-constraints/other-limits-and-system-settings.md` | User Management & Data (`docs/salesforce/user-management-data.md`) | A pre-flight checklist for permissions, SSO, named credentials, and email deliverability in a sandbox |
+| `01-salesforce-key-principles/principles.md` | DevOps page; Crash Course | The principles spine as a shared intro; reuse the one-line answers |
+
+**Rule for sibling pages:** add a short section and link to the DevOps page for the full treatment. Do not duplicate the full limits/dependency tables across four pages; the repo will drift.
+
