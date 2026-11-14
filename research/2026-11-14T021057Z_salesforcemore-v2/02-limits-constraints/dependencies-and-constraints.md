@@ -88,7 +88,7 @@ These are the things a deploy cannot fix by including another component.
 | Change Sets only work between related orgs | No Git diff, no CLI, no rollback | Use the CLI or a vendor pipeline with Git in front |
 | Sandbox refresh overwrites | A refresh replaces metadata and data | Re-deploy from Git and re-run masking after refresh |
 | Deploy user permissions | The integration user needs API access and deploy permissions | Use a dedicated user with a least-privilege deploy permission set |
-| Concurrent deploys | Two deploys to one org can conflict or queue unpredictably | Serialize per org with a concurrency group or deployment lock |
+| Concurrent deploys | Two deploys to one org can conflict or queue unpredictably; only one deployment runs at a time, and queued deployments are not guaranteed to run in submission order | Serialize per org with a concurrency group or deployment lock; submit in order one at a time |
 | Hard-coded ids | The id in Dev is not the id in UAT | Use custom metadata, custom settings, or a query by developer name |
 | `NoTestRun` in production | Rejected when the payload contains Apex | Use `RunSpecifiedTests` or `RunLocalTests` |
 | "Ignore conflicts" | Hides a real divergence between Git and the org | Do not use it in production; fix the source of truth |
@@ -106,7 +106,23 @@ sf project deploy start \
 
 Use pre-destructive changes only when the delete must happen before the add (for example, a rename that would collide). A delete in production is not undone by Git. Rollback of a delete means recreating the metadata, and any records that lived on a deleted object are gone.
 
-## 7. Troubleshooting method
+## 7. Test levels — five, not four
+
+The Metadata API `TestLevel` enum has five values. The older four-level answer is incomplete.
+
+| Level | What it runs | When to use |
+|---|---|---|
+| `NoTestRun` | No tests | Development environments only; rejected in production when the payload contains Apex |
+| `RunSpecifiedTests` | Only the tests you name | Fast, targeted validation; each deployed class/trigger must be covered to 75% by those tests |
+| `RunRelevantTests` (Beta) | Only tests relevant to the deployment payload, identified from the payload and its dependencies | API version 66.0+; Apex-heavy deployments where you want test time to scale with the payload; annotate test classes for fine-grained control |
+| `RunLocalTests` | All tests in the org except managed/unlocked package tests | The default for production deployments that include Apex; slower but honest |
+| `RunAllTestsInOrg` | All tests, including managed-package tests | Rarely; very slow and usually not necessary for a release |
+
+Source: [Metadata API `deploy()`](https://developer.salesforce.com/docs/platform/api-metadata/references/file-based-calls/meta-deploy.html) and the [Salesforce CLI deploy messages](https://github.com/salesforcecli/plugin-deploy-retrieve/blob/main/messages/deploy.metadata.md), accessed 2026-11-14.
+
+**Interview line.** "There are five test levels. `RunRelevantTests` is the Beta level that runs tests relevant to the payload on API 66.0+. I still use `RunLocalTests` when I need the broadest honest gate before production."
+
+## 8. Troubleshooting method
 
 ```text
 1. Save the full error and the deploy id.
@@ -120,7 +136,7 @@ Use pre-destructive changes only when the delete must happen before the add (for
 9. Only then change code.
 ```
 
-## 8. Error-to-fix quick table
+## 9. Error-to-fix quick table
 
 | Error | First check | Fix |
 |---|---|---|
@@ -136,7 +152,7 @@ Use pre-destructive changes only when the delete must happen before the add (for
 | Callout works in Dev, fails in UAT | Missing named credential secret, external credential, certificate, remote site, or endpoint | Configure per org |
 | `REQUEST_LIMIT_EXCEEDED` | API usage, async queue, or concurrency | Check Setup → Company Information → API Usage; reduce/serialize/off-peak |
 
-## 9. What to merge
+## 10. What to merge
 
 **Merge:** the dependency graph, the six rules, the record-type manifest, the constraints table, the destructive-change warning, the troubleshooting method, and the error-to-fix table.
 

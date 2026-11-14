@@ -9,7 +9,7 @@ Access date for all sources: **2026-11-14**.
 | S1 | Scotiabank job posting, Requisition 276046 | <https://jobs.scotiabank.com/job/Toronto-DevOps-Engineer%28Salesforce%29-ON-M5H-1A1/606915617/> | Scope contract: responsibilities and requirements | High | Public posting; captured in `job-description.md` |
 | S2 | Salesforce DevOps Engineer training page | <https://eltonaguiar.github.io/ServiceNow_Learning_TSOM-_CSM_FSM_SalesCRM_HAM_ITSM/docs/salesforce/devops-engineer/> | Current downstream content and section structure | High | Read-only reference; merge target |
 | S3 | Apex execution governors and limits | <https://developer.salesforce.com/docs/platform/apex-dev/references/apex-dev/apex-gov-limits.html> | Governor limit tables, async limits, cross-namespace limits | High | Developer docs blocked a direct browser fetch; content retrieved via a reader proxy on 2026-11-14. Verify numbers in the current release. |
-| S4 | Metadata API guide | <https://developer.salesforce.com/docs/platform/api-metadata/guide/> | Deploy/retrieve model, metadata vs data | High | The old `meta_limits.htm` URL returned 404; payload ceilings should be re-checked on the current limits page |
+| S4 | Metadata API guide | <https://developer.salesforce.com/docs/platform/api-metadata/guide/> | Deploy/retrieve model, metadata vs data | High | The old `meta_limits.htm` URL returned 404; the current deploy limits are on the `deploy()` reference (S23) |
 | S5 | Salesforce Help — Sandboxes | <https://help.salesforce.com/s/articleView?id=sf.deploy_sandboxes_parent.htm&type=5> | Sandbox types and refresh | High | Help pages are JavaScript-heavy; use the in-product Help for exact steps |
 | S6 | Salesforce Help — Quick Deploy | <https://help.salesforce.com/s/articleView?id=sf.deploy_quick_deploy.htm&type=5> | Validate vs quick deploy | High | Same access caveat |
 | S7 | Salesforce Help — Data Mask | <https://help.salesforce.com/s/articleView?id=sf.data_mask.htm&type=5> | Masking | High | Product availability varies by licence |
@@ -28,6 +28,11 @@ Access date for all sources: **2026-11-14**.
 | S20 | GitHub Actions documentation | <https://docs.github.com/en/actions> | Workflows, environments, secrets, approvals | High | Feature availability depends on plan |
 | S21 | `sfdx-git-delta` | <https://github.com/scolladon/sfdx-git-delta> | Delta manifest generation | Medium–High | Community plugin; verify command flags |
 | S22 | Salesforce Help — API usage / limits | In-product: Setup → Company Information → API Usage | Org API allocation | High | Exact allocation is edition/licence-specific; inspect your org |
+| S23 | Metadata API `deploy()` reference | <https://developer.salesforce.com/docs/platform/api-metadata/references/file-based-calls/meta-deploy.html> | Deploy limits (≈39 MB compressed / ≈600 MB uncompressed; 10,000 / 35,000 files), one deployment at a time, queue order, five test levels | High | Limits can change without notice; re-check on merge |
+| S24 | Salesforce CLI deploy messages | <https://github.com/salesforcecli/plugin-deploy-retrieve/blob/main/messages/deploy.metadata.md> | `RunRelevantTests` (Beta, API 66.0+) description and the five test levels | High | CLI messages track the current implementation |
+| S25 | Gearset docs collections | <https://docs.gearset.com/en/> | Current UI groupings: My connections, Metadata deployments, Continuous delivery, Backup & archiving, Sandbox seeding & compliance, Problem analyzers, Observability, Settings | Medium–High | Labels vary by edition; article lists checked on 2026-11-14 |
+| S26 | Copado platform overview | <https://www.copado.com/platform-overview> | Current branding: Copado CI/CD, Copado Essentials, Agentia, Robotic Testing, AI Platform | Medium–High | Product packaging changes; verify the bank's licence |
+| S27 | AutoRABIT products | <https://www.autorabit.com/products/> | ARM (CI/CD), Vault (backup/restore), CodeScan (static analysis), Guard (security posture) | Medium–High | Product packaging changes; verify the bank's licence |
 
 ## Source-quality notes
 

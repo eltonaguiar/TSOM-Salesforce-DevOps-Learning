@@ -114,6 +114,7 @@ These are the principles the downstream page should keep repeating. They explain
 | `06-term-deep-dives/term-entries.md` | Term-by-term deep dives |
 | `07-merge/merge-map.md` | File → page section mapping |
 | `07-merge/content-gaps.md` | What the current page lacks and what to change |
+| `08-cross-bundle-notes.md` | Reconciliation with the sibling `salesforceagain` bundle and verified corrections |
 
 ## 6. Open questions for the merge agent
 

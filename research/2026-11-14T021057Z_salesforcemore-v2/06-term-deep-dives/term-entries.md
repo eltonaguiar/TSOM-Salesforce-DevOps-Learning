@@ -127,6 +127,8 @@ sf apex run test --test-level RunLocalTests --code-coverage \
 
 **Failure mode.** A test depends on org data and passes in Dev, fails in an empty QA sandbox.
 
+**Test levels.** The Metadata API has five: `NoTestRun`, `RunSpecifiedTests`, `RunRelevantTests` (Beta, API 66.0+), `RunLocalTests`, `RunAllTestsInOrg`. The older four-level answer is incomplete.
+
 **Interview line.** "Validate against the org you are about to change. Quick deploy is not a second validation."
 
 ---

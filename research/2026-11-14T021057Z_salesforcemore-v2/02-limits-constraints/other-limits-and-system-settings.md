@@ -30,7 +30,13 @@
 
 ## 3. Metadata and deploy ceilings
 
-Salesforce caps what one deploy or retrieve can contain. The commonly cited ceiling is **10,000 components and a 400 MB payload**; re-check the current Metadata API limits page for your release before you quote it.
+Salesforce caps what one deploy or retrieve can contain. The current Metadata API `deploy()` reference lists:
+
+- **Maximum compressed `.zip` size:** approximately **39 MB**. Metadata API base64-encodes the zip; the encoded result cannot exceed 50 MB, and base64 adds roughly 22%, so the compressed payload must stay under about 39 MB.
+- **Maximum uncompressed folder size:** approximately **600 MB** (629,145,600 bytes), depending on the files' compression ratio.
+- **Maximum files:** **10,000** for an unlocked or second-generation managed package; **35,000** for a first-generation managed package that passed AppExchange Security Review.
+
+Source: [Metadata API `deploy()`](https://developer.salesforce.com/docs/platform/api-metadata/references/file-based-calls/meta-deploy.html), accessed 2026-11-14. Limits can change without notice; re-check before you quote them in an interview or a runbook.
 
 **Why it matters.** A full-org retrieve or deploy is the classic way to hit the ceiling. It is also the classic way to make a release unreviewable. Delta manifests, package directories, and split payloads are the design response.
 
@@ -46,6 +52,7 @@ Setup → Company Information → Storage shows data and file storage. Sandboxes
 
 ## 5. Concurrency limits
 
+- **Only one deployment runs at a time per org.** You can submit multiple deployments, but the others remain in a queue. Queued deployments are **not necessarily executed in the order they were submitted**. To control the order, submit them one at a time after the previous deployment completes successfully. (Source: Metadata API `deploy()` reference.)
 - Long-running synchronous transactions over 5 seconds: 10–50 concurrent, based on licences.
 - Batch Apex: 5 concurrent jobs, 1 concurrent `start`, 100 holding in the flex queue.
 - Deployments are long-running operations. Two deploys to one org can queue or conflict; serialize per org with a CI concurrency group or a deployment lock.

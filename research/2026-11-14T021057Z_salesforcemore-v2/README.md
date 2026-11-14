@@ -29,6 +29,7 @@ The research is split into small files so the merge agent can accept, reject, or
 | `05-certifications/` | Certification landscape, Salesforce credential curricula, vendor certificates, study plan | Merge into the Certifications section and section 14 |
 | `06-term-deep-dives/` | Term index and term entries for every posting line | Merge into section 14 |
 | `07-merge/` | Merge map and content-gap recommendations | Instructions for the merge agent, not page content |
+| `08-cross-bundle-notes.md` | Reconciliation with the sibling `2026-11-14T020300Z-kilo-salesforceagain` bundle and verified corrections | Read before merging; do not paste into the page |
 
 ## What is safe to merge as-is
 

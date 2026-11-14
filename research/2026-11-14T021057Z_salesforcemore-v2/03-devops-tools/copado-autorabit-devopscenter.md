@@ -8,9 +8,9 @@
 
 ### 1.1 What it is
 
-A release-management platform built around user stories, pipelines, promotions, deployment steps, quality gates, and audit evidence. It is common in large Salesforce programs because it models the change process, not just the deploy.
+A release-management platform built around user stories, pipelines, promotions, deployment steps, quality gates, and audit evidence. Current product branding includes **Copado CI/CD** for enterprise teams, **Copado Essentials** for smaller teams, **Agentia** as the AI layer, **Copado Robotic Testing**, and the **Copado AI Platform**. "Copado Fundamentals" and a Copado "DevOps Center" tier are not current product names; do not use them in an interview.
 
-### 1.2 Practical click-paths
+### 1.2 Practical click-paths (Copado CI/CD)
 
 | Task | Where (common shape) | What you do | What to verify |
 |---|---|---|---|
@@ -24,6 +24,8 @@ A release-management platform built around user stories, pipelines, promotions, 
 | Audit | Deployment history / story history | Export the promotion evidence | Ticket, approver, deploy id, test result, timestamp |
 | Backup (if licensed) | Copado backup module | Take a backup before the risky step | Backup id recorded in the ticket |
 
+**Copado Essentials** is the simpler standalone product. It may not expose the same enterprise pipeline objects; verify which product the bank actually licenses before you promise a specific workflow.
+
 ### 1.3 What it does not replace
 
 Git hygiene, a real test suite, a rollback tag, or a human who reads the diff. Copado makes the process visible; it does not make a bad payload safe.
@@ -36,22 +38,31 @@ Git hygiene, a real test suite, a rollback tag, or a human who reads the diff. C
 
 ### 2.1 What it is
 
-A CI/CD and release platform with modules commonly described as CI jobs, deployment, data loader, backup/restore, org monitoring, and release management. Product packaging varies by edition.
+A Salesforce DevOps platform with four current product areas:
+
+| Product | What it does |
+|---|---|
+| **AutoRABIT ARM** | CI/CD, deployments, version control, testing, sandbox management |
+| **AutoRABIT Vault** | Backup/restore, data integrity, archiving; data masking capabilities may sit in Vault or a related module—verify the edition |
+| **AutoRABIT CodeScan** | Static code analysis and code quality |
+| **AutoRABIT Guard** | Security posture, policy enforcement, misconfiguration detection |
+
+Older material may describe a generic "CI Jobs / Deployment / Data Loader / Backup / Monitoring / Release" module list. Treat that as category-level, not as current product naming.
 
 ### 2.2 Practical click-paths
 
 | Task | Where (common shape) | What you do | What to verify |
 |---|---|---|---|
-| CI job | CI Jobs / CI | Connect Git repo and branch; choose target org; choose validate or deploy; add tests | The job fails on a test failure |
-| Deployment | Deployment | Compare metadata between orgs/branches; deploy; keep a history | The diff is reviewed, not blindly deployed |
-| Data | Data Loader | Seed or migrate records | Data is masked/approved; not bulk customer data without a ticket |
-| Backup | Backup & Restore | Back up metadata before a risky release | Backup id and restore path are recorded |
-| Monitoring | Org Monitoring | Detect drift and direct changes | Alerts route to the release owner |
-| Release | Release management | Promote through environments | Approvals and gates are configured |
+| CI job | ARM → CI Jobs / CI | Connect Git repo and branch; choose target org; choose validate or deploy; add tests | The job fails on a test failure |
+| Deployment | ARM → Deployment | Compare metadata between orgs/branches; deploy; keep a history | The diff is reviewed, not blindly deployed |
+| Data | Vault / data tooling | Seed or migrate records | Data is masked/approved; not bulk customer data without a ticket |
+| Backup | Vault → Backup & Restore | Back up metadata/data before a risky release | Backup id and restore path are recorded |
+| Monitoring | ARM / Guard | Detect drift and security/compliance issues | Alerts route to the release owner |
+| Static analysis | CodeScan | Scan the branch for quality/security findings | The gate is configured and enforced |
 
 ### 2.3 Interview line
 
-"AutoRABIT is the same category as Gearset and Copado: CI, deployment, data, backup, monitoring. The questions are always the promotion path, the back-promotion, and where the secrets live."
+"AutoRABIT ARM is the CI/CD layer; Vault is backup/restore and data; CodeScan is static analysis; Guard is security posture. The questions are always the promotion path, the back-promotion, and where the secrets live."
 
 ## 3. DevOps Center
 

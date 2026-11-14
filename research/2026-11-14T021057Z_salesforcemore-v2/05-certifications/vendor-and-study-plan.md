@@ -6,9 +6,9 @@
 
 | Programme | Tracks / credentials | Cost | What it proves | Caveat |
 |---|---|---|---|---|
-| DevOps Launchpad (Gearset) | Salesforce DevOps Fundamentals; CI/CD for Salesforce; Salesforce DevOps Leadership; Salesforce Backup; Gearset Academy | Free | DevOps concepts and Gearset tool use | Catalogue and certificate names can change; verify on the site |
-| Copado | Copado Academy / Copado certification programme | Varies | Copado pipeline, promotion, release management | The public certification URL returned 404 on 2026-11-14; verify with Copado |
-| AutoRABIT | AutoRABIT Academy / certification programme | Varies | AutoRABIT CI, deployment, data, backup | Product packaging and programme names vary by edition |
+| DevOps Launchpad (Gearset) | Salesforce DevOps Fundamentals; CI/CD for Salesforce; Salesforce DevOps Leadership; Salesforce Backup; **Gearset Academy Certification** | Free | DevOps concepts and Gearset tool use | Catalogue and certificate names can change; verify on the site |
+| Copado | **Copado Certified** / Copado Academy tracks | Varies | Copado pipeline, promotion, release management | The public certification URL returned 404 on 2026-11-14; verify the current name with Copado |
+| AutoRABIT | **AutoRABIT Academy ARM tracks** (and related product tracks) | Varies | AutoRABIT ARM CI/CD, deployment, data, backup | Product packaging and programme names vary by edition |
 | Salesforce developer/architect | PD1, PD2, Application Architect, System Architect, Technical Architect | Paid exams | Platform depth | None is a DevOps-specific credential |
 
 **DevOps Launchpad link:** <https://devopslaunchpad.com/>

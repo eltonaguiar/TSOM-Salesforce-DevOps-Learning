@@ -29,6 +29,10 @@ sf limits api display --target-org uat
 sf apex run test --test-level RunLocalTests --code-coverage \
   --result-format human --wait 60 --target-org uat
 
+# On API 66.0+, the Beta level runs only tests relevant to the payload
+sf project deploy start --manifest manifest/package.xml \
+  --test-level RunRelevantTests --target-org uat --wait 60
+
 # What happened to that validation/deploy?
 sf project deploy report --job-id <job-id> --target-org uat
 
@@ -65,6 +69,8 @@ CLI flags move. Confirm with `sf <command> --help` before you put a command in a
 8. **"A callout works in Dev and fails in UAT."** Named credential secret, external credential, certificate, remote site setting, or endpoint.
 9. **"Why is a 75% coverage result in Dev not enough?"** Coverage is per org; the target's tests and the target's package context decide whether production accepts the deploy.
 10. **"What does a Git revert not undo?"** Data changes, destructive deletes, activated Flow versions, and any post-deploy script that already ran.
+11. **"Name the five test levels."** `NoTestRun`, `RunSpecifiedTests`, `RunRelevantTests` (Beta, API 66.0+), `RunLocalTests`, `RunAllTestsInOrg`.
+12. **"Two teams submit deployments at 9 a.m. Which one runs first?"** Only one deployment runs at a time per org; queued deployments are not guaranteed to run in submission order. Serialize or submit one at a time.
 
 ## 5. What to merge
 

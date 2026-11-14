@@ -59,6 +59,7 @@ Related pages
 | `05-certifications/vendor-and-study-plan.md` | Certifications | Expand | Keep the vendor table with the caveat and the 10-week plan |
 | `06-term-deep-dives/term-index.md` | 14 | Use as a checklist | Do not paste the index; it is for coverage |
 | `06-term-deep-dives/term-entries.md` | 14 | Convert to collapsibles | Keep the five-part shape; compress entries already covered by 13 |
+| `08-cross-bundle-notes.md` | — | Read before editing | Reconciles this bundle with the sibling `2026-11-14T020300Z-kilo-salesforceagain` bundle; lists verified corrections |
 | `07-merge/content-gaps.md` | — | Read before editing | Lists the specific changes and priorities |
 
 ## 3. Collapsible markup
@@ -104,7 +105,7 @@ Add a blank line after `<summary>` and before `</details>`.
 ## 5. Facts that must keep a caveat
 
 - Apex governor numbers: "verify current release".
-- Metadata payload ceiling (10,000 / 400 MB): "commonly cited; verify current Metadata API limits page".
+- Metadata payload ceiling (~39 MB compressed / ~600 MB uncompressed; 10,000 files for unlocked/2GP, 35,000 for AppExchange-reviewed 1GP): "verify the current Metadata API `deploy()` reference".
 - Gearset/Copado/AutoRABIT/DevOps Center UI labels: "verify in your tenant; labels drift".
 - Certification exam weights: do not publish without the current official exam guide.
 - Scotiabank process: describe a regulated-environment pattern, not an internal procedure.

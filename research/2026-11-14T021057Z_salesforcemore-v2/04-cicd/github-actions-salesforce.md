@@ -220,7 +220,7 @@ jobs:
 | Quick deploy | Applies the validated job inside the change window without paying the test runtime twice |
 | Smoke test after deploy | Catches "deployed but broken" (inactive Flow, missing secret, wrong assignment) |
 | Annotated tag | The rollback target and the audit anchor |
-| Concurrency group | Two deploys to one org do not race |
+| Concurrency group | Two deploys to one org do not race; only one deployment runs at a time per org, and queued deployments are not guaranteed to run in submission order |
 | Artifact upload | The validation result and delta are evidence for the ticket |
 | Minimal `permissions` | A compromised workflow cannot write the repo by default |
 
@@ -240,6 +240,7 @@ jobs:
 ## 5. Trade-offs to mention in an interview
 
 - `RunLocalTests` is slower than `RunSpecifiedTests` but catches more. Use it before the window; use named tests for the PR if the suite is too slow.
+- `RunRelevantTests` (Beta, API 66.0+) is a fifth test level that runs only tests relevant to the payload. It is a good fit for Apex-heavy deployments where test time should scale with the payload, but do not use it to avoid a broad gate the bank's policy requires.
 - A full-org delta from `origin/main` can be large on a long-lived release branch. Use the previous release tag as the base when the branch is long.
 - The quick-deploy window is limited. If the validation expires or the payload changes, re-validate; do not force the quick deploy.
 - GitHub Environments and required reviewers depend on the plan. If the bank uses Azure DevOps or GitLab, the same gates exist under different names.
