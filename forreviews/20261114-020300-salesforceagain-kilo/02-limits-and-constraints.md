@@ -344,7 +344,42 @@ Other verified facts:
 
 ---
 
-## 7. Permissions the deploy identity needs
+## 7. Sandbox and scratch-org allocations
+
+**Source: Salesforce DX Developer Guide — *Scratch Orgs: Editions and Allocations*, and the sandbox
+refresh eligibility rules.** `verified` (2026-11-14)
+
+### 7.1 Sandbox refresh cadence
+
+| Sandbox type | Minimum interval between refreshes |
+|---|---|
+| Developer | **1 day** |
+| Partial Copy | **5 days** |
+| Full | **29 days** |
+
+The important operational consequence: there is **no universal "one org-wide refresh per day"**.
+Every Full sandbox on a 29-day cycle is refreshed on its own schedule, so a change window that
+assumes "the Full sandbox refreshes tonight" is wrong roughly 29 times out of 30. Confirm the
+next eligible refresh date on `Setup > Sandboxes` for each sandbox, and plan masking time *after*
+that date, not before it.
+
+### 7.2 Scratch org allocations (rolling 24 hours)
+
+| Edition | Daily allocation | Concurrent active |
+|---|---|---|
+| Developer Edition / Trial | **6** | **3** |
+| Enterprise | **80** | **40** |
+| Unlimited / Performance | **200** | **100** |
+
+A CI pipeline that creates one scratch org per pull request will exhaust a Developer/trial
+allocation in six runs and then **fail with a quota error**, not with a clear "try again". Either
+pool scratch orgs per job (create once, reuse across the job's steps) or schedule the runs. This
+is also the reason to use a **sandbox** for PR validation and a **scratch org** for package
+builds and disposable tests — they have different allocation pools.
+
+---
+
+## 8. Permissions the deploy identity needs
 
 The client application must be logged in with **`Modify Metadata Through Metadata API Functions`**
 or **`Modify All Data`**.
@@ -364,7 +399,7 @@ review cadence — not a default.
 
 ---
 
-## 8. Debugging a failed deployment — the order to work in
+## 9. Debugging a failed deployment — the order to work in
 
 1. **Get the deployment id.** `sf project deploy start` returns it; `Setup > Deploy > Deployment Status`
    lists the last 30 days with `View details` and the error text.
@@ -389,7 +424,7 @@ review cadence — not a default.
 
 ---
 
-## 9. Unverified / open items
+## 10. Unverified / open items
 
 | Item | Status | What would confirm it |
 |---|---|---|

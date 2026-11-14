@@ -142,6 +142,53 @@ standard in cloud, and Salesforce does not publish an equivalent for org auth, s
 is either a self-hosted runner with bank PKI or a brokered secret — not a long-lived refresh token
 in a repo secret."
 
+**The precise position.** Salesforce has a **Token Exchange** capability, but it is a
+**custom-handler external-IdP mechanism** — an org configured as a custom token handler exchanging
+its own token for a Salesforce token. There is **no official GitHub Actions recipe** for it, and it
+is not a first-class CLI flow. Do not tell an interviewer that "Salesforce supports OIDC with
+GitHub Actions" — that is not true today. Say: *"there is no first-class OIDC path; the supported
+model is JWT with a certificate."*
+
+---
+
+### 2.6 Commands and flags that do not exist
+
+Copied from older runbooks, blog posts and AI-generated pipelines. Each was checked against
+`@salesforce/cli` **2.158.7** and `plugin-deploy-retrieve` **4.3.2** on 2026-11-14. **Do not use
+them — they fail at the argument parser, which is a confusing way to discover a mistake.**
+
+| Wrong | Right |
+|---|---|
+| `sf project deploy quick deploy` | `sf project deploy quick` |
+| `sf project deploy quick --deploy-id <id>` | `sf project deploy quick --job-id <id>` |
+| `sf project deploy report --deploy-id <id>` | `sf project deploy report --job-id <id>` |
+| `sf org login jwt --jwt-key <file>` | `sf org login jwt --jwt-key-file <file>` |
+| `sf org login jwt --client-secret <secret>` | **There is no `--client-secret`.** JWT uses a certificate |
+| `sf project deploy start --target-url <url>` | Use `--target-org <alias>` |
+| `sf project deploy start --wait-timeout <n>` | Use `--wait <minutes>`; to resume, `sf project deploy resume`; to read status, `sf project deploy report` |
+| `sf project deploy start --code-coverage` | Use `--coverage-formatters` (repeatable: `lcov`, `clover`) |
+| `sf project deploy start --skip-lint` | No such flag on `deploy start` |
+| `sf project deploy start --warning-email <addr>` | No such flag on `deploy start` |
+| `sf apex run test --wait-timeout <n>` | Use `--wait <minutes>` |
+| `sf apex run test --test-name <name>` | Use `--tests <name>` (repeat the flag, or space-separate) |
+| `sf project run` | **Does not exist.** Use source-tracked `sf project deploy start` / `sf project retrieve start` |
+| `sf apex run query` | **Does not exist.** Use `sf data query --use-tooling-api` |
+| `sf package promote` | `sf package version promote` |
+| `sf scanner run` / `sf code analyzer run` | `sf scanner run` / `sf code-analyzer run` — **hyphen**, and both are optional plugins |
+| `sf lightning-inspect` | **Does not exist** |
+| `npm install -g sfdx-cli` | `npm install -g @salesforce/cli@<pinned>` — `sfdx-cli` is the deprecated predecessor |
+| `sfdx force:org:display`, `sfdx force:source:push` | `sf org display`, `sf project deploy start` — the `force:` namespace is deprecated |
+
+Two more that are easy to get wrong because they are *close* to real:
+
+- **`sf project deploy quick --wait` defaults to 33 minutes**, not 30 and not "unlimited". Passing
+  `--wait 30` explicitly is fine; knowing the default matters when a deploy is slower than you
+  expect and the command returns while the deploy is still running (use `sf project deploy
+  resume`).
+- **`sf project deploy validate` returns a *validation* job id; the quick deploy that consumes it
+  produces a *new* deployment id.** Two different ids, both needed for the audit trail: the
+  validation id proves the payload was checked, the prod id proves it was applied.
+
 ---
 
 ## 3. Repository layout
@@ -210,14 +257,12 @@ jobs:
       - name: Install Salesforce CLI (pinned)
         run: npm install -g @salesforce/cli@2.158.7
 
-      - name: Cache CLI state
+      - name: Cache npm only — never the CLI auth state
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.sfdx
-            ~/.sf
-          key: sf-${{ runner.os }}-${{ hashFiles('sfdx-project.json', 'manifest/**') }}
-          restore-keys: sf-${{ runner.os }}-
+          path: ~/.npm
+          key: npm-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: npm-${{ runner.os }}-
 
       - name: Materialise JWT key
         run: |
@@ -256,6 +301,10 @@ jobs:
 
 - `--dry-run` performs a `checkOnly` deployment: it compiles the payload against the target and runs
   the tests, and **changes nothing**.
+- **Do not cache `~/.sfdx` or `~/.sf`.** Those directories hold the CLI's **auth state** — org
+  aliases, refresh tokens and auth files. Caching them means a restored runner can present a stale
+  credential, and a poisoned cache becomes a credential-injection path. Cache `~/.npm` only. The
+  CLI's install is a single `npm install -g`, which is fast enough not to need caching.
 - The CI sandbox should be **refreshed or reset on a schedule**; a stale sandbox is a false green.
 - `cancel-in-progress: true` is safe for PR validation because it changes nothing in an org. **Do
   not** use it on a deploy job.

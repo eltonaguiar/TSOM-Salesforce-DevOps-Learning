@@ -57,16 +57,16 @@ The existing page is a good 12-section training track. This bundle does three th
 | Q5 | Understanding of branching strategies (feature, release, hotfix) | `05` §1.4, §3 |
 | Q6 | Familiar with automated testing and validation concepts | `02` §3, `04` §4 |
 | Q7 | Hands-on with Gearset, Copado, AutoRABIT, or equivalent | `03` |
-| Q8 | Apex & Triggers | `02` §1, `05` §9 |
-| Q9 | Flows (Before/After Save) | `05` §6.3, §9 |
-| Q10 | Permission Sets vs Profiles | `05` §6.1 |
-| Q11 | Record Types, Page Layouts, Security model | `05` §6.2 |
-| Q12 | Troubleshoot deployment failures and dependency issues | `02` §6, `05` §6 |
-| Q13 | Salesforce Platform Developer experience | `06` §1 |
-| Q14 | Unlocked / Managed Packages | `05` §11 |
-| Q15 | Exposure to Salesforce DX | `05` §1, `04` §2 |
-| Q16 | Experience in regulated/enterprise environments | `05` §4, §10 |
-| Q17 | Salesforce certifications (PD1, Advanced Admin, DevOps related certs) | `06` |
+| Q8a | Apex & Triggers | `02` §1, `05` §9 |
+| Q8b | Flows (Before/After Save) | `05` §6.3, §9 |
+| Q8c | Permission Sets vs Profiles | `05` §6.1 |
+| Q8d | Record Types, Page Layouts, Security model | `05` §6.2 |
+| Q9 | Troubleshoot deployment failures and dependency issues | `02` §6, `05` §6 |
+| Q10 | Salesforce Platform Developer experience | `06` §1 |
+| Q11 | Unlocked / Managed Packages | `05` §11 |
+| Q12 | Exposure to Salesforce DX | `05` §1, `04` §2 |
+| Q13 | Experience in regulated/enterprise environments | `05` §4, §10 |
+| Q14 | Salesforce certifications (PD1, Advanced Admin, DevOps related certs) | `06` |
 
 ## 4. Key Salesforce principles the research is anchored to
 

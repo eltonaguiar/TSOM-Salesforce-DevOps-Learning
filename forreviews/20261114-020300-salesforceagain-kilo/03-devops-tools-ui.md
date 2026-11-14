@@ -21,7 +21,7 @@
 | "Gearset Pipeline Job / Deployment Job" | Current job types are **`CI job`**, **`Deployment CI Job`** and **`Validation-only CI Job`** | Use these |
 | "Gearset refreshes sandboxes" | **No.** Salesforce performs the refresh. Gearset handles re-authentication, branch sync, comparison and masking afterwards | Answering "Gearset refreshes the sandbox" is wrong |
 | "Gearset backup is a feature toggle on the org" | Backups are a **separately licensed product** configured as `Data backup jobs` | — |
-| "Copado Fundamentals / Copado DevOps Center" | Not current tier names. Current branding: **Copado Essentials** (Free / Basic / **Essentials Plus**) standalone SaaS, and **Agentia Pipeline** / **Agentia Pipeline Pro** (legacy docs: *Copado Deployer*, *Salesforce Metadata Pipelines*, *Salesforce Source Format Pipelines*) | Say the current name |
+| "Copado Fundamentals / Copado DevOps Center" | Not current tier names. Current branding: **Copado Essentials** (Free / Basic / **Essentials Plus**) for the standalone SaaS, **Copado CI/CD** for the enterprise platform, and **Agentia** as the unified umbrella (its docs publications are *Agentia Pipeline* / *Agentia Pipeline Pro*; legacy docs: *Copado Deployer*, *Salesforce Metadata Pipelines*, *Salesforce Source Format Pipelines*) | Say the current name |
 | "Copado Data Masking" | **No such product.** Copado has **Copado Data Deploy** / Data Sets / Data Templates | — |
 | "AutoRABIT DevOps" / "AutoRABIT Test Repository" / "AutoRABIT Data Masking product" | Current: **AutoRABIT ARM** (CI/CD), **AutoRABIT Vault** (backup/recovery **and** data masking), **AutoRABIT CodeScan** (SAST), **AutoRABIT Guard** (security posture) | — |
 | "AutoRABIT release calendar / change request object" | Not found. The real mechanisms are **Release Labels**, **Commit Labels**, **Merge Approvals**, and **Scheduled Deployments** (ARM New UI, feature-flagged) | — |
@@ -246,7 +246,7 @@ as `Archive data after`, `Delete after`, `Do not archive`.
 | **Copado Essentials** — Free | Up to 15 deployments/month, Knowledgebase support |
 | **Copado Essentials** — Basic | Unlimited deployments; org comparison and change detection; fast deployments; full metadata support; team roles and collaboration |
 | **Copado Essentials** — Essentials Plus | Adds **Release Pipelines & Work Items**, **Version Control & Backup**, **Automation & Continuous Integration** (custom CI jobs to back up, schedule, automate and validate deployments) |
-| Enterprise | **Agentia Pipeline Pro** (SFDX CI/CD), **Agentia Pipeline** / Agentia Testing / Agentia AI Context Hub. Legacy docs: *Copado Deployer*, *Salesforce Metadata Pipelines (MFP)*, *Salesforce Source Format Pipelines (SFP)* |
+| Enterprise | **Copado CI/CD** — "automate your deployment pipeline to deliver high-quality releases". **Agentia** is the unified umbrella ("one unified solution for Salesforce delivery"); its documentation publications are **Agentia Pipeline** (SFDX CI/CD) and **Agentia Pipeline Pro**, with Agentia Testing and Agentia AI Context Hub alongside. Legacy doc names: *Copado Deployer*, *Salesforce Metadata Pipelines (MFP)*, *Salesforce Source Format Pipelines (SFP)* |
 
 **Licence types (Glossary of Terms):** *Copado User*, *Copado Plan* (planning records — user
 stories, sprints, epics; Kanban, Sprint Wall, Work Manager), *Copado Branch Management*,

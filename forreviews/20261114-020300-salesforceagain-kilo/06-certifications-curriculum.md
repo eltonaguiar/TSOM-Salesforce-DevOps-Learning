@@ -14,7 +14,7 @@
 |---|---|---|---|
 | **PD1** | **Salesforce Certified Platform Developer** (exam `Plat-Dev-201`) | — | The posting's "PD1". Trailhead calls it "Platform Developer"; the exam id retains `Plat-Dev-201` |
 | **Advanced Admin** | **Salesforce Certified Platform Administrator II** (exam `Plat-Admn-301`) | **Salesforce Certified Platform Administrator** — this is a hard prerequisite, not a recommendation | Salesforce renamed "Advanced Administrator" to "Platform Administrator II". The existing training page says the rename but omits the prerequisite |
-| **DevOps related certs** | **No Salesforce-branded DevOps certification exists.** These are vendor credentials | Per vendor | Say the vendor names explicitly; do not imply a Salesforce DevOps cert exists |
+| **DevOps related certs** | **No Salesforce credential is *named* "DevOps"** — but the closest is the **Salesforce Certified Development Lifecycle and Deployment Architect**, which covers exactly this lifecycle. The vendor credentials are the other half | Per credential | Say the names explicitly. Do not imply a credential called "Salesforce DevOps Engineer" exists, and do not imply no Salesforce credential covers DevOps — one does |
 | *(implied but unnamed)* | **Salesforce Certified Platform App Builder** | — | Directly relevant: declarative metadata is what a release engineer deploys most often. The existing page mentions it as a study option |
 
 ### 1.1 The naming trap
@@ -24,7 +24,7 @@ The posting was written before the renames. In an interview:
 - Say "**Platform Administrator II**" (and note it is the credential formerly called Advanced
   Administrator) — not "Advanced Admin".
 - Say "**Salesforce Certified Platform Developer**" — not "Developer I" without the "Platform".
-- Do **not** say "Salesforce DevOps Engineer certification". It does not exist.
+- Do **not** say "Salesforce DevOps Engineer certification" — no credential has that name. Do **also not** say "Salesforce has no DevOps certification" — the Development Lifecycle and Deployment Architect credential covers the lifecycle.
 
 ### 1.2 The prerequisite changes your sequencing
 
@@ -122,6 +122,7 @@ contains a packaging-and-deployment domain.
 
 | Credential | Why it is worth mentioning |
 |---|---|
+| **Salesforce Certified Development Lifecycle and Deployment Architect** | **The single most on-point Salesforce credential for this posting.** It is the architect credential for the release lifecycle and deployment — metadata lifecycle, CI/CD, environments, testing strategy and release management, which is the JD line-for-line. *(Contributed by a peer review; confirmed to exist as a Salesforce credential, but confirm the current exam outline against the official guide before publishing any domain weights.)* |
 | **Salesforce Certified Architect — Associate / Professional** | Systems design: environments, integration, identity. Speaks directly to "DevOps friendly design patterns" and platform boundaries (the unlocked-package decision) |
 | **Salesforce Certified Identity and Access Management Designer** | The deploy identity, connected apps, certificate-based auth, secret management — the exact controls a regulated bank will probe |
 | **Salesforce Certified Marketing / Sales Cloud / Service Cloud Consultant** | Domain credibility in Commercial Banking (Sales Cloud is the likely core) |
@@ -163,7 +164,8 @@ contains a packaging-and-deployment domain.
 
 ### 6.4 How to answer "do you have a DevOps certification?"
 
-> "There is no Salesforce-branded DevOps certification. On the Salesforce side I hold Platform
+> "There is no Salesforce credential literally called DevOps; the closest is the Development
+> Lifecycle and Deployment Architect. On the Salesforce side I hold Platform
 > Developer and Platform Administrator II, because the content I release is Apex, Flow, security and
 > deployment settings. On the tooling side I hold the vendor credential — [Gearset Academy / Copado
 > Certified / AutoRABIT ARM] — because that is where the pipeline, compliance and masking product

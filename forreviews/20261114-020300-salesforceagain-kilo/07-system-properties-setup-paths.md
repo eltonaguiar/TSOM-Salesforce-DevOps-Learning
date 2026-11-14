@@ -55,10 +55,18 @@ This is the single page that decides **whether a pipeline can deploy into an org
 
 | Setting | Effect | Release-engineering note |
 |---|---|---|
-| **Allow inbound deployments** | Master switch for Metadata API deployments into the org | If off, every pipeline fails with an auth/deploy error that does not name the cause. **Check this first when a pipeline that worked yesterday fails today on a new org.** |
-| **Enable Salesforce CLI deploys** | Allows `sf project deploy start` (the CLI-specific deploy path) as opposed to raw Metadata API calls | Some orgs have the CLI path separately gated from the API path. `verified` that these are distinct controls; the exact field name varies by release |
-| **Restrict deployments to specific IP ranges** | Only traffic from the listed CIDRs may deploy | This is how a bank enforces "only the CI runner deploys to prod". Combine with the runner's static egress IP. Verify the current field name in your org — the setting has been renamed across releases |
+| **Allow inbound deployments** *(label unverified)* | Reported to be the master switch for Metadata API deployments into the org | If off, a pipeline fails with an auth/deploy error that does not name the cause. **Check this first when a pipeline that worked yesterday fails today on a new org.** The exact current label could not be confirmed against current Salesforce documentation — see the caveat below |
+| **Enable Salesforce CLI deploys** *(label seen in an older official guide)* | Allows the `sf project deploy` path as opposed to raw Metadata API calls | `vendor-claim`. The current Metadata API documentation instead surfaces the capability as the `SF_ORG_METADATA_REST_DEPLOY` environment variable / `org-metadata-rest-deploy` endpoint. Treat the UI label as unverified and confirm in a non-prod org |
+| **Restrict deployments to specific IP ranges** *(label unverified)* | Reported to limit deploy traffic to listed CIDRs | This is how a bank enforces "only the CI runner deploys to prod". The setting has been renamed across releases — confirm the current field name in the org before writing it into a runbook |
 | **Deployment history retention** | Deployments in progress or completed in the **last 30 days** are visible in `Setup > Deploy > Deployment Status` | `verified` (Metadata API Developer Guide). If your audit needs 7 years of deployment evidence, Salesforce's 30-day view is **not** enough — you must export the CI artefacts yourself |
+
+> **Label caveat, added after peer review.** I could not verify the current field labels on
+> `Setup > Deploy > Deployment Settings` against current Salesforce documentation. Only
+> "Enable Salesforce CLI Deploys" surfaced, and only in an older official guide; the current
+> Metadata API guide documents the capability through `SF_ORG_METADATA_REST_DEPLOY` /
+> `org-metadata-rest-deploy` instead. **Publish the behaviours, not the labels**, and have the
+> merge round confirm the labels in a non-prod org. The behaviours themselves (an inbound-deploy
+> gate, a CLI-deploy gate, and an IP allowlist) are real and are what a runbook needs to say.
 
 **Variations and traps**
 
@@ -80,6 +88,7 @@ control change and belongs in the change process.
 | Setting / path | Effect | Note |
 |---|---|---|
 | `Setup > Sandboxes` | Lists every sandbox, its type, its refresh history and the **next eligible refresh** | The page is the source of truth for refresh cadence — do not quote a cadence from memory |
+| Refresh cadence (verified) | **Developer 1 day · Partial Copy 5 days · Full 29 days** | There is **no universal "one org-wide refresh per day"**. Plan the masking window *after* each sandbox's own next-eligible date |
 | `Setup > Sandboxes > Sandbox Templates` | Defines the data set copied into a **Partial Copy** | A template is the difference between a Partial Copy that is useful and one that leaks. Review the template the way you review a data masking rule |
 | Sandbox refresh permissions | Who may request a refresh | For a bank, refresh should be a **ticketed, named-person** operation. Some orgs restrict refresh to admins so that a casual "refresh my sandbox" cannot create an unmasked production copy |
 | Refresh notifications | Salesforce emails on refresh completion | Use it as the trigger for the masking step — do not rely on a human noticing the email |

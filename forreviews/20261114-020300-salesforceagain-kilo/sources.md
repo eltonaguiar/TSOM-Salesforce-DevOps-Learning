@@ -50,6 +50,11 @@ is the literal string the CLI uses.
 | S22 | Same repo — `src/commands/project/deploy/start.ts`, `validate.ts`, `quick.ts`, `preview.ts`, `report.ts`, `cancel.ts`, `resume.ts` | The existence and flag sets of `sf project deploy validate`, `sf project deploy quick`, `sf project deploy preview`, `sf project deploy report`, `sf project deploy cancel`, `sf project deploy resume` | `verified` |
 | S23 | <https://developer.salesforce.com/docs/platform/salesforce-cli-plugin/guide/project-deploy-start.html> | Referenced for the CLI guide | **403** — Salesforce blocks automated access; S20–S22 used instead |
 | S24 | <https://developer.salesforce.com/docs/platform/salesforce-cli-plugin/guide/project-deploy-quick.html> | Referenced for quick deploy | **403** — as S23 |
+| S25 | <https://developer.salesforce.com/docs/platform/salesforce-cli-reference/guide/cli_reference.html> — Salesforce CLI Command Reference (CLI 2.153.5) | Command and flag inventory used to check the "flags that do not exist" table | `verified` |
+| S26 | <https://developer.salesforce.com/docs/platform/sfdx-dev/guide/sfdx-dev-scratch-orgs-editions-and-allocations.html> | Scratch org daily allocations: Developer/trial 6 per day and 3 concurrent; Enterprise 80/40; Unlimited and Performance 200/100 | `verified` |
+| S27 | <https://developer.salesforce.com/docs/platform/api-metadata/guide/meta-rest-deploy-recentvalidation.html> | Recent-validation / deploy-via-validation endpoint (`SF_ORG_METADATA_REST_DEPLOY`, `org-metadata-rest-deploy`) — the current documented surface behind the CLI quick-deploy path | `vendor-claim` |
+| S28 | <https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference_package_version_promote.htm> | `sf package version promote` command reference | `verified` (command name) |
+| S29 | <https://www.salesforceben.com/salesforce-development-lifecycle-deployment-architect-certification-guide-tips/> and <https://www.trailblazeprep.com/certifications/dev-lifecycle-deployment-architect> | Existence and naming of the **Salesforce Certified Development Lifecycle and Deployment Architect** credential | `vendor-claim` — confirm the exam outline against the official guide before publishing weights |
 
 ---
 
@@ -121,7 +126,7 @@ is the literal string the CLI uses.
 | # | Source | Used for | Confidence |
 |---|---|---|---|
 | S90 | <https://www.copado.com/copado-essentials> | Essentials Free / Basic / Essentials Plus edition matrix and prices | `vendor-claim` (prices as at 2026-11-14) |
-| S91 | <https://docs.copado.com/home/en-us/> | Current publication set: Agentia Pipeline Pro, Agentia Testing, Agentia AI Context Hub, Salesforce Metadata Pipelines (legacy) | `verified` |
+| S91a | <https://www.copado.com/platform-overview> | Enterprise line branded **Copado CI/CD**; **Agentia** as the unified umbrella; Copado Essentials as the standalone line | `vendor-claim` |
 | S92 | <https://docs.copado.com/articles/copado-ci-cd-publication/glossary-of-terms> | Object definitions (Pipeline, User Story, Environment, Promotion, Release, Feature/Promotion Branch, Credential, Git Snapshot, Deployment Step, Job Template/Step/Execution, Connection Behavior) and licence types | `verified` |
 | S93 | <https://docs.copado.com/articles/copado-ci-cd-publication/pipeline-page> and <https://docs.copado.com/articles/copado-ci-cd-publication/pipeline-configuration> | Pipeline Manager navigation; status icons; drill-downs; `Configure Pipeline` | `verified` |
 | S94 | <https://docs.copado.com/articles/copado-ci-cd-publication/how-to-create-a-promotion> and <https://docs.copado.com/articles/copado-ci-cd-publication/promotion-overview> | Promotion routes; `Ready to Promote`; `Add Selected User Stories`; `Create Deployment`; `Deployment Details`; promotion-branch naming; `tag=x.y.z`; 8,000/10,000 file limits; Copado Admin rule for production | `verified` |

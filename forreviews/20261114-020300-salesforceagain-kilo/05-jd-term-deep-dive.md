@@ -35,8 +35,10 @@ A pipeline is a **product with a support burden**:
 - **Secret rotation.** Connected-app certificates and client secrets expire. Salesforce refresh
   tokens expire after 30 days of inactivity — Copado documents this as a credential that
   "expires with no proactive warning".
-- **Runner hygiene.** Cache `~/.sfdx` and `~/.sf` deliberately; a poisoned cache is a supply-chain
-  problem.
+- **Runner hygiene.** Cache `~/.npm` only. **Never cache `~/.sfdx` or `~/.sf`** — they hold the
+  CLI's auth state (org aliases, refresh tokens), so a restored runner can present a stale
+  credential and a poisoned cache becomes a credential-injection path. A poisoned npm cache is a
+  supply-chain problem; a poisoned auth cache is an authentication problem, which is worse.
 - **Failure triage.** The pipeline must publish the **deployment id** as an artifact. Without it,
   the audit trail starts at "the pipeline went green".
 
@@ -632,13 +634,13 @@ tree. "Package the entire org on day one" is not a plan.
 | `sf org login jwt` | Non-interactive auth with a certificate | The CI auth model |
 | `sf project deploy preview` | Shows what *would* be deployed and deleted, plus conflicts | Pre-deploy diff without a deploy |
 | `sf project deploy validate` | Validation-only deploy | The `checkOnly` equivalent as a first-class command |
-| `sf project deploy quick` | Quick deploy from a validation | The fast path into the window |
-| `sf project run` | Source-tracking-aware run | Not used for deploys |
+| `sf project deploy quick` | Quick deploy from a validation | The fast path into the window. Uses `--job-id`, **not** `--deploy-id` |
+| `sf project deploy report` | Re-reads the status of a running/finished deploy | Uses `--job-id`; add `--coverage-formatters`/`--junit`/`--results-dir` for test artefacts |
 
 **CLI commands a release engineer should know cold:**
 
 ```
-sf org login jwt --client-id <id> --client-secret <secret> --username <u> --jwt-key <cert> --instance-url <url> --alias <name>
+sf org login jwt --client-id <id> --username <u> --jwt-key-file <cert.pem> --instance-url <url> --alias <name>
 sf project retrieve start --metadata <Type:Name> --target-org <org> --output-dir <dir>
 sf project deploy preview --target-org <org>
 sf project deploy validate --manifest package.xml --test-level RunLocalTests --target-org <org> --wait 30

@@ -29,7 +29,7 @@ in published runbooks — `sf org login jwt` has **no `--client-secret`** and ta
 **`--jwt-key-file`**, not `--jwt-key`; and `sf project deploy validate` **requires** Apex tests and
 is explicitly not intended for sandboxes. The two complete GitHub Actions workflows here were
 linted with `actionlint v1.7.12` (clean) and every flag was checked against `@salesforce/cli`
-**2.158.7**. It also carries the only copy of the **26 metadata types that force a full local test
+**2.158.7**. It also carries the only copy of the **24 metadata types that force a full local test
 run** and a **16-item list of stale vendor labels not to repeat** (`03` §0 and §5).
 
 ---
@@ -218,16 +218,16 @@ The existing page is a good 12-section training track. This bundle does three th
 | Q5 | Understanding of branching strategies (feature, release, hotfix) | `05` §1.4, §3 |
 | Q6 | Familiar with automated testing and validation concepts | `02` §3, `04` §4 |
 | Q7 | Hands-on with Gearset, Copado, AutoRABIT, or equivalent | `03` |
-| Q8 | Apex & Triggers | `02` §1, `05` §9 |
-| Q9 | Flows (Before/After Save) | `05` §6.3, §9 |
-| Q10 | Permission Sets vs Profiles | `05` §6.1 |
-| Q11 | Record Types, Page Layouts, Security model | `05` §6.2 |
-| Q12 | Troubleshoot deployment failures and dependency issues | `02` §6, `05` §6 |
-| Q13 | Salesforce Platform Developer experience | `06` §1 |
-| Q14 | Unlocked / Managed Packages | `05` §11 |
-| Q15 | Exposure to Salesforce DX | `05` §1, `04` §2 |
-| Q16 | Experience in regulated/enterprise environments | `05` §4, §10 |
-| Q17 | Salesforce certifications (PD1, Advanced Admin, DevOps related certs) | `06` |
+| Q8a | Apex & Triggers | `02` §1, `05` §9 |
+| Q8b | Flows (Before/After Save) | `05` §6.3, §9 |
+| Q8c | Permission Sets vs Profiles | `05` §6.1 |
+| Q8d | Record Types, Page Layouts, Security model | `05` §6.2 |
+| Q9 | Troubleshoot deployment failures and dependency issues | `02` §6, `05` §6 |
+| Q10 | Salesforce Platform Developer experience | `06` §1 |
+| Q11 | Unlocked / Managed Packages | `05` §11 |
+| Q12 | Exposure to Salesforce DX | `05` §1, `04` §2 |
+| Q13 | Experience in regulated/enterprise environments | `05` §4, §10 |
+| Q14 | Salesforce certifications (PD1, Advanced Admin, DevOps related certs) | `06` |
 
 ### 4. Key Salesforce principles the research is anchored to
 
@@ -309,6 +309,14 @@ Verdict key:
 **Thin** = the page names it but not deep enough for the line ·
 **Gap** = the line is not materially addressed ·
 **Correction** = the page says something the primary source contradicts.
+> **Numbering.** `R1`–`R14` are the fourteen bullets under *"In this role, you will"*, in posting
+> order. `Q1`–`Q14` are the fourteen bullets under *"Do you have the skills that will enable you to
+> succeed"*, in posting order. The posting's eighth qualification bullet is a single bullet with
+> four sub-items ("Good understanding of: Apex & Triggers / Flows / Permission Sets vs Profiles /
+> Record Types, Page Layouts, and Security model"); those are labelled **Q8a–Q8d** here so the
+> mapping stays one-to-one with the posting while keeping the sub-items addressable.
+> *(Corrected 2026-11-14: an earlier draft of this file numbered the qualifications Q1–Q17,
+> which over-counted the posting.)*
 ---
 
 
@@ -344,16 +352,16 @@ Verdict key:
 | Q5 | Understanding of branching strategies (feature, release, hotfix) | §4 Branching | **Covered** | `05 §1.4`, `05 §3` — adds the hotfix → release-branch back-merge rule and the tag-as-rollback-target discipline. |
 | Q6 | Familiar with automated testing and validation concepts | §9 Tests and validation | **Thin** | `02 §5` — the **five** test levels (not four), the exact metadata-type list that forces a full local test run, per-class coverage semantics, and `checkOnly` restrictions. |
 | Q7 | Hands on experience with Salesforce DevOps tools such as Gearset, Copado, AutoRABIT, or equivalent | §6 DevOps tools | **Thin** | `03` — per-vendor object model, navigation, click paths for compare/deploy/backup/masking/rollback, plan gates, and a list of stale names to avoid. The page has one table row per vendor. |
-| Q8 | Good understanding of Apex & Triggers | §2 (mentions triggers) | **Thin** | `02 §1`, `02 §2` — trigger batch size 200 (2,000 for platform events/CDC), 16-level trigger stack, bulkification limits, and the deployment ceiling of 7,500 Apex code units. |
-| Q9 | Flows (Before/After Save) | §7 Conflict clinic → Flows | **Covered** | `05 §6.3`, `05 §9` — before-save vs after-save deployment implications, the Draft/Active version trap, and why a before-save flow built as after-save fails under volume. |
-| Q10 | Permission Sets vs Profiles | §7 Conflict clinic → Permission sets | **Covered** | `05 §6.1` — permission set groups as the bundling mechanism, and the exact deploy-user permission model. |
-| Q11 | Record Types, Page Layouts, and Security model | §7 Conflict clinic | **Covered** | `05 §6.2` — the assignment chain (record type → business process → picklist values → layout → profile/permission set). |
-| Q12 | Ability to troubleshoot deployment failures and dependency issues | §2 Metadata that breaks releases | **Thin** | `02 §6` — an ordered debugging procedure (get the id → read the error verbatim → classify by error class → reproduce with the CLI against the same org type → re-validate). |
-| Q13 | Salesforce Platform Developer experience | throughout | **Covered** | `06 §1` — maps the JD's "Platform Developer" to the current **Salesforce Certified Platform Developer** credential and to the parts of PD1 that actually matter for release engineering. |
-| Q14 | Experience with Unlocked Packages / Managed Packages | §8 Packages | **Covered** | `05 §11` — adds the 10,000-file limit, the 35,000-file 1GP ceiling, and the certified-namespace governor-limit interaction. |
-| Q15 | Exposure to Salesforce DX | §1 Source of truth | **Covered** | `04 §2`, `05 §1` — `sfdx-project.json`, source tracking, scratch org vs sandbox, and the new `sf project` command family (including `sf project deploy validate` and `sf project deploy quick`, which the page does not mention). |
-| Q16 | Experience in regulated or enterprise environments | §11 Banking change control | **Thin** | `05 §4`, `05 §10` — segregation of duties made structural, the evidence pack, and the "no customer data in a ticket or a slide" rule with the debug-log mechanism behind it. |
-| Q17 | Salesforce certifications (PD1, Advanced Admin, DevOps related certs) | §Certifications | **Correction** | `06` — current credential names, the **Platform Administrator prerequisite** for Administrator II, and the fact that there is no Salesforce-branded DevOps certification, so "DevOps related certs" = vendor credentials (Gearset Academy, Copado Certified, AutoRABIT Academy ARM tracks). |
+| Q8a | Good understanding of Apex & Triggers | §2 (mentions triggers) | **Thin** | `02 §1`, `02 §2` — trigger batch size 200 (2,000 for platform events/CDC), 16-level trigger stack, bulkification limits, and the deployment ceiling of 7,500 Apex code units. |
+| Q8b | Flows (Before/After Save) | §7 Conflict clinic → Flows | **Covered** | `05 §6.3`, `05 §9` — before-save vs after-save deployment implications, the Draft/Active version trap, and why a before-save flow built as after-save fails under volume. |
+| Q8c | Permission Sets vs Profiles | §7 Conflict clinic → Permission sets | **Covered** | `05 §6.1` — permission set groups as the bundling mechanism, and the exact deploy-user permission model. |
+| Q8d | Record Types, Page Layouts, and Security model | §7 Conflict clinic | **Covered** | `05 §6.2` — the assignment chain (record type → business process → picklist values → layout → profile/permission set). |
+| Q9 | Ability to troubleshoot deployment failures and dependency issues | §2 Metadata that breaks releases | **Thin** | `02 §6` — an ordered debugging procedure (get the id → read the error verbatim → classify by error class → reproduce with the CLI against the same org type → re-validate). |
+| Q10 | Salesforce Platform Developer experience | throughout | **Covered** | `06 §1` — maps the JD's "Platform Developer" to the current **Salesforce Certified Platform Developer** credential and to the parts of PD1 that actually matter for release engineering. |
+| Q11 | Experience with Unlocked Packages / Managed Packages | §8 Packages | **Covered** | `05 §11` — adds the 10,000-file limit, the 35,000-file 1GP ceiling, and the certified-namespace governor-limit interaction. |
+| Q12 | Exposure to Salesforce DX | §1 Source of truth | **Covered** | `04 §2`, `05 §1` — `sfdx-project.json`, source tracking, scratch org vs sandbox, and the new `sf project` command family (including `sf project deploy validate` and `sf project deploy quick`, which the page does not mention). |
+| Q13 | Experience in regulated or enterprise environments | §11 Banking change control | **Thin** | `05 §4`, `05 §10` — segregation of duties made structural, the evidence pack, and the "no customer data in a ticket or a slide" rule with the debug-log mechanism behind it. |
+| Q14 | Salesforce certifications (PD1, Advanced Admin, DevOps related certs) | §Certifications | **Correction** | `06` — current credential names, the **Platform Administrator prerequisite** for Administrator II, and the fact that there is no Salesforce-branded DevOps certification, so "DevOps related certs" = vendor credentials (Gearset Academy, Copado Certified, AutoRABIT Academy ARM tracks). |
 
 ---
 
@@ -772,7 +780,42 @@ Other verified facts:
 
 ---
 
-### 7. Permissions the deploy identity needs
+### 7. Sandbox and scratch-org allocations
+
+**Source: Salesforce DX Developer Guide — *Scratch Orgs: Editions and Allocations*, and the sandbox
+refresh eligibility rules.** `verified` (2026-11-14)
+
+#### 7.1 Sandbox refresh cadence
+
+| Sandbox type | Minimum interval between refreshes |
+|---|---|
+| Developer | **1 day** |
+| Partial Copy | **5 days** |
+| Full | **29 days** |
+
+The important operational consequence: there is **no universal "one org-wide refresh per day"**.
+Every Full sandbox on a 29-day cycle is refreshed on its own schedule, so a change window that
+assumes "the Full sandbox refreshes tonight" is wrong roughly 29 times out of 30. Confirm the
+next eligible refresh date on `Setup > Sandboxes` for each sandbox, and plan masking time *after*
+that date, not before it.
+
+#### 7.2 Scratch org allocations (rolling 24 hours)
+
+| Edition | Daily allocation | Concurrent active |
+|---|---|---|
+| Developer Edition / Trial | **6** | **3** |
+| Enterprise | **80** | **40** |
+| Unlimited / Performance | **200** | **100** |
+
+A CI pipeline that creates one scratch org per pull request will exhaust a Developer/trial
+allocation in six runs and then **fail with a quota error**, not with a clear "try again". Either
+pool scratch orgs per job (create once, reuse across the job's steps) or schedule the runs. This
+is also the reason to use a **sandbox** for PR validation and a **scratch org** for package
+builds and disposable tests — they have different allocation pools.
+
+---
+
+### 8. Permissions the deploy identity needs
 
 The client application must be logged in with **`Modify Metadata Through Metadata API Functions`**
 or **`Modify All Data`**.
@@ -792,7 +835,7 @@ review cadence — not a default.
 
 ---
 
-### 8. Debugging a failed deployment — the order to work in
+### 9. Debugging a failed deployment — the order to work in
 
 1. **Get the deployment id.** `sf project deploy start` returns it; `Setup > Deploy > Deployment Status`
    lists the last 30 days with `View details` and the error text.
@@ -817,7 +860,7 @@ review cadence — not a default.
 
 ---
 
-### 9. Unverified / open items
+### 10. Unverified / open items
 
 | Item | Status | What would confirm it |
 |---|---|---|
@@ -852,7 +895,7 @@ review cadence — not a default.
 | "Gearset Pipeline Job / Deployment Job" | Current job types are **`CI job`**, **`Deployment CI Job`** and **`Validation-only CI Job`** | Use these |
 | "Gearset refreshes sandboxes" | **No.** Salesforce performs the refresh. Gearset handles re-authentication, branch sync, comparison and masking afterwards | Answering "Gearset refreshes the sandbox" is wrong |
 | "Gearset backup is a feature toggle on the org" | Backups are a **separately licensed product** configured as `Data backup jobs` | — |
-| "Copado Fundamentals / Copado DevOps Center" | Not current tier names. Current branding: **Copado Essentials** (Free / Basic / **Essentials Plus**) standalone SaaS, and **Agentia Pipeline** / **Agentia Pipeline Pro** (legacy docs: *Copado Deployer*, *Salesforce Metadata Pipelines*, *Salesforce Source Format Pipelines*) | Say the current name |
+| "Copado Fundamentals / Copado DevOps Center" | Not current tier names. Current branding: **Copado Essentials** (Free / Basic / **Essentials Plus**) for the standalone SaaS, **Copado CI/CD** for the enterprise platform, and **Agentia** as the unified umbrella (its docs publications are *Agentia Pipeline* / *Agentia Pipeline Pro*; legacy docs: *Copado Deployer*, *Salesforce Metadata Pipelines*, *Salesforce Source Format Pipelines*) | Say the current name |
 | "Copado Data Masking" | **No such product.** Copado has **Copado Data Deploy** / Data Sets / Data Templates | — |
 | "AutoRABIT DevOps" / "AutoRABIT Test Repository" / "AutoRABIT Data Masking product" | Current: **AutoRABIT ARM** (CI/CD), **AutoRABIT Vault** (backup/recovery **and** data masking), **AutoRABIT CodeScan** (SAST), **AutoRABIT Guard** (security posture) | — |
 | "AutoRABIT release calendar / change request object" | Not found. The real mechanisms are **Release Labels**, **Commit Labels**, **Merge Approvals**, and **Scheduled Deployments** (ARM New UI, feature-flagged) | — |
@@ -1077,7 +1120,7 @@ as `Archive data after`, `Delete after`, `Do not archive`.
 | **Copado Essentials** — Free | Up to 15 deployments/month, Knowledgebase support |
 | **Copado Essentials** — Basic | Unlimited deployments; org comparison and change detection; fast deployments; full metadata support; team roles and collaboration |
 | **Copado Essentials** — Essentials Plus | Adds **Release Pipelines & Work Items**, **Version Control & Backup**, **Automation & Continuous Integration** (custom CI jobs to back up, schedule, automate and validate deployments) |
-| Enterprise | **Agentia Pipeline Pro** (SFDX CI/CD), **Agentia Pipeline** / Agentia Testing / Agentia AI Context Hub. Legacy docs: *Copado Deployer*, *Salesforce Metadata Pipelines (MFP)*, *Salesforce Source Format Pipelines (SFP)* |
+| Enterprise | **Copado CI/CD** — "automate your deployment pipeline to deliver high-quality releases". **Agentia** is the unified umbrella ("one unified solution for Salesforce delivery"); its documentation publications are **Agentia Pipeline** (SFDX CI/CD) and **Agentia Pipeline Pro**, with Agentia Testing and Agentia AI Context Hub alongside. Legacy doc names: *Copado Deployer*, *Salesforce Metadata Pipelines (MFP)*, *Salesforce Source Format Pipelines (SFP)* |
 
 **Licence types (Glossary of Terms):** *Copado User*, *Copado Plan* (planning records — user
 stories, sprints, epics; Kanban, Sprint Wall, Work Manager), *Copado Branch Management*,
@@ -1587,6 +1630,53 @@ standard in cloud, and Salesforce does not publish an equivalent for org auth, s
 is either a self-hosted runner with bank PKI or a brokered secret — not a long-lived refresh token
 in a repo secret."
 
+**The precise position.** Salesforce has a **Token Exchange** capability, but it is a
+**custom-handler external-IdP mechanism** — an org configured as a custom token handler exchanging
+its own token for a Salesforce token. There is **no official GitHub Actions recipe** for it, and it
+is not a first-class CLI flow. Do not tell an interviewer that "Salesforce supports OIDC with
+GitHub Actions" — that is not true today. Say: *"there is no first-class OIDC path; the supported
+model is JWT with a certificate."*
+
+---
+
+#### 2.6 Commands and flags that do not exist
+
+Copied from older runbooks, blog posts and AI-generated pipelines. Each was checked against
+`@salesforce/cli` **2.158.7** and `plugin-deploy-retrieve` **4.3.2** on 2026-11-14. **Do not use
+them — they fail at the argument parser, which is a confusing way to discover a mistake.**
+
+| Wrong | Right |
+|---|---|
+| `sf project deploy quick deploy` | `sf project deploy quick` |
+| `sf project deploy quick --deploy-id <id>` | `sf project deploy quick --job-id <id>` |
+| `sf project deploy report --deploy-id <id>` | `sf project deploy report --job-id <id>` |
+| `sf org login jwt --jwt-key <file>` | `sf org login jwt --jwt-key-file <file>` |
+| `sf org login jwt --client-secret <secret>` | **There is no `--client-secret`.** JWT uses a certificate |
+| `sf project deploy start --target-url <url>` | Use `--target-org <alias>` |
+| `sf project deploy start --wait-timeout <n>` | Use `--wait <minutes>`; to resume, `sf project deploy resume`; to read status, `sf project deploy report` |
+| `sf project deploy start --code-coverage` | Use `--coverage-formatters` (repeatable: `lcov`, `clover`) |
+| `sf project deploy start --skip-lint` | No such flag on `deploy start` |
+| `sf project deploy start --warning-email <addr>` | No such flag on `deploy start` |
+| `sf apex run test --wait-timeout <n>` | Use `--wait <minutes>` |
+| `sf apex run test --test-name <name>` | Use `--tests <name>` (repeat the flag, or space-separate) |
+| `sf project run` | **Does not exist.** Use source-tracked `sf project deploy start` / `sf project retrieve start` |
+| `sf apex run query` | **Does not exist.** Use `sf data query --use-tooling-api` |
+| `sf package promote` | `sf package version promote` |
+| `sf scanner run` / `sf code analyzer run` | `sf scanner run` / `sf code-analyzer run` — **hyphen**, and both are optional plugins |
+| `sf lightning-inspect` | **Does not exist** |
+| `npm install -g sfdx-cli` | `npm install -g @salesforce/cli@<pinned>` — `sfdx-cli` is the deprecated predecessor |
+| `sfdx force:org:display`, `sfdx force:source:push` | `sf org display`, `sf project deploy start` — the `force:` namespace is deprecated |
+
+Two more that are easy to get wrong because they are *close* to real:
+
+- **`sf project deploy quick --wait` defaults to 33 minutes**, not 30 and not "unlimited". Passing
+  `--wait 30` explicitly is fine; knowing the default matters when a deploy is slower than you
+  expect and the command returns while the deploy is still running (use `sf project deploy
+  resume`).
+- **`sf project deploy validate` returns a *validation* job id; the quick deploy that consumes it
+  produces a *new* deployment id.** Two different ids, both needed for the audit trail: the
+  validation id proves the payload was checked, the prod id proves it was applied.
+
 ---
 
 ### 3. Repository layout
@@ -1655,14 +1745,12 @@ jobs:
       - name: Install Salesforce CLI (pinned)
         run: npm install -g @salesforce/cli@2.158.7
 
-      - name: Cache CLI state
+      - name: Cache npm only — never the CLI auth state
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.sfdx
-            ~/.sf
-          key: sf-${{ runner.os }}-${{ hashFiles('sfdx-project.json', 'manifest/**') }}
-          restore-keys: sf-${{ runner.os }}-
+          path: ~/.npm
+          key: npm-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: npm-${{ runner.os }}-
 
       - name: Materialise JWT key
         run: |
@@ -1701,6 +1789,10 @@ jobs:
 
 - `--dry-run` performs a `checkOnly` deployment: it compiles the payload against the target and runs
   the tests, and **changes nothing**.
+- **Do not cache `~/.sfdx` or `~/.sf`.** Those directories hold the CLI's **auth state** — org
+  aliases, refresh tokens and auth files. Caching them means a restored runner can present a stale
+  credential, and a poisoned cache becomes a credential-injection path. Cache `~/.npm` only. The
+  CLI's install is a single `npm install -g`, which is fast enough not to need caching.
 - The CI sandbox should be **refreshed or reset on a schedule**; a stale sandbox is a false green.
 - `cancel-in-progress: true` is safe for PR validation because it changes nothing in an org. **Do
   not** use it on a deploy job.
@@ -2191,8 +2283,10 @@ A pipeline is a **product with a support burden**:
 - **Secret rotation.** Connected-app certificates and client secrets expire. Salesforce refresh
   tokens expire after 30 days of inactivity — Copado documents this as a credential that
   "expires with no proactive warning".
-- **Runner hygiene.** Cache `~/.sfdx` and `~/.sf` deliberately; a poisoned cache is a supply-chain
-  problem.
+- **Runner hygiene.** Cache `~/.npm` only. **Never cache `~/.sfdx` or `~/.sf`** — they hold the
+  CLI's auth state (org aliases, refresh tokens), so a restored runner can present a stale
+  credential and a poisoned cache becomes a credential-injection path. A poisoned npm cache is a
+  supply-chain problem; a poisoned auth cache is an authentication problem, which is worse.
 - **Failure triage.** The pipeline must publish the **deployment id** as an artifact. Without it,
   the audit trail starts at "the pipeline went green".
 
@@ -2788,13 +2882,13 @@ tree. "Package the entire org on day one" is not a plan.
 | `sf org login jwt` | Non-interactive auth with a certificate | The CI auth model |
 | `sf project deploy preview` | Shows what *would* be deployed and deleted, plus conflicts | Pre-deploy diff without a deploy |
 | `sf project deploy validate` | Validation-only deploy | The `checkOnly` equivalent as a first-class command |
-| `sf project deploy quick` | Quick deploy from a validation | The fast path into the window |
-| `sf project run` | Source-tracking-aware run | Not used for deploys |
+| `sf project deploy quick` | Quick deploy from a validation | The fast path into the window. Uses `--job-id`, **not** `--deploy-id` |
+| `sf project deploy report` | Re-reads the status of a running/finished deploy | Uses `--job-id`; add `--coverage-formatters`/`--junit`/`--results-dir` for test artefacts |
 
 **CLI commands a release engineer should know cold:**
 
 ```
-sf org login jwt --client-id <id> --client-secret <secret> --username <u> --jwt-key <cert> --instance-url <url> --alias <name>
+sf org login jwt --client-id <id> --username <u> --jwt-key-file <cert.pem> --instance-url <url> --alias <name>
 sf project retrieve start --metadata <Type:Name> --target-org <org> --output-dir <dir>
 sf project deploy preview --target-org <org>
 sf project deploy validate --manifest package.xml --test-level RunLocalTests --target-org <org> --wait 30
@@ -2901,7 +2995,7 @@ What the release engineer needs from Apex, even if they do not write it:
 |---|---|---|---|
 | **PD1** | **Salesforce Certified Platform Developer** (exam `Plat-Dev-201`) | — | The posting's "PD1". Trailhead calls it "Platform Developer"; the exam id retains `Plat-Dev-201` |
 | **Advanced Admin** | **Salesforce Certified Platform Administrator II** (exam `Plat-Admn-301`) | **Salesforce Certified Platform Administrator** — this is a hard prerequisite, not a recommendation | Salesforce renamed "Advanced Administrator" to "Platform Administrator II". The existing training page says the rename but omits the prerequisite |
-| **DevOps related certs** | **No Salesforce-branded DevOps certification exists.** These are vendor credentials | Per vendor | Say the vendor names explicitly; do not imply a Salesforce DevOps cert exists |
+| **DevOps related certs** | **No Salesforce credential is *named* "DevOps"** — but the closest is the **Salesforce Certified Development Lifecycle and Deployment Architect**, which covers exactly this lifecycle. The vendor credentials are the other half | Per credential | Say the names explicitly. Do not imply a credential called "Salesforce DevOps Engineer" exists, and do not imply no Salesforce credential covers DevOps — one does |
 | *(implied but unnamed)* | **Salesforce Certified Platform App Builder** | — | Directly relevant: declarative metadata is what a release engineer deploys most often. The existing page mentions it as a study option |
 
 #### 1.1 The naming trap
@@ -2911,7 +3005,7 @@ The posting was written before the renames. In an interview:
 - Say "**Platform Administrator II**" (and note it is the credential formerly called Advanced
   Administrator) — not "Advanced Admin".
 - Say "**Salesforce Certified Platform Developer**" — not "Developer I" without the "Platform".
-- Do **not** say "Salesforce DevOps Engineer certification". It does not exist.
+- Do **not** say "Salesforce DevOps Engineer certification" — no credential has that name. Do **also not** say "Salesforce has no DevOps certification" — the Development Lifecycle and Deployment Architect credential covers the lifecycle.
 
 #### 1.2 The prerequisite changes your sequencing
 
@@ -3009,6 +3103,7 @@ contains a packaging-and-deployment domain.
 
 | Credential | Why it is worth mentioning |
 |---|---|
+| **Salesforce Certified Development Lifecycle and Deployment Architect** | **The single most on-point Salesforce credential for this posting.** It is the architect credential for the release lifecycle and deployment — metadata lifecycle, CI/CD, environments, testing strategy and release management, which is the JD line-for-line. *(Contributed by a peer review; confirmed to exist as a Salesforce credential, but confirm the current exam outline against the official guide before publishing any domain weights.)* |
 | **Salesforce Certified Architect — Associate / Professional** | Systems design: environments, integration, identity. Speaks directly to "DevOps friendly design patterns" and platform boundaries (the unlocked-package decision) |
 | **Salesforce Certified Identity and Access Management Designer** | The deploy identity, connected apps, certificate-based auth, secret management — the exact controls a regulated bank will probe |
 | **Salesforce Certified Marketing / Sales Cloud / Service Cloud Consultant** | Domain credibility in Commercial Banking (Sales Cloud is the likely core) |
@@ -3050,7 +3145,8 @@ contains a packaging-and-deployment domain.
 
 #### 6.4 How to answer "do you have a DevOps certification?"
 
-> "There is no Salesforce-branded DevOps certification. On the Salesforce side I hold Platform
+> "There is no Salesforce credential literally called DevOps; the closest is the Development
+> Lifecycle and Deployment Architect. On the Salesforce side I hold Platform
 > Developer and Platform Administrator II, because the content I release is Apex, Flow, security and
 > deployment settings. On the tooling side I hold the vendor credential — [Gearset Academy / Copado
 > Certified / AutoRABIT ARM] — because that is where the pipeline, compliance and masking product
@@ -3156,10 +3252,18 @@ This is the single page that decides **whether a pipeline can deploy into an org
 
 | Setting | Effect | Release-engineering note |
 |---|---|---|
-| **Allow inbound deployments** | Master switch for Metadata API deployments into the org | If off, every pipeline fails with an auth/deploy error that does not name the cause. **Check this first when a pipeline that worked yesterday fails today on a new org.** |
-| **Enable Salesforce CLI deploys** | Allows `sf project deploy start` (the CLI-specific deploy path) as opposed to raw Metadata API calls | Some orgs have the CLI path separately gated from the API path. `verified` that these are distinct controls; the exact field name varies by release |
-| **Restrict deployments to specific IP ranges** | Only traffic from the listed CIDRs may deploy | This is how a bank enforces "only the CI runner deploys to prod". Combine with the runner's static egress IP. Verify the current field name in your org — the setting has been renamed across releases |
+| **Allow inbound deployments** *(label unverified)* | Reported to be the master switch for Metadata API deployments into the org | If off, a pipeline fails with an auth/deploy error that does not name the cause. **Check this first when a pipeline that worked yesterday fails today on a new org.** The exact current label could not be confirmed against current Salesforce documentation — see the caveat below |
+| **Enable Salesforce CLI deploys** *(label seen in an older official guide)* | Allows the `sf project deploy` path as opposed to raw Metadata API calls | `vendor-claim`. The current Metadata API documentation instead surfaces the capability as the `SF_ORG_METADATA_REST_DEPLOY` environment variable / `org-metadata-rest-deploy` endpoint. Treat the UI label as unverified and confirm in a non-prod org |
+| **Restrict deployments to specific IP ranges** *(label unverified)* | Reported to limit deploy traffic to listed CIDRs | This is how a bank enforces "only the CI runner deploys to prod". The setting has been renamed across releases — confirm the current field name in the org before writing it into a runbook |
 | **Deployment history retention** | Deployments in progress or completed in the **last 30 days** are visible in `Setup > Deploy > Deployment Status` | `verified` (Metadata API Developer Guide). If your audit needs 7 years of deployment evidence, Salesforce's 30-day view is **not** enough — you must export the CI artefacts yourself |
+
+> **Label caveat, added after peer review.** I could not verify the current field labels on
+> `Setup > Deploy > Deployment Settings` against current Salesforce documentation. Only
+> "Enable Salesforce CLI Deploys" surfaced, and only in an older official guide; the current
+> Metadata API guide documents the capability through `SF_ORG_METADATA_REST_DEPLOY` /
+> `org-metadata-rest-deploy` instead. **Publish the behaviours, not the labels**, and have the
+> merge round confirm the labels in a non-prod org. The behaviours themselves (an inbound-deploy
+> gate, a CLI-deploy gate, and an IP allowlist) are real and are what a runbook needs to say.
 
 **Variations and traps**
 
@@ -3181,6 +3285,7 @@ control change and belongs in the change process.
 | Setting / path | Effect | Note |
 |---|---|---|
 | `Setup > Sandboxes` | Lists every sandbox, its type, its refresh history and the **next eligible refresh** | The page is the source of truth for refresh cadence — do not quote a cadence from memory |
+| Refresh cadence (verified) | **Developer 1 day · Partial Copy 5 days · Full 29 days** | There is **no universal "one org-wide refresh per day"**. Plan the masking window *after* each sandbox's own next-eligible date |
 | `Setup > Sandboxes > Sandbox Templates` | Defines the data set copied into a **Partial Copy** | A template is the difference between a Partial Copy that is useful and one that leaks. Review the template the way you review a data masking rule |
 | Sandbox refresh permissions | Who may request a refresh | For a bank, refresh should be a **ticketed, named-person** operation. Some orgs restrict refresh to admins so that a casual "refresh my sandbox" cannot create an unmasked production copy |
 | Refresh notifications | Salesforce emails on refresh completion | Use it as the trigger for the masking step — do not rely on a human noticing the email |
@@ -3495,6 +3600,11 @@ is the literal string the CLI uses.
 | S22 | Same repo — `src/commands/project/deploy/start.ts`, `validate.ts`, `quick.ts`, `preview.ts`, `report.ts`, `cancel.ts`, `resume.ts` | The existence and flag sets of `sf project deploy validate`, `sf project deploy quick`, `sf project deploy preview`, `sf project deploy report`, `sf project deploy cancel`, `sf project deploy resume` | `verified` |
 | S23 | <https://developer.salesforce.com/docs/platform/salesforce-cli-plugin/guide/project-deploy-start.html> | Referenced for the CLI guide | **403** — Salesforce blocks automated access; S20–S22 used instead |
 | S24 | <https://developer.salesforce.com/docs/platform/salesforce-cli-plugin/guide/project-deploy-quick.html> | Referenced for quick deploy | **403** — as S23 |
+| S25 | <https://developer.salesforce.com/docs/platform/salesforce-cli-reference/guide/cli_reference.html> — Salesforce CLI Command Reference (CLI 2.153.5) | Command and flag inventory used to check the "flags that do not exist" table | `verified` |
+| S26 | <https://developer.salesforce.com/docs/platform/sfdx-dev/guide/sfdx-dev-scratch-orgs-editions-and-allocations.html> | Scratch org daily allocations: Developer/trial 6 per day and 3 concurrent; Enterprise 80/40; Unlimited and Performance 200/100 | `verified` |
+| S27 | <https://developer.salesforce.com/docs/platform/api-metadata/guide/meta-rest-deploy-recentvalidation.html> | Recent-validation / deploy-via-validation endpoint (`SF_ORG_METADATA_REST_DEPLOY`, `org-metadata-rest-deploy`) — the current documented surface behind the CLI quick-deploy path | `vendor-claim` |
+| S28 | <https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference_package_version_promote.htm> | `sf package version promote` command reference | `verified` (command name) |
+| S29 | <https://www.salesforceben.com/salesforce-development-lifecycle-deployment-architect-certification-guide-tips/> and <https://www.trailblazeprep.com/certifications/dev-lifecycle-deployment-architect> | Existence and naming of the **Salesforce Certified Development Lifecycle and Deployment Architect** credential | `vendor-claim` — confirm the exam outline against the official guide before publishing weights |
 
 ---
 
@@ -3566,7 +3676,7 @@ is the literal string the CLI uses.
 | # | Source | Used for | Confidence |
 |---|---|---|---|
 | S90 | <https://www.copado.com/copado-essentials> | Essentials Free / Basic / Essentials Plus edition matrix and prices | `vendor-claim` (prices as at 2026-11-14) |
-| S91 | <https://docs.copado.com/home/en-us/> | Current publication set: Agentia Pipeline Pro, Agentia Testing, Agentia AI Context Hub, Salesforce Metadata Pipelines (legacy) | `verified` |
+| S91a | <https://www.copado.com/platform-overview> | Enterprise line branded **Copado CI/CD**; **Agentia** as the unified umbrella; Copado Essentials as the standalone line | `vendor-claim` |
 | S92 | <https://docs.copado.com/articles/copado-ci-cd-publication/glossary-of-terms> | Object definitions (Pipeline, User Story, Environment, Promotion, Release, Feature/Promotion Branch, Credential, Git Snapshot, Deployment Step, Job Template/Step/Execution, Connection Behavior) and licence types | `verified` |
 | S93 | <https://docs.copado.com/articles/copado-ci-cd-publication/pipeline-page> and <https://docs.copado.com/articles/copado-ci-cd-publication/pipeline-configuration> | Pipeline Manager navigation; status icons; drill-downs; `Configure Pipeline` | `verified` |
 | S94 | <https://docs.copado.com/articles/copado-ci-cd-publication/how-to-create-a-promotion> and <https://docs.copado.com/articles/copado-ci-cd-publication/promotion-overview> | Promotion routes; `Ready to Promote`; `Add Selected User Stories`; `Create Deployment`; `Deployment Details`; promotion-branch naming; `tag=x.y.z`; 8,000/10,000 file limits; Copado Admin rule for production | `verified` |

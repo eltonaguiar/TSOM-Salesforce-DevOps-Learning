@@ -11,6 +11,15 @@ Verdict key:
 **Gap** = the line is not materially addressed ·
 **Correction** = the page says something the primary source contradicts.
 
+> **Numbering.** `R1`–`R14` are the fourteen bullets under *"In this role, you will"*, in posting
+> order. `Q1`–`Q14` are the fourteen bullets under *"Do you have the skills that will enable you to
+> succeed"*, in posting order. The posting's eighth qualification bullet is a single bullet with
+> four sub-items ("Good understanding of: Apex & Triggers / Flows / Permission Sets vs Profiles /
+> Record Types, Page Layouts, and Security model"); those are labelled **Q8a–Q8d** here so the
+> mapping stays one-to-one with the posting while keeping the sub-items addressable.
+> *(Corrected 2026-11-14: an earlier draft of this file numbered the qualifications Q1–Q17,
+> which over-counted the posting.)*
+
 ---
 
 ## Part 1 — Responsibilities ("In this role, you will")
@@ -45,16 +54,16 @@ Verdict key:
 | Q5 | Understanding of branching strategies (feature, release, hotfix) | §4 Branching | **Covered** | `05 §1.4`, `05 §3` — adds the hotfix → release-branch back-merge rule and the tag-as-rollback-target discipline. |
 | Q6 | Familiar with automated testing and validation concepts | §9 Tests and validation | **Thin** | `02 §5` — the **five** test levels (not four), the exact metadata-type list that forces a full local test run, per-class coverage semantics, and `checkOnly` restrictions. |
 | Q7 | Hands on experience with Salesforce DevOps tools such as Gearset, Copado, AutoRABIT, or equivalent | §6 DevOps tools | **Thin** | `03` — per-vendor object model, navigation, click paths for compare/deploy/backup/masking/rollback, plan gates, and a list of stale names to avoid. The page has one table row per vendor. |
-| Q8 | Good understanding of Apex & Triggers | §2 (mentions triggers) | **Thin** | `02 §1`, `02 §2` — trigger batch size 200 (2,000 for platform events/CDC), 16-level trigger stack, bulkification limits, and the deployment ceiling of 7,500 Apex code units. |
-| Q9 | Flows (Before/After Save) | §7 Conflict clinic → Flows | **Covered** | `05 §6.3`, `05 §9` — before-save vs after-save deployment implications, the Draft/Active version trap, and why a before-save flow built as after-save fails under volume. |
-| Q10 | Permission Sets vs Profiles | §7 Conflict clinic → Permission sets | **Covered** | `05 §6.1` — permission set groups as the bundling mechanism, and the exact deploy-user permission model. |
-| Q11 | Record Types, Page Layouts, and Security model | §7 Conflict clinic | **Covered** | `05 §6.2` — the assignment chain (record type → business process → picklist values → layout → profile/permission set). |
-| Q12 | Ability to troubleshoot deployment failures and dependency issues | §2 Metadata that breaks releases | **Thin** | `02 §6` — an ordered debugging procedure (get the id → read the error verbatim → classify by error class → reproduce with the CLI against the same org type → re-validate). |
-| Q13 | Salesforce Platform Developer experience | throughout | **Covered** | `06 §1` — maps the JD's "Platform Developer" to the current **Salesforce Certified Platform Developer** credential and to the parts of PD1 that actually matter for release engineering. |
-| Q14 | Experience with Unlocked Packages / Managed Packages | §8 Packages | **Covered** | `05 §11` — adds the 10,000-file limit, the 35,000-file 1GP ceiling, and the certified-namespace governor-limit interaction. |
-| Q15 | Exposure to Salesforce DX | §1 Source of truth | **Covered** | `04 §2`, `05 §1` — `sfdx-project.json`, source tracking, scratch org vs sandbox, and the new `sf project` command family (including `sf project deploy validate` and `sf project deploy quick`, which the page does not mention). |
-| Q16 | Experience in regulated or enterprise environments | §11 Banking change control | **Thin** | `05 §4`, `05 §10` — segregation of duties made structural, the evidence pack, and the "no customer data in a ticket or a slide" rule with the debug-log mechanism behind it. |
-| Q17 | Salesforce certifications (PD1, Advanced Admin, DevOps related certs) | §Certifications | **Correction** | `06` — current credential names, the **Platform Administrator prerequisite** for Administrator II, and the fact that there is no Salesforce-branded DevOps certification, so "DevOps related certs" = vendor credentials (Gearset Academy, Copado Certified, AutoRABIT Academy ARM tracks). |
+| Q8a | Good understanding of Apex & Triggers | §2 (mentions triggers) | **Thin** | `02 §1`, `02 §2` — trigger batch size 200 (2,000 for platform events/CDC), 16-level trigger stack, bulkification limits, and the deployment ceiling of 7,500 Apex code units. |
+| Q8b | Flows (Before/After Save) | §7 Conflict clinic → Flows | **Covered** | `05 §6.3`, `05 §9` — before-save vs after-save deployment implications, the Draft/Active version trap, and why a before-save flow built as after-save fails under volume. |
+| Q8c | Permission Sets vs Profiles | §7 Conflict clinic → Permission sets | **Covered** | `05 §6.1` — permission set groups as the bundling mechanism, and the exact deploy-user permission model. |
+| Q8d | Record Types, Page Layouts, and Security model | §7 Conflict clinic | **Covered** | `05 §6.2` — the assignment chain (record type → business process → picklist values → layout → profile/permission set). |
+| Q9 | Ability to troubleshoot deployment failures and dependency issues | §2 Metadata that breaks releases | **Thin** | `02 §6` — an ordered debugging procedure (get the id → read the error verbatim → classify by error class → reproduce with the CLI against the same org type → re-validate). |
+| Q10 | Salesforce Platform Developer experience | throughout | **Covered** | `06 §1` — maps the JD's "Platform Developer" to the current **Salesforce Certified Platform Developer** credential and to the parts of PD1 that actually matter for release engineering. |
+| Q11 | Experience with Unlocked Packages / Managed Packages | §8 Packages | **Covered** | `05 §11` — adds the 10,000-file limit, the 35,000-file 1GP ceiling, and the certified-namespace governor-limit interaction. |
+| Q12 | Exposure to Salesforce DX | §1 Source of truth | **Covered** | `04 §2`, `05 §1` — `sfdx-project.json`, source tracking, scratch org vs sandbox, and the new `sf project` command family (including `sf project deploy validate` and `sf project deploy quick`, which the page does not mention). |
+| Q13 | Experience in regulated or enterprise environments | §11 Banking change control | **Thin** | `05 §4`, `05 §10` — segregation of duties made structural, the evidence pack, and the "no customer data in a ticket or a slide" rule with the debug-log mechanism behind it. |
+| Q14 | Salesforce certifications (PD1, Advanced Admin, DevOps related certs) | §Certifications | **Correction** | `06` — current credential names, the **Platform Administrator prerequisite** for Administrator II, and the fact that there is no Salesforce-branded DevOps certification, so "DevOps related certs" = vendor credentials (Gearset Academy, Copado Certified, AutoRABIT Academy ARM tracks). |
 
 ---
 
