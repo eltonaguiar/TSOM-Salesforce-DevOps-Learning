@@ -201,3 +201,100 @@ merge**, which was already known.
   command to reject two of four.
 - **Always name the source precisely.** "Repo vs webpages" is only meaningful once you say which revision of
   each. Here the webpages were pre-merge, which is why the repo won everything.
+
+---
+
+# Addendum 2 — conflict detection, and a bug in my own tooling
+
+## The gap this fills
+
+Coverage asks "who says more". Neither answers the question that produces wrong
+documentation: **where do the two sources contradict each other?**
+
+Six detection strategies were built. Five failed in instructive ways.
+
+| # | Strategy | Result | Failure mode |
+|---|---|---|---|
+| 1 | whole documents, TIE allowed | 10/10 TIE | cannot compare what it cannot see |
+| 2 | retrieval + forced binary | 10/10 B at ~0.50 | coin flip; bias replaced signal |
+| 3 | retrieval fixed + judge | 10/10 B at 0.75–0.93 | worked for breadth |
+| 4 | model-judged AGREE/CONFLICT/DIFFERENT | 10/10 DIFFERENT | narrow excerpts hide the conflict |
+| 5 | value-set substring scan | false AGREE | assertion vs refutation |
+| 6 | **polarity per claim** | **works** | see below |
+
+**#5 is the important one.** Comparing "does this string appear" found that the merged page and the repo both
+contain `6 MB` and `12 MB` — and reported AGREE. But the page uses them for *callout request size* (correct)
+and the repo uses them for *heap size* (wrong). Substring presence cannot tell an assertion from its
+refutation, and the tool produced a false "no conflict here" on the single most important discrepancy in the
+whole corpus.
+
+**#6 fixes it** by asking for the source's *polarity* on a specific claim — ASSERTS / DENIES / NOT_ADDRESSED —
+then comparing polarities. Reading the claim, not the token.
+
+## A bug in my own tooling
+
+The first polarity run returned `NOT_ADDRESSED` for all 8 claims. That was not a finding.
+
+SubQ returns `choice: "option_1"` and `probabilities: {"option_0": ..., "option_1": ...}` — **not** the option
+text. `pick()` returned `"option_1"`, and the comparison `ch.startswith("ASSERTS")` was false for every
+option index, so every verdict fell through to the `NOT_ADDRESSED` branch.
+
+Resolution required mapping the index back to the option list:
+
+```python
+key = max(pr.items(), key=lambda x: x[1])[0]      # "option_1"
+if key.startswith("option_"):
+    return options[int(key.split("_")[1])], pr[key]   # "DENIES the claim"
+```
+
+**This also affected the coverage runs (#2, #3).** They happened to produce the correct outcome because B was
+always `option_1` and the fallback branch also mapped to B — the bug was masked by the answer. It was luck,
+not soundness. Any run where A won would have been silently reported as B.
+
+Lesson: when a model returns an indexed choice, resolve the index against the option list you supplied. Never
+compare the returned key against a label prefix.
+
+## Corrected results
+
+### Contradictions (merged pages vs repo bundles)
+
+| Claim | Merged | Repo | Verdict |
+|---|---|---|---|
+| Heap size is 6 MB sync / 12 MB async | **DENIES** | **ASSERTS** | **CONTRADICTION** |
+| There is a 1% minimum coverage per class/trigger | **DENIES** | **ASSERTS** | **CONTRADICTION** |
+| Max compressed payload is 400 MB | DENIES | not addressed | no signal |
+| Named system properties exist (`org.wideSharing.default`) | DENIES | not addressed | no signal |
+| Apex Jobs / Scheduled Jobs are separate Setup pages | DENIES | not addressed | no signal |
+
+The two contradictions are **exactly the two false claims the merge corrected**, verified against primary
+sources (`apex-gov-limits.html`, `apex_code_coverage_intro.htm`). The detector reproduced known ground truth
+without being told the answer — that is the validation that matters.
+
+The three `NO_SIGNAL` rows are retrieval misses, not absences: the repo does contain `400 MB`, and does
+address deactivation, but the topical window did not surface the asserting passage. Claim-targeted retrieval
+with a wider window is the next fix.
+
+### Coverage (live site vs repo) — unchanged and still valid
+
+Repo broader on 10/10, 0.75–0.93. Confirmed the outcome is unchanged after the fix, because B was genuinely
+the higher-probability option in all ten.
+
+## What is now reliable, and what is not
+
+| Capability | State |
+|---|---|
+| Breadth ranking ("who covers more") | Works. Measures volume, **not** correctness. Measured precision 2/4 at the top |
+| Contradiction detection | Works for claims with a crisp testable form. Reproduced 2/2 known ground-truth conflicts |
+| Automatic adjudication | **Does not exist.** A conflict is a pointer to a primary source, never a verdict |
+| Narrow-topic retrieval | Still the weak link. Every `NO_SIGNAL` above is a retrieval miss |
+
+## Rules for use
+
+1. **Rank with coverage, decide with polarity, adjudicate with primary sources.** Three separate steps; do not
+   collapse them.
+2. **Name the source revision.** "Live site vs repo" was uninterpretable until the site was established as
+   pre-merge.
+3. **Resolve indexed choices.** Always map `option_N` back to the supplied label.
+4. **Treat a low margin as no signal.** Under 0.6 is a tie, not a weak preference.
+5. **A conflict is a search task, not an answer.** Expect roughly half of top-ranked items to fail a
+   correctness check.

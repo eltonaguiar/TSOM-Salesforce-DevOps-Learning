@@ -1,0 +1,106 @@
+[
+ {
+  "concept": "heap_is_6_12",
+  "claim": "Heap size is 6 MB synchronous and 12 MB asynchronous.",
+  "A": {
+   "polarity": "DENIES",
+   "prob": 0.887
+  },
+  "B": {
+   "polarity": "ASSERTS",
+   "prob": 0.941
+  },
+  "verdict": "CONTRADICTION"
+ },
+ {
+  "concept": "one_pct_rule",
+  "claim": "There is a 1% minimum code coverage requirement per class or per trigger.",
+  "A": {
+   "polarity": "DENIES",
+   "prob": 0.955
+  },
+  "B": {
+   "polarity": "ASSERTS",
+   "prob": 0.482
+  },
+  "verdict": "CONTRADICTION"
+ },
+ {
+  "concept": "payload_400mb",
+  "claim": "The maximum compressed Metadata API deploy payload is 400 MB.",
+  "A": {
+   "polarity": "DENIES",
+   "prob": 0.942
+  },
+  "B": {
+   "polarity": "NOT_ADDRESSED",
+   "prob": 0.921
+  },
+  "verdict": "NO_SIGNAL"
+ },
+ {
+  "concept": "no_test_run_prod",
+  "claim": "NoTestRun can be used for a production deployment that contains Apex.",
+  "A": {
+   "polarity": "NOT_ADDRESSED",
+   "prob": 0.726
+  },
+  "B": {
+   "polarity": "NOT_ADDRESSED",
+   "prob": 0.91
+  },
+  "verdict": "NO_SIGNAL"
+ },
+ {
+  "concept": "deactivated_cannot_reactivate",
+  "claim": "A deactivated Salesforce user cannot be reactivated and must be recreated.",
+  "A": {
+   "polarity": "NOT_ADDRESSED",
+   "prob": 0.905
+  },
+  "B": {
+   "polarity": "NOT_ADDRESSED",
+   "prob": 0.961
+  },
+  "verdict": "NO_SIGNAL"
+ },
+ {
+  "concept": "system_properties_exist",
+  "claim": "Salesforce exposes named system properties such as org.wideSharing.default and setup.locked.",
+  "A": {
+   "polarity": "DENIES",
+   "prob": 0.959
+  },
+  "B": {
+   "polarity": "NOT_ADDRESSED",
+   "prob": 0.914
+  },
+  "verdict": "NO_SIGNAL"
+ },
+ {
+  "concept": "apex_jobs_setup_path",
+  "claim": "Apex Jobs and Scheduled Jobs are separate Setup pages at Setup > Apex Jobs and Setup > Scheduled Jobs.",
+  "A": {
+   "polarity": "DENIES",
+   "prob": 0.972
+  },
+  "B": {
+   "polarity": "NOT_ADDRESSED",
+   "prob": 0.665
+  },
+  "verdict": "NO_SIGNAL"
+ },
+ {
+  "concept": "devops_cert_none",
+  "claim": "Salesforce offers an official certification named 'Salesforce DevOps Engineer'.",
+  "A": {
+   "polarity": "NOT_ADDRESSED",
+   "prob": 0.846
+  },
+  "B": {
+   "polarity": "NOT_ADDRESSED",
+   "prob": 0.894
+  },
+  "verdict": "NO_SIGNAL"
+ }
+]

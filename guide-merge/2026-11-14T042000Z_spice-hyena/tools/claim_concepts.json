@@ -1,0 +1,18 @@
+{
+ "heap_is_6_12": {"terms":["heap","6 MB","12 MB","25 MB","callout size"],
+   "claim":"Heap size is 6 MB synchronous and 12 MB asynchronous."},
+ "one_pct_rule": {"terms":["1%","coverage","per class","per trigger"],
+   "claim":"There is a 1% minimum code coverage requirement per class or per trigger."},
+ "payload_400mb": {"terms":["400 MB","39 MB","zip","payload"],
+   "claim":"The maximum compressed Metadata API deploy payload is 400 MB."},
+ "no_test_run_prod": {"terms":["NoTestRun","production","test level","Apex"],
+   "claim":"NoTestRun can be used for a production deployment that contains Apex."},
+ "deactivated_cannot_reactivate": {"terms":["deactivate","reactivate","freeze","active"],
+   "claim":"A deactivated Salesforce user cannot be reactivated and must be recreated."},
+ "system_properties_exist": {"terms":["system propert","org.wideSharing","setup.locked"],
+   "claim":"Salesforce exposes named system properties such as org.wideSharing.default and setup.locked."},
+ "apex_jobs_setup_path": {"terms":["Apex Jobs","Scheduled Jobs","Background Jobs"],
+   "claim":"Apex Jobs and Scheduled Jobs are separate Setup pages at Setup > Apex Jobs and Setup > Scheduled Jobs."},
+ "devops_cert_none": {"terms":["DevOps Engineer cert","certification","Development Lifecycle"],
+   "claim":"Salesforce offers an official certification named 'Salesforce DevOps Engineer'."}
+}
