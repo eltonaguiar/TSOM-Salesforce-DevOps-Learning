@@ -1,0 +1,92 @@
+[
+ {
+  "bundle": "2026-11-14T021036_salesforceyetagain-v3.md",
+  "relevance": "Marginally relevant",
+  "confidence": 0.3985121697187423
+ },
+ {
+  "bundle": "2026-11-14T0210Z-salesforceyetagain-v2-00_planning-salesforce-principles.md",
+  "relevance": "Highly relevant",
+  "confidence": 0.5459315925836563
+ },
+ {
+  "bundle": "2026-11-14T0210Z-salesforceyetagain-v2-01_certifications-curriculum.md",
+  "relevance": "Relevant",
+  "confidence": 0.652382880449295
+ },
+ {
+  "bundle": "2026-11-14T0210Z-salesforceyetagain-v2-02_crash-course.md",
+  "relevance": "Relevant",
+  "confidence": 0.6080199629068375
+ },
+ {
+  "bundle": "2026-11-14T0210Z-salesforceyetagain-v2-README.md",
+  "relevance": "Relevant",
+  "confidence": 0.32182893157005305
+ },
+ {
+  "bundle": "2026-11-14T0210Z-salesforceyetagain-v2",
+  "relevance": "Highly relevant",
+  "confidence": 0.45070564746856684
+ },
+ {
+  "bundle": "2026-11-14T023241_salesforceagain-v2.md",
+  "relevance": "Highly relevant",
+  "confidence": 0.45315457880496973
+ },
+ {
+  "bundle": "2026-11-14T023312_salesforcemore-v3",
+  "relevance": "Highly relevant",
+  "confidence": 0.4617388397455215
+ },
+ {
+  "bundle": "2026-11-14T023507_salesforcemore-v2.md",
+  "relevance": "Highly relevant",
+  "confidence": 0.399619847536087
+ },
+ {
+  "bundle": "2026-11-14T023507_salesforcemore-v2",
+  "relevance": "Highly relevant",
+  "confidence": 0.44181412458419794
+ },
+ {
+  "bundle": "2026-11-14_salesforceagain-v3_devops-gearset-ui-deep-dive.md",
+  "relevance": "Relevant",
+  "confidence": 0.6575851738452911
+ },
+ {
+  "bundle": "2026-11-14_salesforceagain-v3_devops-github-cicd-pipeline.md",
+  "relevance": "Relevant",
+  "confidence": 0.5126376301050186
+ },
+ {
+  "bundle": "2026-11-14_salesforceagain-v3_devops-governor-limits-deep-dive.md",
+  "relevance": "Relevant",
+  "confidence": 0.5463795959949493
+ },
+ {
+  "bundle": "2026-11-14_salesforceagain-v3_devops-metadata-dependencies-deep-dive.md",
+  "relevance": "Highly relevant",
+  "confidence": 0.3643012642860412
+ },
+ {
+  "bundle": "20261114-020300-salesforceagain-kilo",
+  "relevance": "Highly relevant",
+  "confidence": 0.6144116669893265
+ },
+ {
+  "bundle": "20261114-020852-salesforcemore",
+  "relevance": "Highly relevant",
+  "confidence": 0.40903194248676294
+ },
+ {
+  "bundle": "20261114-023241-salesforceagain-v2",
+  "relevance": "Relevant",
+  "confidence": 0.5754192769527435
+ },
+ {
+  "bundle": "salesforceagain-v4-2026-11-14-0230",
+  "relevance": "Highly relevant",
+  "confidence": 0.6716079860925674
+ }
+]
